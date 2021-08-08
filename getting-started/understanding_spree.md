@@ -6,7 +6,7 @@ order: 1
 
 # Understanding how Spree works
 
-So you're probably wondering how all that magic works? Let's dive in.
+Spree is a modular application with a lean core, REST API and 
 
 ## Rails Engine
 
@@ -24,9 +24,9 @@ Spree is divided into several modules / gems which you can opt-out if you would 
 
 | Spree module | Description | Required? |
 | :--- | :--- | :--- |
-| **api** | REST API for your Store | yes |
+| **api** | REST API for | **yes** |
 | **backend** | Admin Panel UI | no |
-| **core** | Models, Services and libraries | yes |
+| **core** | Data models, Services and libraries | **yes** |
 | **frontend** | Storefront UI | no |
 | **sample** | Sample seed data | no |
 
@@ -36,20 +36,28 @@ There are many other Spree-gems providing additional functionality to your Store
 
 To change which Spree gems you would like to install you will need to modify your project `Gemfile`.
 
-### Full-stack Spree application
+### Headless installation
 
 ```ruby
 gem 'spree'
 ```
 
-### Headless installation with API and Admin Panel
+### Admin Panel
 
 ```ruby
-gem 'spree_api'
+gem 'spree'
 gem 'spree_backend'
 ```
 
-After changing the Gemfile please run
+### Storefront and Admin Panel
+
+```ruby
+gem 'spree'
+gem 'spree_backend'
+gem 'spree_frontend'
+```
+
+After changing `Gemfile` please run
 
 ```bash
 bundle install
@@ -63,5 +71,5 @@ bin/bundle-install
 
 ## Next steps
 
-We recommend you go over [Internals section](../internals/stores.md) to learn more how Spree works under the hood. This knowledge will be very helpful when you'll decide you want to [customize your Spree store](/developer/customization/).
+We recommend you go over [Internals section](../internals/stores.md) to learn more how Spree works under the hood. This knowledge will be very helpful when you'll decide you want to [customize your Spree store](../customization/dependencies.md).
 

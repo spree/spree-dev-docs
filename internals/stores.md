@@ -14,6 +14,8 @@ The `Store` model is the center of the Spree ecosystem. Each Spree installation 
 * Store B, `eu.example.com`
 * Store C, `another-brand.com`
 
+![](../.gitbook/assets/mulit_store_978x2.png)
+
 ## `current_store` method
 
 All Spree controllers or any other controllers that includes [Spree::Core::ControllerHelpers::Store](https://github.com/spree/spree/blob/master/core/lib/spree/core/controller_helpers/store.rb) have access to the `current_store` method which returns the currently in use `Spree::Store` object. All parts of Spree \(API v1, API v2, Storefront, Admin Panel\) include this mechanism. This method is also available in views.
@@ -49,11 +51,11 @@ This will also have an effect on what [Shipping / Billing Addresses](/developer/
 
 ### Orders
 
-When a user starts a checkout in a selected Store [Order](/developer/internals/orders.html) is associated with that Store. That means that items added to the Cart will be visible only in a selected Store. If a user switches to another Store they will have a separate `Order` record for that Store. Order is created when a User adds the first item to the Cart. This means you can host multiple brands on one single Spree instance.
+When a user starts a checkout in a selected Store [Order](orders.md) is associated with that Store. That means that items added to the Cart will be visible only in a selected Store. If a user switches to another Store they will have a separate `Order` record for that Store. Order is created when a User adds the first item to the Cart. This means you can host multiple brands on one single Spree instance.
 
 ### Payment Methods
 
-Each [Payment Method](/developer/internals/payments.html#payment-methods) can be associated with multiple Stores, eg. you would like to have Stripe and PayPal in Store A, but only Stripe in Store B, and Braintree in Store C.
+Each [Payment Method](payments.md#payment-methods) can be associated with multiple Stores, eg. you would like to have Stripe and PayPal in Store A, but only Stripe in Store B, and Braintree in Store C.
 
 ### Products
 

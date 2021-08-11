@@ -20,13 +20,19 @@ in your project root directory.
 
 1. Add Spree gems to your `Gemfile`
 
-   **Rails 5.2, 6.0 and 6.1**
+   \*\*\*\*
+
+2. **Rails 5.2, 6.0 and 6.1**
 
    ```ruby
-    gem 'spree', '~> 4.3'
-    gem 'spree_auth_devise', '~> 4.3'
-    gem 'spree_gateway', '~> 3.9'
-    gem 'spree_i18n', '~> 5.0'
+    gem 'spree' # core and API
+    gem 'spree_frontend' # default Rails storefront (optional)
+    gem 'spree_backend' # default Rails admin panel (optional)
+    gem 'spree_emails' # transactional emails (optional)
+    gem 'spree_auth_devise', '~> 4.3' # Devise integration (optional)
+    gem 'spree_gateway', '~> 3.9' # payment gateways eg. Stripe, Braintree (optional)
+    gem 'spree_i18n', '~> 5.0' # translation files (optional) 
+ 
     gem 'sassc', github: 'sass/sassc-ruby', branch: 'master' # only needed for MacOS and Ruby 3.0
    ```
 
@@ -46,7 +52,7 @@ in your project root directory.
     gem 'spree_gateway', '~> 3.2.0'
    ```
 
-2. Install gems
+3. Install gems
 
    ```bash
     bundle install
@@ -58,7 +64,7 @@ in your project root directory.
     bundle update
    ```
 
-3. Use the install generators to set up Spree
+4. Use the install generators to set up Spree
 
    ```text
     bundle exec rails g spree:install --user_class=Spree::User

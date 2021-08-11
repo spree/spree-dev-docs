@@ -51,7 +51,7 @@
 
 ## Advanced
 
-* [Adding Spree to existing Rails application](advanced/existing_app_tutorial.md)
+* [Adding Spree to an existing Rails application](advanced/existing_app_tutorial.md)
 * [Deface](advanced/deface_overrides_tutorial.md)
 * [Adding new attributes to Product model](advanced/extend_product_attributes.md)
 * [Testing Spree applications](advanced/testing.md)

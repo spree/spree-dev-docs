@@ -4,94 +4,54 @@ section: advanced
 order: 1
 ---
 
-# Adding Spree to existing Rails application
+# Adding Spree to an existing Rails application
 
-## Prerequisites
+### Add Spree gems to your `Gemfile`
 
-Before starting this tutorial, please check which Rails version are you using by running:
-
-```bash
-bundle exec rails -v
+```ruby
+gem 'spree' # core and API
+gem 'spree_frontend' # Rails storefront (optional)
+gem 'spree_backend' # Rails admin panel (optional)
+gem 'spree_emails' # transactional emails (optional)
+gem 'spree_auth_devise', '~> 4.3' # Devise integration (optional)
+gem 'spree_gateway', '~> 3.9' # payment gateways eg. Stripe, Braintree (optional)
+gem 'spree_i18n', '~> 5.0' # translation files (optional) 
+ 
+# only needed for MacOS and Ruby 3.0
+gem 'sassc', github: 'sass/sassc-ruby', branch: 'master'
 ```
 
-in your project root directory.
+### Install gems
 
-## Installation
+```bash
+ bundle install
+```
 
-1. Add Spree gems to your `Gemfile`
+### Use the install generators to set up Spree
 
-   \*\*\*\*
-
-2. **Rails 5.2, 6.0 and 6.1**
-
-   ```ruby
-    gem 'spree' # core and API
-    gem 'spree_frontend' # default Rails storefront (optional)
-    gem 'spree_backend' # default Rails admin panel (optional)
-    gem 'spree_emails' # transactional emails (optional)
-    gem 'spree_auth_devise', '~> 4.3' # Devise integration (optional)
-    gem 'spree_gateway', '~> 3.9' # payment gateways eg. Stripe, Braintree (optional)
-    gem 'spree_i18n', '~> 5.0' # translation files (optional) 
- 
-    gem 'sassc', github: 'sass/sassc-ruby', branch: 'master' # only needed for MacOS and Ruby 3.0
-   ```
-
-   **Rails 5.1**
-
-   ```ruby
-    gem 'spree', '~> 3.5.0'
-    gem 'spree_auth_devise', '~> 3.3'
-    gem 'spree_gateway', '~> 3.3'
-   ```
-
-   **Rails 5.0**
-
-   ```ruby
-    gem 'spree', '~> 3.2.0'
-    gem 'spree_auth_devise', '~> 3.2.0'
-    gem 'spree_gateway', '~> 3.2.0'
-   ```
-
-3. Install gems
-
-   ```bash
-    bundle install
-   ```
-
-   **Note**: if you run into `Bundler could not find compatible versions for gem "sprockets":` error message, please run
-
-   ```bash
-    bundle update
-   ```
-
-4. Use the install generators to set up Spree
-
-   ```text
-    bundle exec rails g spree:install --user_class=Spree::User
-    bundle exec rails g spree:auth:install
-    bundle exec rails g spree_gateway:install
-   ```
+```text
+bin/rails g spree:install --user_class=Spree::User
+bin/rails g spree:auth:install
+bin/rails g spree_gateway:install
+bin/rails g spree:frontend:install
+bin/rails g spree:backend:install
+```
 
 ### Installation options
 
-By default, the installation generator \(`rails g spree:install`\) will run migrations as well as adding seed and sample data. This can be disabled using
+By default, the installation generator \(`rails g spree:install`\) will run migrations as well as adding seed. This can be disabled using
 
 ```text
-rails g spree:install --migrate=false --sample=false --seed=false
+bin/rails g spree:install --migrate=false --sample=false --seed=false
 ```
 
 You can always perform any of these steps later by using these commands.
 
 ```text
-bundle exec rake railties:install:migrations
-bundle exec rails db:migrate
-bundle exec rails db:seed
-bundle exec rake spree_sample:load
+bin/rake railties:install:migrations
+bin/rails db:migrate
+bin/rails db:seed
 ```
-
-### Headless installation \(API-mode\)
-
-To use Spree in [API-only mode](https://guides.spreecommerce.org/api/overview/) you need to replace `spree` with `spree_api` in your project Gemfile. This will skip Storefront and Admin Panel. If you would want to include the Admin Panel please add `spree_backend` to your Gemfile.
 
 ### Mounting the Spree engine
 
@@ -113,29 +73,21 @@ The different parts of Spree \(API, Admin\) will be mounted there as well, eg. `
 
 ### Use your existing authentication
 
-[Spree Auth Devise](https://github.com/spree/spree_auth_devise) is the default authentication that comes with Spree but you can swap it for your own, please [follow this guide](/developer/customization/authentication.html)
+[Spree Auth Devise](https://github.com/spree/spree_auth_devise) is the default authentication that comes with Spree but you can swap it for your own, please [follow this guide](../customization/authentication.md)
 
-## Hello, Spree Commerce
+### Hello, Spree Commerce
 
 You now have a functional Spree application after running only a few commands!
 
 To see your application in action, open a browser window and navigate to [http://localhost:3000](http://localhost:3000). You should see the Spree default home page:
 
-To stop the web server, hit Ctrl-C in the terminal window where it's running. In development mode, Spree does not generally require you to stop the server; changes you make in files will be automatically picked up by the server.
+To stop the webserver, hit Ctrl-C in the terminal window where it's running. In development mode, Spree does not generally require you to stop the server; changes you make in files will be automatically picked up by the server.
 
-### Logging Into the Admin Panel
+#### Logging Into the Admin Panel
 
-The next thing you'll probably want to do is to log into the admin interface. Use your browser window to navigate to [http://localhost:3000/admin](http://localhost:3000/admin). You can login with the username `spree@example.com` and password `spree123`.
+The next thing you'll probably want to do is to log into the admin interface. Use your browser window to navigate to [http://localhost:3000/admin](http://localhost:3000/admin). You can log in with the username `spree@example.com` and password `spree123`.
 
 Upon successful authentication, you should see the admin screen:
 
 Feel free to explore some of the Admin Panel features that Spree has to offer and to verify that your installation is working properly.
-
-## Next steps
-
-If you've followed the steps described in this tutorial, you should now have a fully functional Spree application up and running.
-
-We recommend you should continue to [Customization section](/developer/customization/storefront.html) to learn how to modify and extend your Spree application.
-
-To learn more about Spree internals please refer [Core section](/developer/internals/orders.html).
 

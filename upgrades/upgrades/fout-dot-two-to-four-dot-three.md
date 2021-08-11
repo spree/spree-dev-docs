@@ -3,11 +3,10 @@ title: Upgrading Spree 4.2 to 4.3
 section: upgrades
 order: 0
 hidden: true
+description: This guide covers upgrading a 4.2 Spree application to Spree 4.3.
 ---
 
 # 4.2 to 4.3
-
-This guide covers upgrading a **4.2 Spree application** to **Spree 4.3**.
 
 If you have any questions or suggestions feel free to reach out through [Spree slack channels](http://slack.spreecommerce.org/)
 

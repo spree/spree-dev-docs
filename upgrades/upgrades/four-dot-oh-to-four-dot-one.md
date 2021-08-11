@@ -2,11 +2,10 @@
 title: Upgrading Spree 4.0 to 4.1
 section: upgrades
 order: 1
+description: This guide covers upgrading a 4.0 Spree application to Spree 4.1.
 ---
 
 # 4.0 to 4.1
-
-This guide covers upgrading a **4.0 Spree application** to **Spree 4.1**.
 
 If you have any questions or suggestions feel free to reach out through [Spree slack channels](http://slack.spreecommerce.org/)
 

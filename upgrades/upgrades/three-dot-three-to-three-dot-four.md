@@ -2,11 +2,10 @@
 title: Upgrading Spree from 3.3 to 3.4
 section: upgrades
 order: 6
+description: 'This guide covers upgrading a 3.3 Spree store, to a 3.4 store.'
 ---
 
-# three-dot-three-to-three-dot-four
-
-This guide covers upgrading a 3.3 Spree store, to a 3.4 store.
+# 3.3 to 3.4
 
 ### Update Gemfile
 

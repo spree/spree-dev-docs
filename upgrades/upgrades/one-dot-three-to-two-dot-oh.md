@@ -5,7 +5,7 @@ order: 13
 hidden: true
 ---
 
-# one-dot-three-to-two-dot-oh
+# 1.3 to 2.0
 
 ## Overview
 

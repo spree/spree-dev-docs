@@ -5,7 +5,7 @@ hidden: true
 order: 10
 ---
 
-# two-dot-two-to-two-dot-three
+# 2.2 to 2.3
 
 ## Overview
 

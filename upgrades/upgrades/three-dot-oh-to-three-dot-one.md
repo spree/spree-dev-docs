@@ -2,13 +2,10 @@
 title: Upgrading Spree from 3.0 to 3.1
 section: upgrades
 order: 9
+description: 'This guide covers upgrading a 3.0.x Spree store, to a 3.1.x store'
 ---
 
-# three-dot-oh-to-three-dot-one
-
-This guide covers upgrading a 3.0.x Spree store, to a 3.1.x store. This guide has been written from the perspective of a blank Spree 3.0.x store with no extensions.
-
-If you have extensions that your store depends on, you will need to manually verify that each of those extensions work within your 3.1.x store once this upgrade is complete. Typically, extensions that are compatible with this version of Spree will have a 3-1-stable branch.
+# 3.0 to 3.1
 
 ## Upgrade Rails
 

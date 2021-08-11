@@ -5,7 +5,7 @@ order: 15
 hidden: true
 ---
 
-# one-dot-one-to-one-dot-two
+# 1.1 to 1.2
 
 ## Overview
 

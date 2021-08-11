@@ -13,9 +13,9 @@ If you have any questions or suggestions feel free to reach out through [Spree s
 
 **If you're on an older version than 4.1 please follow previous upgrade guides and perform those upgrades incrementally**, eg.
 
-1. [upgrade 3.7 to 4.0](/developer/upgrades/three-dot-seven-to-four-dot-oh.html)
-2. [upgrade 4.0 to 4.1](/developer/upgrades/four-dot-oh-to-four-dot-one.html)
-3. [upgrade 4.1 to 4.2](/developer/upgrades/four-dot-one-to-four-dot-two.html)
+1. [upgrade 3.7 to 4.0](three-dot-seven-to-four-dot-oh.md)
+2. [upgrade 4.0 to 4.1](four-dot-oh-to-four-dot-one.md)
+3. [upgrade 4.1 to 4.2](four-dot-one-to-four-dot-two.md)
 
 This is the safest and recommended method.
 
@@ -79,17 +79,15 @@ rails db:migrate
 
 ## Upgrade all of your Spree extensions to the newest versions
 
-To avoid errors and compatibility issues, please update all of your Spree extension gems to the newest versions which usually includes fixes for the new Spree release, eg.
+To avoid errors and compatibility issues, please update all of your Spree extension gems to the newest versions which usually include fixes for the new Spree release, eg.
 
 ```bash
 bundle update spree_related_products
 ```
 
-## Other things to remember
-
 ## Read the release notes
 
-For information about changes contained within this release, please read the [4.3.0 Release Notes](https://guides.spreecommerce.org/release_notes/spree_4_3_0.html).
+For information about changes contained within this release, please read the [4.3.0 Release Notes](https://github.com/spree/spree/releases/tag/v4.3.0) and [CHANGELOG](https://github.com/spree/spree/blob/master/CHANGELOG.md).
 
 ## More info
 

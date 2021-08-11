@@ -5,7 +5,7 @@ hidden: true
 order: 9
 ---
 
-# two-dot-three-to-two-dot-four
+# 2.3 to 2.4
 
 This guide covers upgrading a 2.3.x Spree store, to a 2.4.x store. This guide has been written from the perspective of a blank Spree 2.3.x store with no extensions.
 

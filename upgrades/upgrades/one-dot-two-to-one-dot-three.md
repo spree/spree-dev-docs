@@ -5,7 +5,7 @@ order: 14
 hidden: true
 ---
 
-# one-dot-two-to-one-dot-three
+# 1.2 to 1.3
 
 ## Overview
 

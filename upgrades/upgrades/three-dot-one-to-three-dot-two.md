@@ -2,11 +2,10 @@
 title: Upgrading Spree from 3.1 to 3.2
 section: upgrades
 order: 8
+description: 'This guide covers upgrading a 3.1.x Spree store, to a 3.2.x store.'
 ---
 
-# three-dot-one-to-three-dot-two
-
-This guide covers upgrading a 3.1.x Spree store, to a 3.2.x store.
+# 3.1 to 3.2
 
 ### Update your Rails version to 5.0
 

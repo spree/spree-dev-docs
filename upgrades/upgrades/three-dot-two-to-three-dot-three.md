@@ -4,7 +4,7 @@ section: upgrades
 order: 7
 ---
 
-# three-dot-two-to-three-dot-three
+# 3.2 to 3.3
 
 This guide covers upgrading a 3.2.x Spree store, to a 3.3.x store.
 

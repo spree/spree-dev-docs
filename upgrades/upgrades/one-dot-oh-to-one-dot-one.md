@@ -5,7 +5,7 @@ hidden: true
 order: 16
 ---
 
-# one-dot-oh-to-one-dot-one
+# 1.0 to 1.1
 
 ## Overview
 

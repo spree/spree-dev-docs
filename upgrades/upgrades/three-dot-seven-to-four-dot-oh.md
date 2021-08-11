@@ -2,11 +2,10 @@
 title: Upgrading Spree 3.7 to 4.0
 section: upgrades
 order: 2
+description: This guide covers upgrading a 3.7 Spree application to Spree 4.0.
 ---
 
-# three-dot-seven-to-four-dot-oh
-
-This guide covers upgrading a **3.7 Spree application** to **Spree 4.0**.
+# 3.7 to 4.0
 
 If you have any questions or suggestions feel free to reach out through [Spree slack channels](http://slack.spreecommerce.org/)
 

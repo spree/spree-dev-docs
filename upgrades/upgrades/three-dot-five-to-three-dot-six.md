@@ -2,11 +2,10 @@
 title: Upgrading Spree from 3.5 to 3.6
 section: upgrades
 order: 4
+description: 'This guide covers upgrading a 3.5 Spree application, to a 3.6 application.'
 ---
 
-# three-dot-five-to-three-dot-six
-
-This guide covers upgrading a 3.5 Spree application, to a 3.6 application.
+# 3.5 to 3.6
 
 ### Update Gemfile
 

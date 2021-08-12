@@ -57,7 +57,7 @@ gem 'spree_backend'
 gem 'spree_frontend'
 ```
 
-After changing `Gemfile` please run
+After changing the `Gemfile` you need to run
 
 ```bash
 bundle install
@@ -71,5 +71,5 @@ bin/bundle-install
 
 ## Next steps
 
-We recommend you go over [Internals section](../internals/stores.md) to learn more how Spree works under the hood. This knowledge will be very helpful when you'll decide you want to [customize your Spree store](../customization/dependencies.md).
+We recommend you go over [Internals section](../internals/stores.md) to learn more about how Spree works under the hood. This knowledge will be very useful when you'll decide you want to [customize your Spree store](../customization/dependencies.md).
 

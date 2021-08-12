@@ -4,11 +4,11 @@ section: contributing
 order: 1
 ---
 
-# Creating new extensions
+# Creating an extension
 
 ## Getting Started
 
-Let's build a simple [extension](/developer/customization/extensions.html). Suppose we want the ability to mark certain products as being on sale. We'd like to be able to set a sale price on a product and show products that are on sale on a separate products page. This is a great example of how an extension can be used to build on the solid Spree foundation.
+Let's build a simple extension. Suppose we want the ability to mark certain products as being on sale. We'd like to be able to set a sale price on a product and show products that are on sale on a separate products page. This is a great example of how an extension can be used to build on the solid Spree foundation.
 
 Before we start, let's make sure we have spree command installed by running:
 
@@ -30,7 +30,7 @@ cd spree_simple_sales
 
 ## Adding a Sale Price to Variants
 
-The first thing we need to do is create a migration that adds a sale\_price column to [variants](/developer/products.html#variants).
+The first thing we need to do is create a migration that adds a sale\_price column to [variants](../internals/products.md#variants).
 
 We can do this with the following command:
 
@@ -52,7 +52,7 @@ end
 
 ## Adding Our Extension to the Spree Application
 
-Before we continue development of our extension, let's add it to the Spree application we created in the [last tutorial](/developer/getting_started_tutorial.html). This will allow us to see how the extension works with an actual Spree store while we develop it.
+Before we continue development of our extension, let's add it to the Spree application.
 
 Within the `my_store` application directory, add the following line to the bottom of our `Gemfile`:
 
@@ -253,5 +253,5 @@ These specs test that the `price_in` method we overrode in our `VariantDecorator
 
 ## Summary
 
-In this tutorial you learned how to both install extensions and create your own. A lot of core Spree development concepts were covered and you gained exposure to some of the Spree internals.
+In this tutorial, you learned how to both install extensions and create your own. A lot of core Spree development concepts were covered and you gained exposure to some of the Spree internals.
 

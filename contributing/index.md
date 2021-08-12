@@ -5,7 +5,7 @@ section: contributing
 
 # General guidelines
 
-Spree is an open, community powered project that anyone can contribute to. There are several ways you can help us improve Spree:
+Spree is an open, community-powered project that anyone can contribute to. There are several ways you can help us improve Spree:
 
 * submitting an issue describing a bug or a feature request
 * fixing a bug or creating a new feature
@@ -19,7 +19,7 @@ You can [submit an issue](https://github.com/spree/spree/issues/new/choose) on o
 
 ## Fixing a bug or creating a new feature
 
-Before diving into the Spree codebase we recommend you spend some time to review the [Internals section](/developer/internals/) which will help you understand how Spree works under the hood.
+Before diving into the Spree codebase we recommend you spend some time reviewing the [Internals section](/developer/internals/) which will help you understand how Spree works under the hood.
 
 After you're done with that please follow to [Developing Spree guide](developing_spree.md)
 
@@ -27,7 +27,7 @@ To find issues you can tackle on we recommend visiting [Spree Contribute page](h
 
 ## Creating a Spree extension
 
-Extensions provide additional features and integrations for your Spree store. You can create your own and share with the rest of the community. Before doing so please check our [Extension directory](/extensions) if your desired extension does not exist already. If not [follow Extensions tutorial](extensions_tutorial.md) to learn how to create one.
+Extensions provide additional features and integrations for your Spree store. You can create your own and share with the rest of the community. Before doing so please check our [Extension directory](/extensions) if your desired extension does not exist already. If not [follow Extensions tutorial](../extensions/extensions_tutorial.md) to learn how to create one.
 
 ## Upgrading old extensions to recent Spree versions
 

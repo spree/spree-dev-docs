@@ -26,7 +26,6 @@
 
 * [Dependencies](customization/dependencies.md)
 * [Business Logic](customization/logic.md)
-* [Extensions](customization/extensions.md)
 * [API v1](customization/api_v1.md)
 * [API v2](customization/api_v2.md)
 * [Checkout](customization/checkout.md)
@@ -36,6 +35,11 @@
 * [Internationalization](customization/i18n.md)
 * [Storefront](customization/storefront.md)
 * [Emails](customization/emails.md)
+
+## Extensions
+
+* [Extensions](extensions/extensions.md)
+* [Creating an extension](extensions/extensions_tutorial.md)
 
 ## Deployment
 
@@ -84,6 +88,5 @@
 
 * [General guidelines](contributing/index.md)
 * [Developing Spree](contributing/developing_spree.md)
-* [Creating new extensions](contributing/extensions_tutorial.md)
 * [Upgrading extensions](contributing/upgrading_extensions.md)
 

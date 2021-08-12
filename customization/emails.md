@@ -6,6 +6,10 @@ order: 10
 
 # Emails
 
+{% hint style="info" %}
+Emails are now part of `spree_emails` gem
+{% endhint %}
+
 ## Overview
 
 Spree uses [postmark templates](https://github.com/wildbit/postmark-templates), as a base for all transactional emails.

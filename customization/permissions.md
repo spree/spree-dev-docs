@@ -66,7 +66,7 @@ end
 
 ## Replacing all permissions
 
-As we've mentioned earlier, Spree uses main Ability class. But you can change that to use your own custom Ability class via [Dependencies](/developer/customization/dependencies.html) in Spree initializer \(`config/initializers/spree.rb`\), eg.
+As we've mentioned earlier, Spree uses the main Ability class. You can change that to use your own custom Ability class via [Dependencies](dependencies.md) in Spree initializer \(`config/initializers/spree.rb`\), eg.
 
 ```ruby
 Spree::Dependencies.ability_class = 'MyProject::Ability'
@@ -105,7 +105,7 @@ module MyProject
 end
 ```
 
-Now your can restart your rails server and observe new permissions being implemented in the application.
+After restarting the rails server you observe new permissions being recognized in the application.
 
-Leter permission changes should be automatically picked up in development and should not require application restarts.
+Further permission changes should be automatically picked up in development and should not require application restarts.
 

@@ -19,7 +19,7 @@ You can [submit an issue](https://github.com/spree/spree/issues/new/choose) on o
 
 ## Fixing a bug or creating a new feature
 
-Before diving into the Spree codebase we recommend you spend some time reviewing the [Internals section](/developer/internals/) which will help you understand how Spree works under the hood.
+Before diving into the Spree codebase we recommend you spend some time reviewing the [Internals section](../internals/stores.md) which will help you understand how Spree works under the hood.
 
 After you're done with that please follow to [Developing Spree guide](developing_spree.md)
 
@@ -27,7 +27,7 @@ To find issues you can tackle on we recommend visiting [Spree Contribute page](h
 
 ## Creating a Spree extension
 
-Extensions provide additional features and integrations for your Spree store. You can create your own and share with the rest of the community. Before doing so please check our [Extension directory](/extensions) if your desired extension does not exist already. If not [follow Extensions tutorial](../extensions/extensions_tutorial.md) to learn how to create one.
+Extensions provide additional features and integrations for your Spree store. You can create your own and share with the rest of the community. Before doing so please check our [Extension directory](../extensions/extensions.md) if your desired extension does not exist already. If not [follow Extensions tutorial](../extensions/extensions_tutorial.md) to learn how to create one.
 
 ## Upgrading old extensions to recent Spree versions
 

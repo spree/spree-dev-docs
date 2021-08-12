@@ -5,6 +5,10 @@ section: advanced
 
 # Testing Spree applications
 
+{% hint style="warning" %}
+This guide is outdated and needs updates which will be applied soon!
+{% endhint %}
+
 ## Overview
 
 The Spree project currently uses [RSpec](http://rspec.info) for all of its tests. Each of the gems that makes up Spree has a test suite that can be run to verify the code base.

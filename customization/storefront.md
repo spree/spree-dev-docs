@@ -6,6 +6,10 @@ order: 0
 
 # Storefront
 
+{% hint style="info" %}
+This sections covers the Rails based storefront which was extracted to `spree_frontend` ruby gem. 
+{% endhint %}
+
 ## Styling with SASS variables
 
 Spree 4 under the hood uses [Bootstrap 4](https://getbootstrap.com/docs/4.6/getting-started/theming/) for easy theming with some additional Spree-specific [SASS variables](https://sass-lang.com/documentation/variables).
@@ -416,8 +420,6 @@ To replace an entire JavaScript file as provided by Spree you simply need to cre
 For example, to replace `spree/frontend/all.js` you would save the replacement to `your_app/vendor/assets/javascripts/spree/frontend/all.js`.
 
  This same method can be used to override JavaScript files provided by third-party extensions.
-
-
 
 ## SEO recommendations
 

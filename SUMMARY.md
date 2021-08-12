@@ -26,8 +26,8 @@
 
 * [Dependencies](customization/dependencies.md)
 * [Business Logic](customization/logic.md)
-* [API v1](customization/api_v1.md)
 * [API v2](customization/api_v2.md)
+* [API v1](customization/api_v1.md)
 * [Checkout](customization/checkout.md)
 * [Authentication](customization/authentication.md)
 * [Permissions](customization/permissions.md)

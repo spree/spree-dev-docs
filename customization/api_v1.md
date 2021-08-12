@@ -6,13 +6,17 @@ order: 7
 
 # API v1
 
+{% hint style="danger" %}
+API v1 usage is not recommended anymore and will be extracted from Spree in the 5.0 release
+{% endhint %}
+
 ## Introduction
 
-In this tutorial we are going to learn how we can customize the [**REST API**](api) provided by Spree, adding a new endpoint \(or you can override an existing in core\). We will use `spree_simple_sales` extension created in [Extensions tutorial](/developer/advanced/extensions_tutorial.html). If you haven't seen before, please check them!
+In this tutorial we are going to learn how we can customize the [**REST API**](api) provided by Spree, adding a new endpoint \(or you can override an existing in core\). We will use `spree_simple_sales` extension created in [Extensions tutorial](../extensions/extensions_tutorial.md). If you haven't seen before, please check them!
 
 ## Adding Custom Endpoints
 
-Similarly to adding a controller action of [Extensions tutorial](/developer/advanced/extensions_tutorial.html), you can create a new controller class with an action that emits a json response from a [Rabl](https://github.com/nesquena/rabl) view.
+Similarly to adding a controller action of [Extensions tutorial](../extensions/extensions_tutorial.md), you can create a new controller class with an action that emits a json response from a [Rabl](https://github.com/nesquena/rabl) view.
 
 ### Creating the controller and action
 

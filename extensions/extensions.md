@@ -18,6 +18,12 @@ Provides authentication services for Spree, using the Devise gem such as signup,
 
 Move your existing Shopify blogs over to Spree bringing all your blog posts and URL's with you
 
+## Customer Service
+
+### [Gladly](https://github.com/upsidelab/spree_gladly)
+
+Allows you to connect your Spree store with [Gladly](https://www.gladly.com/) service. It allows Gladly agents to see basic information about Spree customers and their orders.
+
 ## Internationalization
 
 ### [Globalize](https://github.com/spree-contrib/spree_globalize)

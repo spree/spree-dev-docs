@@ -18,17 +18,27 @@ The `Store` model is the center of the Spree ecosystem. Each Spree installation 
 
 ## `current_store` method
 
-All Spree controllers or any other controllers that includes [Spree::Core::ControllerHelpers::Store](https://github.com/spree/spree/blob/master/core/lib/spree/core/controller_helpers/store.rb) have access to the `current_store` method which returns the currently in use `Spree::Store` object. All parts of Spree \(API v1, API v2, Storefront, Admin Panel\) include this mechanism. This method is also available in views.
+All Spree controllers or any other controllers that include [Spree::Core::ControllerHelpers::Store](https://github.com/spree/spree/blob/master/core/lib/spree/core/controller_helpers/store.rb) have access to the `current_store` method which returns the currently in selected `Spree::Store` object. 
+
+All parts of Spree \(API v1, API v2, Storefront, Admin Panel\) have this implemented. This method is also available in views and JSON serializers.
 
 Under the hood `current_store` calls [Store.current](https://github.com/spree/spree/blob/master/core/app/models/spree/store.rb#L36).
 
 ## Default Store
 
-If the system cannot find any Store that matches the current URL it will fallback to the Default Store.
+If the system cannot find any Store that matches the current URL it will fall back to the Default Store.
 
-You can set the default Store in Admin Panel -&gt; Configurations -&gt; Store.
+You can set the default Store in `Admin Panel -> Configurations -> Store` or via Rails console:
 
-To get the default store in code you can call `Spree::Store.default`.
+```ruby
+Spree::Store.find(2).update(default: true)
+```
+
+To get the default store in your code or rails console type:
+
+```ruby
+Spree::Store.default
+```
 
 ## Localization and Currency
 
@@ -41,25 +51,24 @@ Each Store can have different multiple locales and currencies. This configuratio
 
 ## Checkout configuration
 
-Each Store can be configured to ship to only selected countries. This is achieved via `checkout_zone_id` attribute which holds the ID of the selected [Zone record](/user/configuration/configuring_geography.html).
+Each Store can be configured to ship to only selected countries. This is achieved via the `checkout_zone_id` attribute which holds the ID of the selected [Zone record](/user/configuration/configuring_geography.html).
 
 Available Shipping Methods on the Checkout are determined based on the [Zone and Shipping Methods configuration](/developer/internals/shipments.html).
 
-This will also have an effect on what [Shipping / Billing Addresses](/developer/internals/addresses.html) user can add / select during Checkout. Only Addresses from Countries or States available in the selected Zone can be used and will be visible in the User's Address Book.
+This will also have an effect on what [Shipping / Billing Addresses](addresses.md) user can add / select during Checkout. Only Addresses from Countries or States available in the selected Zone can be used and will be visible in the User's Address Book.
 
-## Associated models
+## Store resources
 
-### Orders
-
-When a user starts a checkout in a selected Store [Order](orders.md) is associated with that Store. That means that items added to the Cart will be visible only in a selected Store. If a user switches to another Store they will have a separate `Order` record for that Store. Order is created when a User adds the first item to the Cart. This means you can host multiple brands on one single Spree instance.
-
-### Payment Methods
-
-Each [Payment Method](payments.md#payment-methods) can be associated with multiple Stores, eg. you would like to have Stripe and PayPal in Store A, but only Stripe in Store B, and Braintree in Store C.
-
-### Products
-
-You can assign which Products
+| Resource | Relationship |
+| :--- | :--- |
+| \*\*\*\*[**Order**](orders.md)\*\*\*\* | One Order belongs to one Store |
+| \*\*\*\*[**Product**](products.md)\*\*\*\* | One Product can be associated with many Store\(s\), you can pick and choose in which Store\(s\) each Product will be available |
+| \*\*\*\*[**Payment Method**](payments.md#payment-methods)\*\*\*\* | One Payment Method can be associated with many Store\(s\), you can select in which Stores given Method will be available on Checkout |
+| **Store Credit** | One Store Credit belongs, can be used, in one Store |
+| **CMS Page** | One Page belongs to one Store |
+| **Navigation Menu** | One Menu belongs to one Store |
+| \*\*\*\*[**Taxonomy**](products.md#taxons-and-taxonomies)\*\*\*\* | One Taxonomy belongs to one Store |
+| \*\*\*\*[**Promotion**](promotions.md)\*\*\*\* | One Promotion can be associated with multiple Stores |
 
 
 

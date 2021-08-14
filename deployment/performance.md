@@ -32,6 +32,22 @@ Sending emails, parsing big amounts of data - it's not recommended to do it in t
 
 We recommend setting up [Sidekiq with ActiveJob](https://github.com/mperham/sidekiq/wiki/Active-Job), this required a Redis instance. Spree Starter users don't need to do anything as it's already pre-configured for them.
 
+### Testing locally
+
+To enable caching in the development environment please type in your project directory:
+
+```bash
+bin/rails dev cache
+```
+
+or if you're using Spree Starter
+
+```bash
+docker-compose run web rails dev:cache
+```
+
+After that, you will need to restart your webserver / or stop/start docker-compose.
+
 ## Infrastructure
 
 ### Cache storage engine

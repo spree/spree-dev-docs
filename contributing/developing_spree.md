@@ -36,7 +36,7 @@ If `bundle install` fails that means you're missing some required system librari
 Firstly, ensure you hve [homebrew installed](https://brew.sh/). You will need to install some packages needed to run Spree and Rails applications in general:
 
 ```text
-brew install openssl mysql postgresql sqlite imagemagick
+brew install openssl mysql postgresql sqlite imagemagick redis
 ```
 
 ## Create Sandbox application
@@ -77,7 +77,7 @@ Start the server
 
 ```text
 cd sandbox
-bundle exec rails s
+bin/rails s
 ```
 
 ### Performance in development mode
@@ -93,14 +93,14 @@ config.assets.debug = false
 Also in development caching is disabled by default. To turn on caching run:
 
 ```bash
-bundle exec rails dev:cache
+bin/rails dev:cache
 ```
 
 You will need to restart rails server after this change.
 
 ## Making changes
 
-Create a new branch for your changes. Do not push changes to the main branch. Branch name should be human readable and informative, eg.
+Create a new branch for your changes. Do not push changes to the main branch. Branch name should be human-readable and informative, eg.
 
 * bug fixes: `fix/order-recalculation-total-bug`
 * features: `feature/my-new-amazing-feature`
@@ -116,7 +116,7 @@ Each gem contains its own series of tests, and for each directory, you need to d
 ```text
 cd core
 bundle exec rake test_app
-bundle exec rspec spec
+bundle exec rspec
 ```
 
 If you would like to run specs against a particular database you may specify the dummy app's database, which defaults to sqlite3.

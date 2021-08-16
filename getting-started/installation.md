@@ -8,7 +8,7 @@ If you would like to add Spree to your existing Ruby on Rails application, pleas
 
 ### Windows
 
-Windows users will need to [install the Linux subsystem](https://docs.microsoft.com/en-us/windows/wsl/install-win10) to proceed.
+Windows users will need to [install Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) to proceed.
 
 ## Installation
 

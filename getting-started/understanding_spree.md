@@ -20,7 +20,7 @@ All Spree models, controllers and other classes are namespaced by the `Spree` ke
 
 ## Spree modules
 
-Spree is divided into several modules / gems which you can opt-out if you would like. Installing Spree via Spree Starter gives you access to all of Spree features such as Stoprefront, API and Admin Panel. Not all of the modules are required, eg. headless installations will not require Storefront at all.
+Spree is divided into several modules / gems which you can opt-out if you would like. Installing Spree via Spree Starter gives you access to all of Spree features such as Storefront, API and Admin Panel. Not all of the modules are required, eg. headless installations will not require Storefront at all.
 
 | Spree module | Description | Required? |
 | :--- | :--- | :--- |

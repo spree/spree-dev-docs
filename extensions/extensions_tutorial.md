@@ -12,7 +12,7 @@ Let's build a simple extension. Suppose we want the ability to mark certain prod
 
 Before we start, let's make sure we have spree command installed by running:
 
-```ruby
+```bash
 gem install spree
 ```
 

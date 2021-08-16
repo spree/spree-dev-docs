@@ -134,7 +134,7 @@ module Spree
     let!(:user) { create(:user) }
 
     before do
-      # Mock API autentication using a "spree_api_key"
+      # Mock API authentication using a "spree_api_key"
       stub_authentication!
     end
 

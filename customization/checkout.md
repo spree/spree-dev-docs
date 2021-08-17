@@ -45,7 +45,7 @@ def check_registration
 end
 ```
 
-The configuration of the guest checkout option is done via [Preferences](/developer/internals/preferences.html). Spree will allow guest checkout by default. Use the `allow_guest_checkout` preference to change the default setting.
+The configuration of the guest checkout option is done via [Preferences](../internals/preferences.md). Spree will allow guest checkout by default. Use the `allow_guest_checkout` preference to change the default setting.
 
 ### Address Information
 
@@ -75,7 +75,7 @@ If you do not want to use a gateway with payment profiles then you will need to 
 
  Spree discards the credit card number after this step is processed. If you do not have a gateway with payment profiles enabled then your card information will be lost before it's time to authorize the card.
 
-For more information about payments, please see the [Payments guide](/developer/internals/payments.html).
+For more information about payments, please see the [Payments guide](../internals/payments.md).
 
 ### Confirmation
 
@@ -249,7 +249,7 @@ en:
 
 ## Payment Profiles
 
-The default checkout process in Spree assumes a gateway that allows for some form of third party support for payment profiles. An example of such a service would be [Authorize.net CIM](https://www.authorize.net/our-features/secure-customer-data.html) Such a service allows for a secure and PCI compliant means of storing the users credit card information. This allows merchants to issue refunds to the credit card or to make changes to an existing order without having to leave Spree and use the gateway provider's website. More importantly, it allows us to have a final "confirmation" step before the order is processed since the number is stored securely on the payment step and can still be used to perform the standard authorization/capture via the secure token provided by the gateway.
+The default checkout process in Spree assumes a gateway that allows for some form of third-party support for payment profiles. An example of such a service would be [Authorize.net CIM](https://www.authorize.net/our-features/secure-customer-data.html) Such a service allows for a secure and PCI-compliant means of storing the user's credit card information. This allows merchants to issue refunds to the credit card or to make changes to an existing order without having to leave Spree and use the gateway provider's website. More importantly, it allows us to have a final "confirmation" step before the order is processed since the number is stored securely on the payment step and can still be used to perform the standard authorization/capture via the secure token provided by the gateway.
 
 Spree provides a wrapper around the standard active merchant API in order to provide a common abstraction for dealing with payment profiles. All `Gateway` classes now have a `payment_profiles_supported?` method which indicates whether or not payment profiles are supported. If you are adding Spree support to a `Gateway` you should also implement the `create_profile` method. The following is an example of the implementation of `create_profile` used in the `AuthorizeNetCim` class:
 

@@ -123,5 +123,5 @@ end
 
 ## Replacing Models or Controllers
 
-If your customizations are so large that you overwrite majority of a given Model or Controller we recommend to drop the `_decorator` pattern and overwrite the Model or Controller completely in your project. This will make future Spree upgrades easier.
+If your customizations are so large that you overwrite the majority of a given Model or Controller we recommend to drop the `_decorator` pattern and overwrite the Model or Controller completely in your project. This will make future Spree upgrades easier.
 

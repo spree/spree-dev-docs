@@ -81,12 +81,11 @@ module Spree
 end
 ```
 
-In your `ApplicationController` add those lines:
+In your `ApplicationController` add these lines:
 
 ```ruby
 include Spree::AuthenticationHelpers
 include Spree::Core::ControllerHelpers::Auth
-include Spree::Core::ControllerHelpers::Common
 include Spree::Core::ControllerHelpers::Order
 include Spree::Core::ControllerHelpers::Store
 include Spree::Core::ControllerHelpers::Currency
@@ -95,8 +94,6 @@ include Spree::Core::ControllerHelpers::Locale
 helper 'spree/base'
 helper 'spree/locale', 'spree/currency', 'spree/store'
 ```
-
-Please note that including `Spree::Core::ControllerHelpers::Common` will replace your application layout with [Spree layout](https://github.com/spree/spree/blob/master/frontend/app/views/spree/layouts/spree_application.html.erb). For applications not wanting to use Spree layout omit the `Spree::Core::ControllerHelpers::Common` module.
 
 Each of the methods defined in this module return values that are the most common in Rails applications today, but you may need to customize them. In order, they are:
 
@@ -172,7 +169,7 @@ Finally, if you are using the API component of Spree, there are more methods add
 
  This is only applicable for Spree 4.0 and older. Spree 4.1 and newer releases handle this out of the box.
 
-To make the login link appear on Spree pages, you will need to modify `spree/shared/_nav_bar.html.erb` file which you can copy over from Spree codebase to your project \(detailed in [View Customization section](/developer/customization/view.html)\).
+To make the login link appear on Spree pages, you will need to modify `spree/shared/_nav_bar.html.erb` file which you can copy over from Spree codebase to your project \(detailed in [Storefront Customization section](storefront.md)\).
 
 You will need to add this code:
 

@@ -21,7 +21,7 @@ This is the safest and recommended method.
 ## Update Gemfile
 
 ```ruby
-gem 'spree', '~> 4.3'
+gem 'spree', '~> 4.3.0.rc1'
 ```
 
 ## Remove SpreeMultiDomain \(optional\)
@@ -39,7 +39,7 @@ Multi Store is now incorporated into Spree core and you cannot use that gem anym
 `spree` gem now does not include the `spree_frontend` gem anymore. If you use the default Spree Storefront you need to add it to your `Gemfile`.
 
 ```ruby
-gem 'spree_frontend'
+gem 'spree_frontend', '~> 4.3.0.rc1'
 ```
 
 ## Add `spree_backend` gem \(optional\)
@@ -47,7 +47,7 @@ gem 'spree_frontend'
 `spree` gem now does not include the `spree_backend` gem anymore. If you use the default Spree Admin Panel you need to add it to your `Gemfile`.
 
 ```ruby
-gem 'spree_backend'
+gem 'spree_backend', '~> 4.3.0.rc1'
 ```
 
 ## Add `spree_emails` gem \(optional\)
@@ -55,7 +55,7 @@ gem 'spree_backend'
 Transactional emails once part of `spree_core` were extracted into their own gem called `spree_emails`. If you would like to still use this feature you'll need to include this new gem in your `Gemfile`.
 
 ```ruby
-gem 'spree_emails'
+gem 'spree_emails', '~> 4.3.0.rc1'
 ```
 
 ## Update gems
@@ -75,6 +75,18 @@ rails spree:install:migrations
 ```bash
 rails db:migrate
 ```
+
+## Upgrade Sprockets to v4
+
+In your project create  `app/assets/config/manifest.jss` file with contents: 
+
+```ruby
+//= link_tree ../images
+//= link_tree ../javascripts
+//= link_directory ../stylesheets .css
+```
+
+More [on this topic](https://github.com/rails/sprockets/blob/master/UPGRADING.md#manifestjs).
 
 ## Upgrade all of your Spree extensions to the newest versions
 

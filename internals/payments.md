@@ -176,11 +176,15 @@ In order to implement a new gateway in the spree\_gateway project, please refer 
 
 ## Adding your custom gateway
 
-In order to make your custom gateway show up on backend list of available payment methods you need to add it to spree config list of payment methods first. That can be achieved by adding the following code in your spree.rb for example:
+In order to make your custom gateway show up on the backend list of available payment methods, you need to add it to the spree config list of payment methods first. 
+
+That can be achieved by adding the following code in your `config/initializers/spree.rb` , eg.
 
 ```ruby
-Rails.application.config.spree.payment_methods << YourCustomGateway
+Rails.application.config.after_initialize do
+  Rails.application.config.spree.payment_methods << YourCustomGateway
+end
 ```
 
-[Spree Braintree Vzero](https://github.com/spree-contrib/spree_braintree_vzero) is a good example of a standalone custom gateways.
+[Spree Braintree Vzero](https://github.com/spree-contrib/spree_braintree_vzero) is a good example of a standalone custom gateway.
 

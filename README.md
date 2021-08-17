@@ -14,5 +14,3 @@ Here you will find all kinds of information on topics such as Customization, Dep
 
 For API reference please visit the [API portal](https://api.spreecommerce.org).
 
-
-

@@ -22,17 +22,17 @@ All Spree models, controllers and other classes are namespaced by the `Spree` ke
 
 Spree is divided into several modules / gems which you can opt-out if you would like. Installing Spree via Spree Starter gives you access to all of Spree features such as Stoprefront, API and Admin Panel. Not all of the modules are required, eg. headless installations will not require Storefront at all.
 
-| Spree module | Description                         | Required? |
-| :----------- | :---------------------------------- | :-------- |
-| **api**      | REST API for                        | **yes**   |
-| **backend**  | Admin Panel UI                      | no        |
-| **core**     | Data models, Services and libraries | **yes**   |
-| **frontend** | Storefront UI                       | no        |
-| **sample**   | Sample seed data                    | no        |
+| Spree module | Description | Required? |
+| :--- | :--- | :--- |
+| **api** | REST API for | **yes** |
+| **backend** | Admin Panel UI | no |
+| **core** | Data models, Services and libraries | **yes** |
+| **frontend** | Storefront UI | no |
+| **sample** | Sample seed data | no |
 
 --
 
-There are many other Spree-gems providing additional functionality to your Store called [Extensions](/extensions).
+There are many other Spree-gems providing additional functionality to your Store called [Extensions](https://github.com/spree/spree-dev-docs/tree/0628094f68853238d9b13aa3b24d7b1e1b13fca4/extensions/README.md).
 
 To change which Spree gems you would like to install you will need to modify your project `Gemfile`.
 

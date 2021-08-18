@@ -2,46 +2,58 @@
 title: Understanding Spree
 section: getting_started
 order: 1
+description: >-
+  Spree is a modular, API-first headless ecommerce platform which consists of
+  several APIs.
 ---
 
-# Understanding how Spree works
+# Headless Commerce
 
-## Headless Commerce
+## Spree APIs
 
-Spree is a modular, API-first headless commerce application. What does it mean? 
+Spree is a modular, API-first headless ecommerce platform which consists of several APIs.
 
-Spree comes with a set of [APIs](https://api.spreecommerce.org/) you can work with directly or via [SDK](https://github.com/spree/spree-storefront-api-v2-js-sdk) to build your own Storefront.
+### Storefront API
 
-For application to application integration, you can use Platform API.
+* Modern and lightweight REST API based on JSON API schema
+* Designed for building Storefronts and mobile apps
+* [JavaScript / TypeScript SDK](https://github.com/spree/spree-storefront-api-v2-js-sdk) available
+* NextJS Commetce and VueStorefront integrations available soon!
 
-There are optional Admin / Storefront packages available also.
+### Platform API
 
-## Spree codebase
+* OAuth 2.0 authentication
+* designed for building application to application integration
+* permission sets based access to resources
+* access any resource on the Spree platform and perform any action
 
-Spree API is written in Ruby on Rails framework and is mounted into a Rails application as [a Rails Engine](https://guides.rubyonrails.org/engines.html).
+### Webhooks
 
-You don't need to be a Rails developer to work with Spree. You can install Spree via Spree Starter or Docker and not touch the underlying codebase at all and work only with the APIs. 
+We're working hard to deliver webhooks in the [next release](https://github.com/spree/spree/milestone/45)!
 
-### Spree namespace
+### GraphQL
 
-All Spree models, controllers and other Ruby classes are namespaced by the `Spree` keyword, eg. `Spree::Product`. This means that those files are also located in `spree` sub-directories eg. [app/models/spree/product.rb](https://github.com/spree/spree/blob/master/core/app/models/spree/product.rb).
+We're planning to deliver GraphQL in Q4 2021!
 
-### Spree modules
+## Storefronts
+
+Spree does not include Storefront but you can build one yourself either using 
+
+## Spree modules
 
 Spree is divided into several modules / gems which you can install independently. 
 
-Installing Spree via [Spree Starter](https://github.com/spree/spree_starter) gives you access to all of Spree features such as Storefront, API and Admin Panel. 
+{% hint style="info" %}
+[Spree Starter ](https://github.com/spree/spree_starter)comes with all modules pre-installed for you convenience!
+{% endhint %}
 
 | Spree module | Description |
 | :--- | :--- |
 | **spree** | Data models, Services and APIs |
 | **spree\_backend** | Admin Panel UI \(Rails\) |
-| **spree\_frontend** | Storefront \(Rails\) |
 | **spree\_sample** | Sample seed data |
 
---
-
-There are many other Spree-gems providing additional functionality to your Store called [Extensions](https://github.com/spree/spree-dev-docs/tree/0628094f68853238d9b13aa3b24d7b1e1b13fca4/extensions/README.md).
+There are many other packages adding more features called [Extensions](../extensions/extensions.md).
 
 To change which Spree gems you would like to install you will need to modify your project `Gemfile`.
 
@@ -56,14 +68,6 @@ gem 'spree'
 ```ruby
 gem 'spree'
 gem 'spree_backend'
-```
-
-### Storefront and Admin Panel
-
-```ruby
-gem 'spree'
-gem 'spree_backend'
-gem 'spree_frontend'
 ```
 
 After changing the `Gemfile` you need to run

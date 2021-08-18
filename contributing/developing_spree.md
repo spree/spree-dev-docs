@@ -2,19 +2,28 @@
 title: Developing Spree
 section: contributing
 order: 0
+description: >-
+  This guide covers all the necessary steps to contributing to Spree source
+  code. We're happy you're here!
 ---
 
 # Developing Spree
 
-## Overview
+## Spree codebase
 
-This guide covers all the necessary steps to contributing to Spree source code. We're happy you're here!
+Spree API is written in Ruby on Rails framework and is mounted into a Rails application as [a Rails Engine](https://guides.rubyonrails.org/engines.html).
 
-## Fork Spree repo
+You don't need to be a Rails developer to work with Spree. You can install Spree via Spree Starter or Docker and not touch the underlying codebase at all and work only with the APIs. 
+
+### Spree namespace
+
+All Spree models, controllers and other Ruby classes are namespaced by the `Spree` keyword, eg. `Spree::Product`. This means that those files are also located in `spree` sub-directories eg. [app/models/spree/product.rb](https://github.com/spree/spree/blob/master/core/app/models/spree/product.rb).
+
+## Forking Spree repo
 
 Go to [Spree GitHub repository](https://github.com/spree/spree) and click **Fork** button. This will create a copy of Spree repository on your GitHub account. See [Github Documentation](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) for more information on forking.
 
-## Setup locally
+## Local setup
 
 1. Clone the your fork repository
 
@@ -23,36 +32,25 @@ Go to [Spree GitHub repository](https://github.com/spree/spree) and click **Fork
     cd spree
    ```
 
-2. Install the gem dependencies
+2. [Install ruby](https://www.ruby-lang.org/en/documentation/installation/)
+3. Install required libraries
+
+   ```text
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" && brew install openssl mysql postgresql sqlite imagemagick redis
+   ```
+
+4. Install the gem dependencies
 
    ```text
     bundle install
    ```
 
-### Fix Bundle errors on MacOS
-
-If `bundle install` fails that means you're missing some required system libraries.
-
-Firstly, ensure you hve [homebrew installed](https://brew.sh/). You will need to install some packages needed to run Spree and Rails applications in general:
-
-```text
-brew install openssl mysql postgresql sqlite imagemagick redis
-```
-
 ## Create Sandbox application
 
-Spree is meant to be run within the context of Rails application and the source code is essentially a collection of gems. You can easily create a sandbox application inside of your cloned source directory for testing purposes.
-
-This will setup a Rails application with Spree and some essential extensions and gems pre-installed with some data seeded Sandbox application is not meant to be run on production!
+Bellow command will setup a Rails application with Spree pre-installed with some data seeded:
 
 ```text
 bundle exec rake sandbox
-```
-
-For **headless sandbox** please run:
-
-```text
-SPREE_HEADLESS=true bundle exec rake sandbox
 ```
 
 By default Sandbox uses **SQLite** database. But you can switch to **PostgreSQL**:
@@ -67,12 +65,6 @@ or **MySQL**:
 DB=mysql bundle exec rake sandbox
 ```
 
-You can also combine those options:
-
-```text
-SPREE_HEADLESS=true DB=postgres bundle exec rake sandbox
-```
-
 Start the server
 
 ```text
@@ -82,15 +74,11 @@ bin/rails s
 
 ### Performance in development mode
 
-You may notice that your Spree store runs slower in development environment. This can be because in development each asset \(css and javascript\) is loaded separately. You can disable it by adding the following line to `config/environments/development.rb`.
-
-```ruby
-config.assets.debug = false
-```
+You may notice that your Spree store runs slower in development environment. This is caused by disabled caching and automatic reloading of code after each change.
 
 ### Caching
 
-Also in development caching is disabled by default. To turn on caching run:
+Caching is disabled by default. To turn on caching please run:
 
 ```bash
 bin/rails dev:cache
@@ -139,7 +127,7 @@ cd core
 bundle exec rspec spec/models/spree/state_spec.rb:7
 ```
 
-### Running integration tests on MacOS
+### Running integration tests on MacOS \(only applicable for Admin Panel\)
 
 We use chromedriver to run integration tests. To install it please use this command:
 

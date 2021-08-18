@@ -5,7 +5,7 @@
 ## Getting Started
 
 * [Installation](getting-started/installation.md)
-* [Understanding how Spree works](getting-started/understanding_spree.md)
+* [Headless Commerce](getting-started/understanding_spree.md)
 
 ## Internals
 

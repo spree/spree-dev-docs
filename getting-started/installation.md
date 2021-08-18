@@ -22,9 +22,19 @@ Windows users will need to [install the Linux subsystem](https://docs.microsoft.
 
 You now have a functional Spree application after running only a few commands!
 
-To see your application in action, open a browser window and navigate to [http://localhost:3000](http://localhost:3000). You should see the Spree default home page.
+To stop the webserver, hit `Ctrl-C` in the terminal window where it's running. 
 
-To stop the webserver, hit `Ctrl-C` in the terminal window where it's running. In development mode, Spree does not generally require you to stop the server; changes you make in files will be automatically picked up by the server.
+### Connecting to the API
+
+Your API server is up and running.[ Download our Open API doc](https://raw.githubusercontent.com/spree/spree/master/api/docs/v2/storefront/index.yaml) and [import it to Postman](https://learning.postman.com/docs/integrations/available-integrations/working-with-openAPI/) to start playing around. Your backend server URL is `http://localhost:3000` so to grab the Products List you can use:
+
+```bash
+curl --request GET \
+  --url http://localhost:3000/api/v2/storefront/products \
+  --header 'Content-Type: application/json'
+```
+
+We recommend checking out our [API reference](https://api.spreecommerce.org/) for more details.
 
 ### Logging Into the Admin Panel
 

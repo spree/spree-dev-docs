@@ -458,7 +458,7 @@ Rails.application.config.spree.stock_splitters = [
 ]
 ```
 
-Or if you don't want to split packages just set the option above to an empty array. e.g. a store with the following configuration in spree.rb won't have any package splitted.
+Or if you don't want to split packages just set the option above to an empty array. e.g. a store with the following configuration in `spree.rb` won't have any package split:
 
 ```ruby
 Rails.application.config.spree.stock_splitters = []

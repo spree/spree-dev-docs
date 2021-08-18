@@ -120,7 +120,7 @@ As Spree views are changed over coming versions, the original HTML elements mayb
 
 For example, spree/products/show.html.erb looks as follows:
 
-```text
+```erb
 <div data-hook="product_show" itemscope itemtype="http://schema.org/Product">
   <%% body_id = 'product-details' %>
   <div class="columns six alpha" data-hook="product_left_part">

@@ -7,7 +7,7 @@ order: 0
 # Storefront
 
 {% hint style="info" %}
-This sections covers the Rails based storefront which was extracted to `spree_frontend` ruby gem. 
+This sections covers the Rails based storefront which was extracted to `spree_frontend` ruby gem.
 {% endhint %}
 
 ## Styling with SASS variables
@@ -54,7 +54,7 @@ _**$font-family**_ - this sets the font family used across your site. By default
 
 ### Input fields
 
-_**$input-background**_ - this allows you to set a color for all input field backgrounds across the site. See two examples of a white and a yellow backround below.
+_**$input-background**_ - this allows you to set a color for all input field backgrounds across the site. See two examples of a white and a yellow background below.
 
 _**$second-global-border**_ - this allows you to set a color for all input field borders across the whole site. See an example below with red input field borders.
 

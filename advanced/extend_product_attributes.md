@@ -7,15 +7,15 @@ section: tutorial
 
 ## Overview
 
-If you need to add more attributes to your product model you can easily extend spree. In this example you are going to extend your product with an `short_descripton` and make it manageable through admin.
+If you need to add more attributes to your product model you can easily extend Spree. In this example you are going to extend your product with a `short_description` and make it manageable through admin.
 
-Note: Replace `RailsappName` and `railsapp_name` with your actualy Rails App Name \(sic!\)
+Note: Replace `RailsappName` and `railsapp_name` with your actual Rails App Name \(sic!\)
 
 ## Extend your Product
 
 ### Extend Product Attributes
 
-Create a migration that extends your spree products table. `rails g migration AddFieldsToSpreeProducts short_description:text` should create this migration
+Create a migration that extends your Spree products table. `rails g migration AddFieldsToSpreeProducts short_description:text` should create this migration
 
 ```ruby
 class AddFieldsToSpreeProducts < ActiveRecord::Migration[5.2]
@@ -67,7 +67,7 @@ File Location: `app/serializers/railsapp_name/spree/product_serializer_decorator
 
 _Create Template for Admin Form_
 
-```ruby
+```erb
 <div data-hook="admin_product_form_short_description">
   <%= f.field_container :short_description, class: ['form-group'] do %>
     <%= f.label :short_description %>

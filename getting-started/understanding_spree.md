@@ -41,7 +41,7 @@ Installing Spree via [Spree Starter](https://github.com/spree/spree_starter) giv
 
 --
 
-There are many other Spree-gems providing additional functionality to your Store called [Extensions](https://github.com/spree/spree-dev-docs/tree/0628094f68853238d9b13aa3b24d7b1e1b13fca4/extensions/README.md).
+There are many other Spree-gems providing additional functionality to your Store called [Extensions](../extensions/extensions.md).
 
 To change which Spree gems you would like to install you will need to modify your project `Gemfile`.
 

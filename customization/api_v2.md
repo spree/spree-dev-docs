@@ -2,10 +2,12 @@
 title: API v2
 section: customization
 order: 6
-description: This page covers customization of both Storefront API and Platform API
+description: >-
+  This page covers adding new Storefront API endpoints and customization of
+  existing ones
 ---
 
-# API v2
+# Storefront API
 
 ## Customizing existing API endpoints
 

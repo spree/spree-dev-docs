@@ -6,8 +6,6 @@ order: 5
 
 # Permissions
 
-## Overview
-
 ## User and Roles
 
 Spree by default comes with `admin` and `user` roles. You can create more roles in the Admin Panel UI or rails console / seed, eg.:
@@ -24,7 +22,7 @@ Spree.user_class.find_by(email: 'john@example.com').spree_roles << Spree::Role.f
 
 ## Ability class
 
-For authorization Spree uses [CanCanCan](https://github.com/CanCanCommunity/cancancan). The main ability class by default is [Spree::Ability](https://github.com/spree/spree/blob/master/core/app/models/spree/ability.rb).
+For authorization Spree uses [CanCanCan](https://github.com/CanCanCommunity/cancancan) library. The main ability class by default is [Spree::Ability](https://github.com/spree/spree/blob/master/core/app/models/spree/ability.rb).
 
 ## Adding custom permissions
 

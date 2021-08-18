@@ -6,8 +6,10 @@ order: 0
 
 # Storefront
 
-{% hint style="info" %}
-This sections covers the Rails based storefront which was extracted to `spree_frontend` ruby gem. 
+{% hint style="warning" %}
+This sections covers the Rails storefront which was extracted to `spree_frontend` ruby gem. 
+
+For new projects we recommend to use [Storefront API](https://spark-solutions.stoplight.io/docs/api-v2/api/docs/v2/storefront/index.yaml) to build your own storefront.
 {% endhint %}
 
 ## Styling with SASS variables

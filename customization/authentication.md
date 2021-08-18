@@ -91,8 +91,7 @@ include Spree::Core::ControllerHelpers::Store
 include Spree::Core::ControllerHelpers::Currency
 include Spree::Core::ControllerHelpers::Locale
 
-helper 'spree/base'
-helper 'spree/locale', 'spree/currency', 'spree/store'
+helper 'spree/base', 'spree/locale', 'spree/currency', 'spree/store'
 ```
 
 Each of the methods defined in this module return values that are the most common in Rails applications today, but you may need to customize them. In order, they are:
@@ -162,33 +161,6 @@ user.has_spree_role?('admin')
 ```
 
 If this returns `true`, then the user has admin permissions within Spree.
-
-Finally, if you are using the API component of Spree, there are more methods added. The first is the `spree_api_key` getter and setter methods, used for the API key that is used with Spree. The next two methods are `generate_spree_api_key!` and `clear_spree_api_key` which will generate and clear the Spree API key respectively.
-
-## Login link
-
- This is only applicable for Spree 4.0 and older. Spree 4.1 and newer releases handle this out of the box.
-
-To make the login link appear on Spree pages, you will need to modify `spree/shared/_nav_bar.html.erb` file which you can copy over from Spree codebase to your project \(detailed in [Storefront Customization section](storefront.md)\).
-
-You will need to add this code:
-
-```text
-<%% if try_spree_current_user %>
-  <li>
-    <%%= link_to Spree.t(:logout), spree_logout_path, method: :delete %>
-  </li>
-<%% else %>
-  <li>
-    <%%= link_to Spree.t(:login), spree_login_path %>
-  </li>
-  <li>
-    <%%= link_to Spree.t(:sign_up), spree_signup_path %>
-  </li>
-<%% end %>
-```
-
-This will then use the URL helpers you have defined in `lib/spree/authentication_helpers.rb` to define three links, one to allow users to logout, one to allow them to login, and one to allow them to signup. These links will be visible on all customer-facing pages of Spree.
 
 ## Gemfile
 

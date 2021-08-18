@@ -78,9 +78,9 @@ rails db:migrate
 
 ## Upgrade Sprockets to v4
 
-In your project create  `app/assets/config/manifest.jss` file with contents: 
+In your project create `app/assets/config/manifest.js` file with contents:
 
-```ruby
+```js
 //= link_tree ../images
 //= link_tree ../javascripts
 //= link_directory ../stylesheets .css

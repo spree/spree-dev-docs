@@ -20,14 +20,14 @@ We recommend you start and stick to Heroku if you do not have DevOps-skilled tea
 
 There's 2 type of dynos:
 
-* Web - for running the web interface of yuour Store \(Storefront, API, Admin Panel\)
-* Worker - for running background jobs via [Active Job](https://guides.rubyonrails.org/active_job_basics.html) such as email send out, report generation, etc
+* **Web** - for running the web interface of yuour Store \(Storefront, API, Admin Panel\)
+* **Worker** - for running background jobs via [Active Job](https://guides.rubyonrails.org/active_job_basics.html) such as email send out, report generation, etc
 
 ### Recommended sizing
 
 | Dynos | Staging environment | Production environment |
 | :--- | :--- | :--- |
-| **web** | 1 x Standard-2x | 1 x Standard-2x \(small traffic\) or 1 x Performance-M \(medium traffic\) |
+| **web** | 1 x Standard-2x | 1 x Performance-M or Performance-L |
 | **worker** | 1 x Standard-1x | 1 x Standard-1x |
 
 ## Add-Ons
@@ -42,9 +42,9 @@ There's 2 type of dynos:
 | Edge | Hobby | Micro |
 | Heroku Postgres | Hobby Basic | Standard-0 |
 | Heroku Scheduler | N/A | N/A |
-| Memcached Cloud | Free | 100 MB |
+| Memcached Cloud | Free | 1 GB |
 | Papertrail | Choklad | Fixa |
-| Redis Cloud | Free | 100 MB |
+| Redis Cloud | Free | 250 MB |
 | Scout APM | Free | Free \(small traffic\) or Eldora \(medium traffic\) |
 | Sendgrid | Free | Bronze |
 | Sentry | Free | Small |

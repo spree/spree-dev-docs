@@ -6,29 +6,38 @@ order: 1
 
 # Understanding how Spree works
 
-Spree is a modular application with a lean Core, REST API, and several optional modules and extensions.
+## Headless Commerce
 
-## Rails Engine
+Spree is a modular, API-first headless commerce application. What does it mean? 
 
-Spree is a [Ruby on Rails Engine](https://guides.rubyonrails.org/engines.html), which means it's an application that provides functionality to their host applications \(that is your store application\).
+Spree comes with a set of [APIs](https://api.spreecommerce.org/) you can work with directly or via [SDK](https://github.com/spree/spree-storefront-api-v2-js-sdk) to build your own Storefront.
 
-Spree is a collection of Models, Views, and Controllers that your application gains access to when you install Spree. You can easily combine Spree with any Ruby on Rails application meaning you can add e-commerce capabilities to your existing RoR applications.
+For application to application integration, you can use Platform API.
 
-## Spree namespace
+There are optional Admin / Storefront packages available also.
 
-All Spree models, controllers and other classes are namespaced by the `Spree` keyword, eg. `Spree::Product`. This means that those files are also located in `spree` sub-directories eg. [app/models/spree/product.rb](https://github.com/spree/spree/blob/master/core/app/models/spree/product.rb).
+## Spree codebase
 
-## Spree modules
+Spree API is written in Ruby on Rails framework and is mounted into a Rails application as [a Rails Engine](https://guides.rubyonrails.org/engines.html).
 
-Spree is divided into several modules / gems which you can opt-out if you would like. Installing Spree via Spree Starter gives you access to all of Spree features such as Stoprefront, API and Admin Panel. Not all of the modules are required, eg. headless installations will not require Storefront at all.
+You don't need to be a Rails developer to work with Spree. You can install Spree via Spree Starter or Docker and not touch the underlying codebase at all and work only with the APIs. 
 
-| Spree module | Description | Required? |
-| :--- | :--- | :--- |
-| **api** | REST API for | **yes** |
-| **backend** | Admin Panel UI | no |
-| **core** | Data models, Services and libraries | **yes** |
-| **frontend** | Storefront UI | no |
-| **sample** | Sample seed data | no |
+### Spree namespace
+
+All Spree models, controllers and other Ruby classes are namespaced by the `Spree` keyword, eg. `Spree::Product`. This means that those files are also located in `spree` sub-directories eg. [app/models/spree/product.rb](https://github.com/spree/spree/blob/master/core/app/models/spree/product.rb).
+
+### Spree modules
+
+Spree is divided into several modules / gems which you can install independently. 
+
+Installing Spree via [Spree Starter](https://github.com/spree/spree_starter) gives you access to all of Spree features such as Storefront, API and Admin Panel. 
+
+| Spree module | Description |
+| :--- | :--- |
+| **spree** | Data models, Services and APIs |
+| **spree\_backend** | Admin Panel UI \(Rails\) |
+| **spree\_frontend** | Storefront \(Rails\) |
+| **spree\_sample** | Sample seed data |
 
 --
 
@@ -36,7 +45,7 @@ There are many other Spree-gems providing additional functionality to your Store
 
 To change which Spree gems you would like to install you will need to modify your project `Gemfile`.
 
-### Headless installation
+### Headless installation \(default\)
 
 ```ruby
 gem 'spree'
@@ -72,5 +81,5 @@ docker-compose build
 
 ## Next steps
 
-We recommend you go over [Internals section](../internals/stores.md) to learn more about how Spree works under the hood. This knowledge will be very useful when you'll decide you want to [customize your Spree store](../customization/dependencies.md).
+We recommend you go over [Internals section](../internals/stores.md) to learn more about how Spree works under the hood.
 

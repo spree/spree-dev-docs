@@ -3,6 +3,7 @@ title: Upgrading Spree from 1.2.x to 1.3.x
 section: upgrades
 order: 14
 hidden: true
+description: This guide covers upgrading a 1.2.x Spree application to Spree 1.3.x
 ---
 
 # 1.2 to 1.3

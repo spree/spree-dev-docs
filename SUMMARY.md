@@ -90,3 +90,10 @@
 * [Developing Spree](contributing/developing_spree.md)
 * [Upgrading extensions](contributing/upgrading_extensions.md)
 
+## 🤝Support
+
+---
+
+* [Core Team support](https://spreecommerce.org/contact)
+* [Slack Community](https://slack.spreecommerce.org)
+

@@ -8,7 +8,7 @@ order: 6
 
 ## Overview
 
-An `Adjustment` object tracks an adjustment to the price of an [Order](/developer/internals/orders.html), an order's [Line Item](/developer/internals/orders.html#line-items), or an order's [Shipments](/developer/internals/shipments.html) within a Spree Commerce storefront.
+An `Adjustment` object tracks an adjustment to the price of an [Order](https://dev-docs.spreecommerce.org/internals/orders), an order's [Line Item](https://dev-docs.spreecommerce.org/internals/shipments), or an order's [Shipments](https://dev-docs.spreecommerce.org/internals/shipments) within a Spree Commerce storefront.
 
 Adjustments can be either positive or negative. Adjustments with a positive value are sometimes referred to as "charges" while adjustments with a negative value are sometimes referred to as "credits." These are just terms of convenience since there is only one `Spree::Adjustment` model in a storefront which handles this by allowing either positive or negative values.
 

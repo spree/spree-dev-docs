@@ -11,14 +11,14 @@ description: >-
 
 ## Spree APIs
 
-Spree is a modular, API-first headless ecommerce platform which consists of several APIs.
+Spree is a modular, API-first headless e-commerce platform that consists of several APIs.
 
 ### [Storefront API](https://api.spreecommerce.org/docs/api-v2/YXBpOjMxMjQ5NjA-storefront-api-v2)
 
 * Modern and lightweight REST API based on JSON API schema
 * Designed for building Storefronts and mobile apps
 * [JavaScript / TypeScript SDK](https://github.com/spree/spree-storefront-api-v2-js-sdk) available
-* NextJS Commetce and VueStorefront integrations available soon!
+* Next.js Commerce and VueStorefront integrations will be released soon!  [Please contact us directly](https://spreecommerce.org/contact) for early access
 
 ### [Platform API](https://api.spreecommerce.org/docs/api-v2/YXBpOjg3MzkxODk-platform-api-v2) \(Developer Preview\)
 
@@ -31,13 +31,13 @@ Spree is a modular, API-first headless ecommerce platform which consists of seve
 
 We're working hard to deliver webhooks in the [next release](https://github.com/spree/spree/milestone/45)!
 
-### GraphQL
-
-We're planning to deliver GraphQL in Q4 2021!
-
 ## Storefronts
 
-Spree does not include Storefront but you can build one yourself either using 
+Spree allows limitless storefront customization. 
+
+You can build your own storefront from scratch using our [SDK](https://github.com/spree/spree-storefront-api-v2-js-sdk) which takes care of all heavy lifting tasks, or you can use [Next.js Commerce](https://nextjs.org/commerce) or [Vue Storefront](https://www.vuestorefront.io/). 
+
+For Next.js/Vue Storefront integration [please contact us directly](https://spreecommerce.org/contact) for early access.
 
 ## Spree modules
 

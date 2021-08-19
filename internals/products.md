@@ -60,17 +60,17 @@ Variants which are not the master variant are unique based on [option type and o
 
 ### Default Variant
 
-To simplify things you can call `product.default_variant` to get the default Variant. If product has multiple Variants it will return the first non-master Variant based on their sort position set in the Admin Panel. If there's no non-master Variants it will return the Master Variant.
+To simplify things you can call `product.default_variant` to get the default Variant. If a product has multiple Variants it will return the first non-master Variant based on their sort position set in the Admin Panel. If there are no non-master Variants it will return the Master Variant.
 
 ## Images
 
 Images link to a product through its master variant. The sub-variants for the product may also have their own unique images to differentiate them in the frontend.
 
-Spree automatically handles creation and storage of several size versions of each image \(via Active Storage\). See [Images Customization](/developer/customization/images.html) section.
+Spree automatically handles the creation and storage of several size versions of each image \(via Active Storage\). See [Images Customization](../customization/images.md) section.
 
 ## Product Properties
 
-Product properties track individual attributes for a product which don't apply to all products. These are typically additional information about the item. For instance, a T-Shirt may have properties representing information about the kind of material used, as well as the type of fit the shirt is.
+Product properties track individual attributes for a product that don't apply to all products. These are typically additional information about the item. For instance, a T-Shirt may have properties representing information about the kind of material used, as well as the type of fit the shirt is.
 
 A `Property` should not be confused with an [`OptionType`](products.md#option_type), which is used when defining [Variants](products.md#variants) for a product.
 
@@ -89,29 +89,15 @@ product.set_property("material", "100% cotton")
 
 If this property doesn't already exist, a new `Property` instance with this name will be created.
 
-## Multi-Currency Support
+## Prices
 
 `Price` objects track a price for a particular currency and variant combination. For instance, a [Variant](products.md#variants) may be available for $15 \(15 USD\) and €7 \(7 Euro\).
 
 Spree behind the scenes uses [Ruby Money gem](https://github.com/RubyMoney/money) with some [additional](https://github.com/spree/spree/blob/master/core/app/models/concerns/spree/display_money.rb) [tweaks](https://github.com/spree/spree/blob/master/core/lib/spree/money.rb).
 
-This presence or lack of a price for a variant in a particular currency will determine if that variant is visible in the frontend if this currency is selected. If no variants of a product have a particular price value for the store current currency, that product will not be visible in the frontend. Frontend currency is determined by `default_currency` value in `Spree::Store` model.
+If a product doesn't have a price in the selected currency it won't show up in the Storefront API by default. 
 
-You may see what price a product would be in the application default currency \(`Spree::Config[:currency]`\) by calling the `price` method on that instance:
-
-```bash
-product.price
-=> "15.99"
-```
-
-To get the price with the currency symbol please use `display_price` method:
-
-```bash
-product.display_price
-=> "$15.99"
-```
-
-To find a list of currencies that this product is available in, call `prices` to get a list of related `Price` objects:
+To fetch a list of currencies that given product is available in, call `prices` to get a list of related `Price` objects:
 
 ```bash
 product.prices
@@ -128,15 +114,33 @@ product.default_variant.prices
 To find Product price in a selected currency via [ISO symbol](https://www.iban.com/currency-codes):
 
 ```bash
-product.price_in('EUR').amount
+product.price_in('EUR')
+=> #<Spree::Price id: 232, variant_id: 232, amount: 0.8499e2, currency: "EUR", deleted_at: nil, created_at: "2021-08-16 19:41:55.888522000 +0000", updated_at: "2021-08-16 19:41:55.888522000 +0000", compare_at_amount: nil, preferences: nil>
 ```
 
-This value can be `nil` if there's no price for this Product in selected currency \(in this case Euros\).
+If there's no price set for this currency this will return a `Price.new(currency: 'EUR')` object.
 
-To find Variant price in a selected currency:
+To find Variant's price in a selected currency:
 
 ```bash
-product.default_variant.price_in('EUR').amount
+product.default_variant.price_in('EUR')
+=> #<Spree::Price id: 232, variant_id: 232, amount: 0.8499e2, currency: "EUR", deleted_at: nil, created_at: "2021-08-16 19:41:55.888522000 +0000", updated_at: "2021-08-16 19:41:55.888522000 +0000", compare_at_amount: nil, preferences: nil>
+```
+
+There are also other helpful methods available such as:
+
+#### Getting amount \(number\)
+
+```text
+product.default_variant.amount_in('EUR')
+ => 0.8499e2
+```
+
+#### Getting amount \(string\)
+
+```text
+product.default_variant.amount_in('EUR').to_s
+ => "84.99"
 ```
 
 ## Prototypes

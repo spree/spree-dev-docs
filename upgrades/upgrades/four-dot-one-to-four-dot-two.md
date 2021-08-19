@@ -11,8 +11,8 @@ If you have any questions or suggestions feel free to reach out through [Spree s
 
 **If you're on an older version than 4.1 please follow previous upgrade guides and perform those upgrades incrementally**, eg.
 
-1. [upgrade 3.7 to 4.0](/developer/upgrades/three-dot-seven-to-four-dot-oh.html)
-2. [upgrade 4.0 to 4.1](/developer/upgrades/four-dot-oh-to-four-dot-one.html)
+1. [upgrade 3.7 to 4.0](https://dev-docs.spreecommerce.org/upgrades/upgrades/three-dot-seven-to-four-dot-oh)
+2. [upgrade 4.0 to 4.1](https://dev-docs.spreecommerce.org/upgrades/upgrades/four-dot-oh-to-four-dot-one)
 
 This is the safest and recommended method.
 
@@ -39,7 +39,7 @@ If you used that gem in the past you need to remove. Multi Currency is now incor
 
 ## Add `deface` gem \(optional\)
 
-If you used [Deface overrides](/developer/advanced/deface_overrides_tutorial.html) you will need to include `deface` in your `Gemfile` as it was removed from Spree / Spree Auth Devise / Spree Gateway dependencies.
+If you used [Deface overrides](https://dev-docs.spreecommerce.org/advanced/deface_overrides_tutorial) you will need to include `deface` in your `Gemfile` as it was removed from Spree / Spree Auth Devise / Spree Gateway dependencies.
 
 Simply add it to your `Gemfile`:
 

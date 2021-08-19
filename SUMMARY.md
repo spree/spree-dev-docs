@@ -6,6 +6,7 @@
 
 * [Installation](getting-started/installation.md)
 * [Headless Commerce](getting-started/headless-commerce.md)
+* [API Reference](https://api.spreecommerce.org)
 
 ## ⚙️Internals
 

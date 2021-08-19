@@ -2,12 +2,12 @@
 
 * [Developer's Documentation](README.md)
 
-## Getting Started
+## 🚀Getting Started
 
 * [Installation](getting-started/installation.md)
 * [Headless Commerce](getting-started/headless-commerce.md)
 
-## Internals
+## ⚙️Internals
 
 * [Stores](internals/stores.md)
 * [Products](internals/products.md)
@@ -22,7 +22,7 @@
 * [Calculators](internals/calculators.md)
 * [Preferences](internals/preferences.md)
 
-## Customization
+## 🛠Customization
 
 * [Dependencies](customization/dependencies.md)
 * [Business Logic](customization/logic.md)
@@ -35,18 +35,18 @@
 * [Storefront](customization/storefront.md)
 * [Emails](customization/emails.md)
 
-## Extensions
+## 🎁Extensions
 
 * [Extensions](extensions/extensions.md)
 * [Creating an extension](extensions/extensions_tutorial.md)
 
-## Deployment
+## 🌏Deployment
 
 * [AWS](deployment/aws.md)
 * [Heroku](deployment/heroku.md)
 * [Performance](deployment/performance.md)
 
-## Security
+## 🔑Security
 
 * [General guidelines](security/index.md)
 * [API](security/api.md)
@@ -60,7 +60,7 @@
 * [Adding new attributes to Product model](advanced/extend_product_attributes.md)
 * [Testing Spree applications](advanced/testing.md)
 
-## Upgrades
+## ⏩Upgrades
 
 * [How to perform upgrades](upgrades/index.md)
 * [Upgrade guides](upgrades/upgrades/README.md)
@@ -84,7 +84,7 @@
   * [1.1 to 1.2](upgrades/upgrades/one-dot-one-to-one-dot-two.md)
   * [1.0 to 1.1](upgrades/upgrades/one-dot-oh-to-one-dot-one.md)
 
-## Contributing
+## ❤️Contributing
 
 * [General guidelines](contributing/index.md)
 * [Developing Spree](contributing/developing_spree.md)

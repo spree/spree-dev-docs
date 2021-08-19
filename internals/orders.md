@@ -52,7 +52,7 @@ Some methods you may find useful:
 
 ## The Order State Machine
 
-Orders flow through a state machine, beginning at a `cart` state and ending up at a `complete` state. The intermediary states can be configured using the [Checkout Flow API](/developer/customization/checkout.html).
+Orders flow through a state machine, beginning at a `cart` state and ending up at a `complete` state. The intermediary states can be configured using the [Checkout Flow API](https://dev-docs.spreecommerce.org/customization/checkout#checkout-customization).
 
 The default states are as follows:
 
@@ -79,12 +79,12 @@ Assuming that an order meets the criteria for the next state, you will be able t
 Alongside the global Order state there's also `shipment_state` column which indicates the state of all shipments. Order can have multiple shipments.
 
 * `shipped` - all Shipments are in the `shipped` state
-* `partial` - at least one Shipment has a state of `shipped` and there is another Shipment with a state other than `shipped` or there are [InventoryUnits](/developer/internals/inventory.html) associated with the order that have a state of `sold` but are not associated with a Shipment
+* `partial` - at least one Shipment has a state of `shipped` and there is another Shipment with a state other than `shipped` or there are [InventoryUnits](https://dev-docs.spreecommerce.org/internals/inventory) associated with the order that have a state of `sold` but are not associated with a Shipment
 * `ready` - all Shipments are in the `ready` state
 * `backorder` - there is backordered inventory associated with an order
 * `pending` - all Shipments are in the `pending` state
 
-For more on this please go to [Shipment States page](developer/2_internals/developer/core/shipments.html#overview).
+For more on this please go to [Shipment States page](https://dev-docs.spreecommerce.org/internals/shipments).
 
 ### Order Payment states
 
@@ -96,13 +96,13 @@ Alongside the global Order state there's also `payment_state` column which indic
 * `failed` - most recent payment is in the `failed` state
 * `void` - order is canceled and `payment_total` isequal to `zero`
 
-For more on this please go to [Payment States page](/developer/internals/payments.html#overview).
+For more on this please go to [Payment States page](https://dev-docs.spreecommerce.org/internals/payments).
 
 ### Order Shipment states
 
 ## Line Items
 
-Line items are used to keep track of items within the context of an order. These records provide a link between orders, and [Variants](developer/2_internals/products.html#variants).
+Line items are used to keep track of items within the context of an order. These records provide a link between orders, and [Variants](https://dev-docs.spreecommerce.org/internals/products#variants).
 
 When a variant is added to an order, the price of that item is tracked along with the line item to preserve that data. If the variant's price were to change, then the line item would still have a record of the price at the time of ordering.
 
@@ -112,17 +112,17 @@ An order can link to two `Address` objects. The shipping address indicates where
 
 The billing address indicates where the user who's paying for the order is located. This can alter the tax rate for the order, which in turn can change how much the final order total can be.
 
-For more information about addresses, please read the [Addresses](/developer/internals/addresses.html) guide.
+For more information about addresses, please read the [Addresses](https://dev-docs.spreecommerce.org/internals/addresses) guide.
 
 ## Adjustments
 
-Adjustments are used to affect an order's final cost, either by decreasing it \([Promotions](/developer/internals/promotions.html)\) or by increasing it \([Shipping](/developer/internals/shipments.html), [Taxes](/developer/internals/taxation.html)\).
+Adjustments are used to affect an order's final cost, either by decreasing it \([Promotions](https://dev-docs.spreecommerce.org/internals/promotions) or by increasing it \([Shipping](https://dev-docs.spreecommerce.org/internals/shipments), [Taxes](https://dev-docs.spreecommerce.org/internals/taxation).
 
-For more information about adjustments, please see the [Adjustments](/developer/internals/adjustments.html) guide.
+For more information about adjustments, please see the [Adjustments](https://dev-docs.spreecommerce.org/internals/adjustments) guide.
 
 ## Payments
 
-Payment records are used to track payment information about an order. For more information, please read the [Payments](/developer/internals/payments.html) guide.
+Payment records are used to track payment information about an order. For more information, please read the [Payments](https://dev-docs.spreecommerce.org/internals/payments) guide.
 
 ## Return Authorizations
 

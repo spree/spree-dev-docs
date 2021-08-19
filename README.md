@@ -8,7 +8,7 @@ order: 0
 
 ![](.gitbook/assets/spree_header_978-2x.png)
 
-This is the developer-focused part of Spree Commerce documentation.
+This is the developer-focused part of Spree Commerce documentation
 
 Here you will find all kinds of information on topics such as Customization, Deployment, Configuration and inside knowledge of how Spree works under the hood.
 

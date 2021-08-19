@@ -3,6 +3,7 @@ title: Upgrading Spree from 2.1.x to 2.2.x
 section: upgrades
 order: 11
 hidden: true
+description: This guide covers upgrading a 2.1.x Spree application to Spree 2.2.x
 ---
 
 # 2.1 to 2.2

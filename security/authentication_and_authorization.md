@@ -29,5 +29,5 @@ These configurations represent a reasonable starting point for a typical e-comme
 
 ## Authorization
 
-Please refer to [Permissions Customization guide](/developer/customization/permissions.html) for more information.
+Please refer to [Permissions Customization guide](https://dev-docs.spreecommerce.org/customization/permissions) for more information.
 

@@ -51,22 +51,22 @@ Each Store can have different multiple locales and currencies. This configuratio
 
 ## Checkout configuration
 
-Each Store can be configured to ship to only selected countries. This is achieved via the `checkout_zone_id` attribute which holds the ID of the selected [Zone record](https://github.com/spree/spree-dev-docs/tree/0628094f68853238d9b13aa3b24d7b1e1b13fca4/internals/shipments/README.md#zones).
+Each Store can be configured to ship to only selected countries. This is achieved via the `checkout_zone_id` attribute which holds the ID of the selected [Zone record](https://dev-docs.spreecommerce.org/internals/shipments#zones).
 
-Available Shipping Methods on the Checkout are determined based on the [Zone and Shipping Methods configuration](https://github.com/spree/spree-dev-docs/tree/0628094f68853238d9b13aa3b24d7b1e1b13fca4/internals/shipments/README.md).
+Available Shipping Methods on the Checkout are determined based on the [Zone and Shipping Methods configuration](https://dev-docs.spreecommerce.org/internals/shipments#design-and-functionality).
 
-This will also have an effect on what [Shipping / Billing Addresses](https://github.com/spree/spree-dev-docs/tree/0628094f68853238d9b13aa3b24d7b1e1b13fca4/internals/addresses/README.md) user can add / select during Checkout. Only Addresses from Countries or States available in the selected Zone can be used and will be visible in the User's Address Book.
+This will also have an effect on what [Shipping / Billing Addresses](https://dev-docs.spreecommerce.org/internals/addresses#address) user can add / select during Checkout. Only Addresses from Countries or States available in the selected Zone can be used and will be visible in the User's Address Book.
 
 ## Store resources
 
 | Resource | Relationship |
 | :--- | :--- |
-| [**Order**](https://github.com/spree/spree-dev-docs/tree/0628094f68853238d9b13aa3b24d7b1e1b13fca4/internals/orders/README.md) | One Order belongs to one Store |
-| [**Product**](https://github.com/spree/spree-dev-docs/tree/0628094f68853238d9b13aa3b24d7b1e1b13fca4/internals/products/README.md) | One Product can be associated with many Store\(s\), you can pick and choose in which Store\(s\) each Product will be available |
-| [**Payment Method**](https://github.com/spree/spree-dev-docs/tree/0628094f68853238d9b13aa3b24d7b1e1b13fca4/internals/payments/README.md#payment-methods) | One Payment Method can be associated with many Store\(s\), you can select in which Stores given Payment Method will be available on Checkout |
+| [**Order**](https://dev-docs.spreecommerce.org/internals/orders) | One Order belongs to one Store |
+| [**Product**](https://dev-docs.spreecommerce.org/internals/products) | One Product can be associated with many Store\(s\), you can pick and choose in which Store\(s\) each Product will be available |
+| [**Payment Method**](https://dev-docs.spreecommerce.org/internals/payments) | One Payment Method can be associated with many Store\(s\), you can select in which Stores given Payment Method will be available on Checkout |
 | **Store Credit** | One Store Credit belongs to and can be used in one Store |
 | **CMS Page** | One Page belongs to one Store |
 | **Navigation Menu** | One Menu belongs to one Store |
-| [**Taxonomy**](https://github.com/spree/spree-dev-docs/tree/0628094f68853238d9b13aa3b24d7b1e1b13fca4/internals/products/README.md#taxons-and-taxonomies) | One Taxonomy belongs to one Store |
-| [**Promotion**](https://github.com/spree/spree-dev-docs/tree/0628094f68853238d9b13aa3b24d7b1e1b13fca4/internals/promotions/README.md) | One Promotion can be associated with multiple Stores |
+| [**Taxonomy**](https://dev-docs.spreecommerce.org/internals/products#taxons-and-taxonomies) | One Taxonomy belongs to one Store |
+| [**Promotion**](https://dev-docs.spreecommerce.org/internals/promotions) | One Promotion can be associated with multiple Stores |
 

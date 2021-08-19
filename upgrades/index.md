@@ -36,7 +36,7 @@ New features, will likely contain API changes. The difference between Spree mino
 
 ## Security
 
-Our Security policy is [described here](/developer/security/security.html).
+Our Security policy is [described here](https://dev-docs.spreecommerce.org/security/index).
 
 When a release series is no longer supported, it's your own responsibility to deal with bugs and security issues. We may provide backports of some critical security fixes.
 

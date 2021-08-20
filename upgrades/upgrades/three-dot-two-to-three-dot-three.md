@@ -22,7 +22,7 @@ gem 'spree_gateway', '~> 3.3'
 
 ### Update your extensions
 
-We're changing how extensions dependencies work. Previously you had to match extension branch to Spree branch. Starting from Spree 3.2 release date `master` branch of all `spree-contrib` extensions should work with Spree &gt;= `3.1` and &lt; `4.0`. Please change your extensions in Gemfile eg.:
+We're changing how extensions dependencies work. Previously you had to match the extension branch to the Spree branch. Starting from Spree 3.2 release date `master` branch of all `spree-contrib` extensions should work with Spree &gt;= `3.1` and &lt; `4.0`. Please change your extensions in Gemfile eg.:
 
 from:
 
@@ -54,7 +54,7 @@ rails db:migrate
 
 ### Include `UserMethods` in your `User` class
 
-With this release we're not including this automatically. You need to do it manually if you're not using `spree_auth_devise`.
+With this release, we're not including this automatically. You need to do it manually if you're not using `spree_auth_devise`.
 
 You need to include `Spree::UserMethods` in your user class, eg.
 
@@ -82,13 +82,13 @@ gem 'aws-sdk', '>= 2.0'
 
 and run `bundle update aws-sdk`
 
-In your paperclip configuration you also need to specify `s3_region` attribute eg. [https://github.com/spree/spree/blame/master/guides/content/developer/customization/s3\_storage.md\#L27](https://github.com/spree/spree/blame/master/guides/content/developer/customization/s3_storage.md#L27)
+In your paperclip configuration, you also need to specify `s3_region` attribute eg. [https://github.com/spree/spree/blame/master/guides/content/developer/customization/s3\_storage.md\#L27](https://github.com/spree/spree/blame/master/guides/content/developer/customization/s3_storage.md#L27)
 
 Seel also [RubyThursday episode](https://rubythursday.com/episodes/ruby-snack-27-upgrade-paperclip-and-aws-sdk-in-prep-for-rails-5) walkthrough of upgrading paperclip in your project.
 
 ### Add jquery.validate to your project if you've used it directly from Spree
 
-If your application.js file includes line `//= require jquery.validate/jquery.validate.min` you will need to add it this file manually to your project because this library was [removed from Spree in favour of native HTML5 validation](https://github.com/spree/spree/pull/8173).
+If your application.js file includes line `//= require jquery.validate/jquery.validate.min` you will need to add this file manually to your project because this library was [removed from Spree in favor of native HTML5 validation](https://github.com/spree/spree/pull/8173).
 
 ## Read the release notes
 
@@ -96,5 +96,5 @@ For information about changes contained within this release, please read the [3.
 
 ## Verify that everything is OK
 
-Run you test suite, click around in your store and make sure it's performing as normal. Fix any deprecation warnings you see.
+Run your test suite, click around in your store and make sure it's performing as normal. Fix any deprecation warnings you see.
 

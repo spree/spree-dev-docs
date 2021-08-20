@@ -3,19 +3,20 @@ title: Upgrading Spree from 1.0.x to 1.1.x
 section: upgrades
 hidden: true
 order: 16
+description: 'This guide covers upgrading a 1.0.x Spree store, to a 1.1.x store.'
 ---
 
 # 1.0 to 1.1
 
 ## Overview
 
-This guide covers upgrading a 1.0.x Spree store, to a 1.1.x store. This guide has been written from the perspective of a blank Spree 1.0.x store with no extensions.
+This guide has been written from the perspective of a blank Spree 1.0.x store with no extensions.
 
-If you have extensions that your store depends on, you will need to manually verify that each of those extensions work within your 1.1.x store once this upgrade is complete. Typically, extensions that are compatible with this version of Spree will have a 1-1-stable branch.
+If you have extensions that your store depends on, you will need to manually verify that each of those extensions works within your 1.1.x store once this upgrade is complete. Typically, extensions that are compatible with this version of Spree will have a 1-1-stable branch.
 
 ## Upgrade Rails
 
-Spree 1.1 depends on any Rails 3.2 release afer Rails 3.2.9. Ensure that you have that dependency specified in your Gemfile:
+Spree 1.1 depends on any Rails 3.2 release after Rails 3.2.9. Ensure that you have that dependency specified in your Gemfile:
 
 ```ruby
 gem 'rails', '~> 3.2.9'```

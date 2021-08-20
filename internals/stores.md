@@ -68,5 +68,5 @@ This will also have an effect on what [Shipping / Billing Addresses](https://dev
 | **CMS Page** | One Page belongs to one Store |
 | **Navigation Menu** | One Menu belongs to one Store |
 | \*\*\*\*[**Taxonomy**](https://dev-docs.spreecommerce.org/internals/products#taxons-and-taxonomies)\*\*\*\* | One Taxonomy belongs to one Store |
-| **Promotion** | One Promotion can be associated with multiple Stores |
+| \*\*\*\*[**Promotion**](https://dev-docs.spreecommerce.org/internals/promotions)\*\*\*\* | One Promotion can be associated with multiple Stores |
 

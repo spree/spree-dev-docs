@@ -11,11 +11,11 @@ If you have any questions or suggestions feel free to reach out through [Spree s
 
 **If you're on an older version than 4.0 please follow previous upgrade guides and perform those upgrades incrementally**, eg.
 
-1. [upgrade 3.3 to 3.4](/developer/upgrades/three-dot-three-to-three-dot-four.html)
-2. [upgrade 3.4 to 3.5](/developer/upgrades/three-dot-four-to-three-dot-five.html)
-3. [upgrade 3.5 to 3.6](/developer/upgrades/three-dot-five-to-three-dot-six.html)
-4. [upgrade 3.6 to 3.7](/developer/upgrades/three-dot-six-to-three-dot-seven.html)
-5. [upgrade 3.7 to 4.0](/developer/upgrades/three-dot-seven-to-four-dot-oh.html)
+1. [upgrade 3.3 to 3.4](https://dev-docs.spreecommerce.org/upgrades/upgrades/three-dot-three-to-three-dot-four)
+2. [upgrade 3.4 to 3.5](https://dev-docs.spreecommerce.org/upgrades/upgrades/three-dot-four-to-three-dot-five)
+3. [upgrade 3.5 to 3.6](https://dev-docs.spreecommerce.org/upgrades/upgrades/three-dot-five-to-three-dot-six)
+4. [upgrade 3.6 to 3.7](https://dev-docs.spreecommerce.org/upgrades/upgrades/three-dot-six-to-three-dot-seven)
+5. [upgrade 3.7 to 4.0](https://dev-docs.spreecommerce.org/upgrades/upgrades/three-dot-seven-to-four-dot-oh)
 
 This is the safest and recommended method.
 
@@ -71,7 +71,7 @@ To replace your current frontend with the new Spree UI follow these steps:
    * [spree\_storefront.rb](https://raw.githubusercontent.com/spree/spree/master/core/lib/generators/spree/install/templates/config/initializers/spree_storefront.rb) to `config/initializers/spree_storefront.rb`
    * [spree\_storefront.yml](https://raw.githubusercontent.com/spree/spree/master/core/lib/generators/spree/install/templates/config/spree_storefront.yml) to `config/spree_storefront.yml`
 4. If you overwrote any `spree_frontend` [controllers](https://github.com/spree/spree/tree/master/frontend/app/controllers) you will need to either remove your local copies or move your custom logic to [decorators](https://guides.spreecommerce.org/developer/customization/logic.html#extending-controllers)
-5. Same goes for [helpers](https://github.com/spree/spree/tree/master/frontend/app/helpers/spree)
+5. The same goes for [helpers](https://github.com/spree/spree/tree/master/frontend/app/helpers/spree)
 6. You will also need to remove this line:
 
    ```javascript
@@ -94,7 +94,7 @@ If you wish to not move to the new Storefront UI it's still an option. Just proc
 
 2. Copy over all views from Spree 4.0
 
-   Copy over views from: [https://github.com/spree/spree/tree/4-0-stable/frontend/app/views](https://github.com/spree/spree/tree/4-0-stable/frontend/app/views) to your application views directory: `app/views`
+   Copy overviews from: [https://github.com/spree/spree/tree/4-0-stable/frontend/app/views](https://github.com/spree/spree/tree/4-0-stable/frontend/app/views) to your application views directory: `app/views`
 
    **WARNING** remember to not overwrite your customizations!
 

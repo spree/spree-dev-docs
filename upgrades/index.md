@@ -8,15 +8,15 @@ order: 0
 
 ## Overview
 
-Keeping your Spree installation up-to-date is essential to keep it safe and secure. Each Spree version brings new features, enhancements and bugfixes so it's greatly beneficial for you and your clients to upgrade frequently.
+Keeping your Spree installation up-to-date is essential to keep it safe and secure. Each Spree version brings new features, enhancements and bug fixes so it's greatly beneficial for you and your clients to upgrade frequently.
 
-The upgrade process is fairly easy and well described. Of course it all boils down to the level of customizations and the way you've customized your Spree applications.
+The upgrade process is fairly easy and well described. Of course, it all boils down to the level of customizations and the way you've customized your Spree applications.
 
 We strongly advise upgrading Spree incrementally, rather than in one big go.
 
 ## Support
 
-If you're stuck and would want get some professional help, you can [contact us directly](https://spreecommerce.org/contact/) and request a quote for our constulting services.
+If you're stuck and would want to get some professional help, you can [contact us directly](https://spreecommerce.org/contact/) and request a quote for our consulting services.
 
 ## Release types
 
@@ -32,11 +32,11 @@ New features, may contain API changes \(Serve as major versions of Semver\). Bre
 
 **Major X, eg. 4.0.0**
 
-New features, will likely contain API changes. The difference between Spree minor and major releases is the magnitude of breaking changes, and usually reserved for special occasions.
+New features, will likely contain API changes. The difference between Spree minor and major releases is the magnitude of breaking changes and is usually reserved for special occasions.
 
 ## Security
 
-Our Security policy is [described here](/developer/security/security.html).
+Our Security policy is [described here](https://dev-docs.spreecommerce.org/security).
 
 When a release series is no longer supported, it's your own responsibility to deal with bugs and security issues. We may provide backports of some critical security fixes.
 

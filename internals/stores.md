@@ -44,29 +44,29 @@ Spree::Store.default
 
 Each Store can have different multiple locales and currencies. This configuration is stored in Store model attributes:
 
-* `default_currency`- this is the default currency which will be pre-selected when visiting the store the first time, eg. `USD`
-* `supported_currencies` - if there is more than one supported currency, visitor will be able to choose which currency they would like to browse your store in, eg. `USD`, `CAD`, etc.
+* `default_currency`- this is the default currency that will be pre-selected when visiting the store the first time, eg. `USD`
+* `supported_currencies` - if there is more than one supported currency, visitors will be able to choose which currency they would like to browse your store in, eg. `USD`, `CAD`, etc.
 * `default_locale` - this is the default locale/language which will be pre-selected when visiting the store the first time, eg. `en`
-* `supported_locales`, if there is more than one supported locale, visitor will be able to choose which locale they would like to browse your store in, eg. `en`, `fr`, etc. Locales are available upon installing [Spree I18n](https://github.com/spree-contrib/spree_i18n)
+* `supported_locales`, if there is more than one supported locale, visitors will be able to choose which locale they would like to browse your store in, eg. `en`, `fr`, etc. Locales are available upon installing [Spree I18n](https://github.com/spree-contrib/spree_i18n)
 
 ## Checkout configuration
 
-Each Store can be configured to ship to only selected countries. This is achieved via the `checkout_zone_id` attribute which holds the ID of the selected [Zone record](https://github.com/spree/spree-dev-docs/tree/0628094f68853238d9b13aa3b24d7b1e1b13fca4/internals/shipments/README.md#zones).
+Each Store can be configured to ship to only selected countries. This is achieved via the `checkout_zone_id` attribute which holds the ID of the selected [Zone record](https://dev-docs.spreecommerce.org/internals/shipments#zones).
 
-Available Shipping Methods on the Checkout are determined based on the [Zone and Shipping Methods configuration](https://github.com/spree/spree-dev-docs/tree/0628094f68853238d9b13aa3b24d7b1e1b13fca4/internals/shipments/README.md).
+Available Shipping Methods on the Checkout are determined based on the [Zone and Shipping Methods configuration](https://dev-docs.spreecommerce.org/internals/shipments).
 
-This will also have an effect on what [Shipping / Billing Addresses](https://github.com/spree/spree-dev-docs/tree/0628094f68853238d9b13aa3b24d7b1e1b13fca4/internals/addresses/README.md) user can add / select during Checkout. Only Addresses from Countries or States available in the selected Zone can be used and will be visible in the User's Address Book.
+This will also have an effect on what [Shipping / Billing Addresses](https://dev-docs.spreecommerce.org/internals/addresses) user can add/ select during Checkout. Only Addresses from Countries or States available in the selected Zone can be used and will be visible in the User's Address Book.
 
 ## Store resources
 
 | Resource | Relationship |
 | :--- | :--- |
-| [**Order**](https://github.com/spree/spree-dev-docs/tree/0628094f68853238d9b13aa3b24d7b1e1b13fca4/internals/orders/README.md) | One Order belongs to one Store |
-| [**Product**](https://github.com/spree/spree-dev-docs/tree/0628094f68853238d9b13aa3b24d7b1e1b13fca4/internals/products/README.md) | One Product can be associated with many Store\(s\), you can pick and choose in which Store\(s\) each Product will be available |
-| [**Payment Method**](https://github.com/spree/spree-dev-docs/tree/0628094f68853238d9b13aa3b24d7b1e1b13fca4/internals/payments/README.md#payment-methods) | One Payment Method can be associated with many Store\(s\), you can select in which Stores given Payment Method will be available on Checkout |
+| \*\*\*\*[**Order**](https://dev-docs.spreecommerce.org/internals/orders)\*\*\*\* | One Order belongs to one Store |
+| \*\*\*\*[**Product**](https://dev-docs.spreecommerce.org/internals/products)\*\*\*\* | One Product can be associated with many Store\(s\), you can pick and choose in which Store\(s\) each Product will be available |
+| \*\*\*\*[**Payment Method**](https://dev-docs.spreecommerce.org/internals/payments)\*\*\*\* | One Payment Method can be associated with many Store\(s\), you can select in which Stores given Payment Method will be available on Checkout |
 | **Store Credit** | One Store Credit belongs to and can be used in one Store |
 | **CMS Page** | One Page belongs to one Store |
 | **Navigation Menu** | One Menu belongs to one Store |
-| [**Taxonomy**](https://github.com/spree/spree-dev-docs/tree/0628094f68853238d9b13aa3b24d7b1e1b13fca4/internals/products/README.md#taxons-and-taxonomies) | One Taxonomy belongs to one Store |
-| [**Promotion**](https://github.com/spree/spree-dev-docs/tree/0628094f68853238d9b13aa3b24d7b1e1b13fca4/internals/promotions/README.md) | One Promotion can be associated with multiple Stores |
+| \*\*\*\*[**Taxonomy**](https://dev-docs.spreecommerce.org/internals/products#taxons-and-taxonomies)\*\*\*\* | One Taxonomy belongs to one Store |
+| **Promotion** | One Promotion can be associated with multiple Stores |
 

@@ -40,13 +40,13 @@ Variant records can track some individual properties regarding a variant, such a
 
 Every single product has a master variant, which tracks basic information such as a count on hand, a price and a SKU. Whenever a product is created, a master variant for that product will be created too.
 
-Master variants are automatically created along with a product and exist for the sole purpose of having a consistent API when associating variants and [line items](developer/2_internals/orders.html#line-items). If there were no master variant, then line items would need to track a polymorphic association which would either be a product or a variant.
+Master variants are automatically created along with a product and exist for the sole purpose of having a consistent API when associating variants and [line items](orders.md#line-items). If there were no master variant, then line items would need to track a polymorphic association which would either be a product or a variant.
 
 By having a master variant, the code within Spree to track is simplified.
 
 ### Normal Variants
 
-Variants which are not the master variant are unique based on [option type and option value](products.md#option_type) combinations. For instance, you may be selling a product which is a Baseball Jersey, which comes in the sizes "Small", "Medium" and "Large", as well as in the colors of "Red", "Green" and "Blue". For this combination of sizes and colors, you would be able to create 9 unique variants:
+Variants which are not the master variant are unique based on [option type and option value](products.md#option-types-and-option-values) combinations. For instance, you may be selling a product which is a Baseball Jersey, which comes in the sizes "Small", "Medium" and "Large", as well as in the colors of "Red", "Green" and "Blue". For this combination of sizes and colors, you would be able to create 9 unique variants:
 
 * Small, Red
 * Small, Green

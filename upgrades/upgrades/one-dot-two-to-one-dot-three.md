@@ -3,15 +3,16 @@ title: Upgrading Spree from 1.2.x to 1.3.x
 section: upgrades
 order: 14
 hidden: true
+description: 'This guide covers upgrading a 1.2.x Spree store, to a 1.3.x store.'
 ---
 
 # 1.2 to 1.3
 
 ## Overview
 
-This guide covers upgrading a 1.2.x Spree store, to a 1.3.x store. This guide has been written from the perspective of a blank Spree 1.2.x store with no extensions.
+This guide has been written from the perspective of a blank Spree 1.2.x store with no extensions.
 
-If you have extensions that your store depends on, you will need to manually verify that each of those extensions work within your 1.3.x store once this upgrade is complete. Typically, extensions that are compatible with this version of Spree will have a 1-3-stable branch.
+If you have extensions that your store depends on, you will need to manually verify that each of those extensions works within your 1.3.x store once this upgrade is complete. Typically, extensions that are compatible with this version of Spree will have a 1-3-stable branch.
 
 ## Upgrade Spree
 

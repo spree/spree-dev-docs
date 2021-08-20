@@ -3,13 +3,14 @@ title: Upgrading Spree from 2.3.x to 2.4.x
 section: upgrades
 hidden: true
 order: 9
+description: 'This guide covers upgrading a 2.3.x Spree store, to a 2.4.x store.'
 ---
 
 # 2.3 to 2.4
 
-This guide covers upgrading a 2.3.x Spree store, to a 2.4.x store. This guide has been written from the perspective of a blank Spree 2.3.x store with no extensions.
+This guide has been written from the perspective of a blank Spree 2.3.x store with no extensions.
 
-If you have extensions that your store depends on, you will need to manually verify that each of those extensions work within your 2.4.x store once this upgrade is complete. Typically, extensions that are compatible with this version of Spree will have a 2-4-stable branch.
+If you have extensions that your store depends on, you will need to manually verify that each of those extensions works within your 2.4.x store once this upgrade is complete. Typically, extensions that are compatible with this version of Spree will have a 2-4-stable branch.
 
 ## Upgrade Rails
 

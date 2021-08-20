@@ -25,7 +25,7 @@ Please follow the [official Rails guide](http://guides.rubyonrails.org/5_2_relea
 
 Please follow the [official paperclip guide](https://github.com/thoughtbot/paperclip/blob/master/MIGRATING.md) if you want to use ActiveStorage instead of paperclip.
 
-You cann still use paperclip for attachment management by setting `SPREE_USE_PAPERCLIP` environment variable to `true`, but keep in mind that paperclip is DEPRECATED and we will remove paperclip support in Spree 4.0.
+You can still use paperclip for attachment management by setting `SPREE_USE_PAPERCLIP` environment variable to `true`, but keep in mind that paperclip is DEPRECATED and we will remove paperclip support in Spree 4.0.
 
 ### Install missing migrations
 
@@ -49,5 +49,5 @@ For information about changes contained within this release, please read the [3.
 
 ## Verify that everything is OK
 
-Run you test suite, click around in your application and make sure it's performing as normal. Fix any deprecation warnings you see.
+Run your test suite, click around in your application and make sure it's performing as normal. Fix any deprecation warnings you see.
 

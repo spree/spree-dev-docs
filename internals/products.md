@@ -72,7 +72,7 @@ Spree automatically handles the creation and storage of several size versions of
 
 Product properties track individual attributes for a product that don't apply to all products. These are typically additional information about the item. For instance, a T-Shirt may have properties representing information about the kind of material used, as well as the type of fit the shirt is.
 
-A `Property` should not be confused with an [`OptionType`](products.md#option_type), which is used when defining [Variants](products.md#variants) for a product.
+A `Property` should not be confused with an [`OptionType`](products.md#option-types-and-option-values), which is used when defining [Variants](products.md#variants) for a product.
 
 You can retrieve the value for a property on a `Product` object by calling the `property` method on it and passing through that property's name:
 

@@ -21,36 +21,48 @@ This is the safest and recommended method.
 ## Update Gemfile
 
 ```ruby
-gem 'spree', '~> 4.3.0.rc1'
+gem 'spree', '>= 4.3.0.rc1'
 ```
 
-## Remove SpreeMultiDomain \(optional\)
+## Remove gems merged into Spree Core
 
-If you used that gem in the past you need to remove it.
+### \(Optional\) Remove SpreeMultiDomain
 
-Multi Store is now incorporated into Spree core and you cannot use that gem anymore.
+If you used that gem in the past you need to remove it. Multi-Store is now incorporated into Spree core and you cannot use that gem anymore.
 
 1. Remove `spree_multi_domain` from your `Gemfile`
 2. Remove `//= require spree/frontend/spree_multi_domain` from `vendor/assets/javascripts/spree/frontend/all.js`
 3. Remove `//= require spree/backend/spree_multi_domain` from `vendor/assets/javascripts/spree/backend/all.js`
 
-## Add `spree_frontend` gem \(optional\)
+### \(Optional\) Remove Spree Editor
 
-`spree` gem now does not include the `spree_frontend` gem anymore. If you use the default Spree Storefront you need to add it to your `Gemfile`.
+Spree 4.3 includes TinyMCE 5 editor built-in. It's not recommended to use `spree_editor` gem anymore.
+
+### \(Optional\) Remove Spree Static Content
+
+Spree 4.3 includes a built-in CMS. It's not recommended to use `spree_static_content`
+
+## Add Spree modules
+
+Spree 4.3 was split into seperate modules which aren't included in the `spree` package anymore.
+
+### \(Optional\) Add `spree_frontend` gem
+
+If you use the default Spree Storefront you need to add it to your `Gemfile`.
 
 ```ruby
 gem 'spree_frontend', '~> 4.3.0.rc1'
 ```
 
-## Add `spree_backend` gem \(optional\)
+### \(Optional\) Add `spree_backend` gem
 
-`spree` gem now does not include the `spree_backend` gem anymore. If you use the default Spree Admin Panel you need to add it to your `Gemfile`.
+If you use the default Spree Admin Panel you need to add it to your `Gemfile`.
 
 ```ruby
 gem 'spree_backend', '~> 4.3.0.rc1'
 ```
 
-## Add `spree_emails` gem \(optional\)
+### \(Optional\) Add `spree_emails` gem
 
 Transactional emails once part of `spree_core` were extracted into their own gem called `spree_emails`. If you would like to still use this feature you'll need to include this new gem in your `Gemfile`.
 
@@ -76,7 +88,9 @@ rails spree:install:migrations
 rails db:migrate
 ```
 
-## Upgrade Sprockets to v4
+## Additional fixes and hints
+
+### Upgrade Sprockets to v4
 
 In your project create  `app/assets/config/manifest.jss` file with contents: 
 
@@ -87,6 +101,20 @@ In your project create  `app/assets/config/manifest.jss` file with contents:
 ```
 
 More [on this topic](https://github.com/rails/sprockets/blob/master/UPGRADING.md#manifestjs).
+
+### Admin Panel fix
+
+If you've developed custom features for your Admin Panel, please replace
+
+```ruby
+render partial: 'spree/shared/error_messages'
+```
+
+with
+
+```ruby
+render partial: 'spree/admin/shared/error_messages'
+```
 
 ## Upgrade all of your Spree extensions to the newest versions
 

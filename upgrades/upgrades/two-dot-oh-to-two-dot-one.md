@@ -3,17 +3,18 @@ title: Upgrading Spree from 2.0.x to 2.1.x
 section: upgrades
 order: 12
 hidden: true
+description: 'This guide covers upgrading a 2.0.x Spree store, to a 2.1.x store.'
 ---
 
 # 2.0 to 2.1
 
 ## Overview
 
-This guide covers upgrading a 2.0.x Spree store, to a 2.1.x store. This guide has been written from the perspective of a blank Spree 2.0.x store with no extensions.
+This guide has been written from the perspective of a blank Spree 2.0.x store with no extensions.
 
-If you have extensions that your store depends on, you will need to manually verify that each of those extensions work within your 2.1.x store once this upgrade is complete. Typically, extensions that are compatible with this version of Spree will have a 2-1-stable branch.
+If you have extensions that your store depends on, you will need to manually verify that each of those extensions works within your 2.1.x store once this upgrade is complete. Typically, extensions that are compatible with this version of Spree will have a 2-1-stable branch.
 
-This is the first Spree release which supports Rails 4 exclusively. Spree releases after this point will continue to support Rails 4 only.
+This is the first Spree release that supports Rails 4 exclusively. Spree releases after this point will continue to support Rails 4 only.
 
 ## Upgrade Rails
 

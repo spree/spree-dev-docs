@@ -21,7 +21,7 @@ gem 'spree_gateway', '~> 3.2.0'
 
 ### Update your extensions
 
-We're changing how extensions dependencies work. Previously you had to match extension branch to Spree branch. Starting from now `master` branch of all `spree-contrib` extensions should work with Spree &gt;= `3.1` and &lt; `4.0`. Please change your extensions in Gemfile eg.:
+We're changing how extensions dependencies work. Previously you had to match the extension branch to the Spree branch. Starting from now `master` branch of all `spree-contrib` extensions should work with Spree &gt;= `3.1` and &lt; `4.0`. Please change your extensions in Gemfile eg.:
 
 from:
 
@@ -57,5 +57,5 @@ For information about changes contained within this release, please read the [3.
 
 ## Verify that everything is OK
 
-Run you test suite, click around in your store and make sure it's performing as normal. Fix any deprecation warnings you see.
+Run your test suite, click around in your store and make sure it's performing as normal. Fix any deprecation warnings you see.
 

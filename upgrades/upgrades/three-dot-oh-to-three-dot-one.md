@@ -79,5 +79,5 @@ For information about changes contained within this release, please read the [3.
 
 ## Verify that everything is OK
 
-Run you test suite, click around in your store and make sure it's performing as normal. Fix any deprecation warnings you see.
+Run your test suite, click around in your store and make sure it's performing as normal. Fix any deprecation warnings you see.
 

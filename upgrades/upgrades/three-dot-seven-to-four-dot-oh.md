@@ -11,11 +11,11 @@ If you have any questions or suggestions feel free to reach out through [Spree s
 
 **If you're on an older version than 3.7 please follow previous upgrade guides and perform those upgrades incrementally**, eg.
 
-1. [upgrade 3.2 to 3.3](/developer/upgrades/three-dot-two-to-three-dot-three.html)
-2. [upgrade 3.3 to 3.4](/developer/upgrades/three-dot-three-to-three-dot-four.html)
-3. [upgrade 3.4 to 3.5](/developer/upgrades/three-dot-four-to-three-dot-five.html)
-4. [upgrade 3.5 to 3.6](/developer/upgrades/three-dot-five-to-three-dot-six.html)
-5. [upgrade 3.6 to 3.7](/developer/upgrades/three-dot-six-to-three-dot-seven.html)
+1. [upgrade 3.2 to 3.3](https://dev-docs.spreecommerce.org/upgrades/upgrades/three-dot-two-to-three-dot-three)
+2. [upgrade 3.3 to 3.4](https://dev-docs.spreecommerce.org/upgrades/upgrades/three-dot-three-to-three-dot-four)
+3. [upgrade 3.4 to 3.5](https://dev-docs.spreecommerce.org/upgrades/upgrades/three-dot-four-to-three-dot-five)
+4. [upgrade 3.5 to 3.6](https://dev-docs.spreecommerce.org/upgrades/upgrades/three-dot-five-to-three-dot-six)
+5. [upgrade 3.6 to 3.7](https://dev-docs.spreecommerce.org/upgrades/upgrades/three-dot-six-to-three-dot-seven)
 
 This is the safest and recommended method.
 
@@ -25,19 +25,19 @@ Spree 4.0 requires Ruby 2.5.0 at least so you need to bump the ruby version in y
 
 ## Migrate from Paperclip to ActiveStorage
 
-In Spree 3.6 we deprecated [Paperclip support in favour of ActiveStorage](/release_notes/3_6_0.html#active-storage-support). Paperclip gem itself isn't maintained anymore and it is recommended to move to ActiveStorage as it is the defualt Rails storage engine since Rails 5.2 release.
+In Spree 3.6 we deprecated [Paperclip support in favor of ActiveStorage](https://guides.spreecommerce.org/release_notes/3_6_0.html#active-storage-support). Paperclip gem itself isn't maintained anymore and it is recommended to move to ActiveStorage as it is the default Rails storage engine since Rails 5.2 release.
 
-In Spree 4.0 we've removed Paperclip support in favour of ActiveStorage.
+In Spree 4.0 we've removed Paperclip support in favor of ActiveStorage.
 
-Please remove also any occurances of `Rails.application.config.use_paperclip` and `Configuration::Paperclip` from your codebase.
+Please remove also any occurrences of `Rails.application.config.use_paperclip` and `Configuration::Paperclip` from your codebase.
 
 Please follow the [official Paperclip to ActiveStorage migration guide](https://github.com/thoughtbot/paperclip/blob/master/MIGRATING.md).
 
 ## Replace OrderContents with services in your codebase
 
-`OrderContents` was deprecated in Spree 3.7 and removed in 4.0. We've replaced it with [service objects](/release_notes/3_7_0.html#service-oriented-architecture).
+`OrderContents` was deprecated in Spree 3.7 and removed in 4.0. We've replaced it with [service objects](https://guides.spreecommerce.org/release_notes/3_7_0.html#service-oriented-architecture).
 
-You need to replace any instances of `OrderContents` usage with coresponding services in your codebase.
+You need to replace any instances of `OrderContents` usage with corresponding services in your codebase.
 
 ### `OrderContents#update_cart`
 
@@ -129,7 +129,7 @@ Spree::Checkout::RemoveStoreCredit.call(order: order)
 
 ## Remove `spree_address_book` extension
 
-If you're using [Address Book](https://github.com/spree-contrib/spree_address_book) extension you need to remove as this feature was [merged into core Spree](/release_notes/4_0_0.html#address-book-support).
+If you're using the [Address Book](https://github.com/spree-contrib/spree_address_book) extension you need to remove it as this feature was merged into [core Spree](https://guides.spreecommerce.org/release_notes/4_0_0.html#address-book-support).
 
 1. Remove this line from `Gemfile`
 
@@ -151,7 +151,7 @@ If you're using [Address Book](https://github.com/spree-contrib/spree_address_bo
 
 ## Replace `class_eval` with `Module.prepend` \(only for Rails 6\)
 
-Rails 6.0 ships with [new code autoloader called Zeitwerk](https://medium.com/@fxn/zeitwerk-a-new-code-loader-for-ruby-ae7895977e73) which has some [strict rules in terms of file naming and contents](https://github.com/fxn/zeitwerk#file-structure). If you used `class_eval` to extend and modify Spree classes you will need to rewrite those with `Module.prepend`. Eg.
+Rails 6.0 ships with a [new code autoloader called Zeitwerk](https://medium.com/@fxn/zeitwerk-a-new-code-loader-for-ruby-ae7895977e73) which has some [strict rules in terms of file naming and contents](https://github.com/fxn/zeitwerk#file-structure). If you used `class_eval` to extend and modify Spree classes you will need to rewrite those with `Module.prepend`. Eg.
 
 Old decorator syntax - `app/models/spree/order_decorator.rb`
 
@@ -185,7 +185,7 @@ end
 ::Spree::Order.prepend(MyStore::Spree::OrderDecorator)
 ```
 
-When migrating class method to the new [autoloader](https://medium.com/@fxn/zeitwerk-a-new-code-loader-for-ruby-ae7895977e73) things are a little different because you will have to prepend to the Singleton class as shown in this example:
+When migrating a class method to the new [autoloader](https://medium.com/@fxn/zeitwerk-a-new-code-loader-for-ruby-ae7895977e73) things are a little different because you will have to prepend to the Singleton class as shown in this example:
 
 ```ruby
 module Spree::BaseDecorator
@@ -197,7 +197,7 @@ end
 Spree::Base.singleton_class.send :prepend, Spree::BaseDecorator
 ```
 
-Please also consider other options for [Logic Customization](/developer/customization/logic.html).
+Please also consider other options for [Logic Customization](https://dev-docs.spreecommerce.org/customization/logic).
 
 We recommend also reading through [Ruby modules: Include vs Prepend vs Extend](https://medium.com/@leo_hetsch/ruby-modules-include-vs-prepend-vs-extend-f09837a5b073)
 

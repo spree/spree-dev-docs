@@ -55,18 +55,18 @@ Each Store can be configured to ship to only selected countries. This is achieve
 
 Available Shipping Methods on the Checkout are determined based on the [Zone and Shipping Methods configuration](shipments.md).
 
-This will also have an effect on what [Shipping / Billing Addresses](https://dev-docs.spreecommerce.org/internals/addresses) user can add/ select during Checkout. Only Addresses from Countries or States available in the selected Zone can be used and will be visible in the User's Address Book.
+This will also have an effect on what [Shipping / Billing Addresses](addresses.md) user can add/ select during Checkout. Only Addresses from Countries or States available in the selected Zone can be used and will be visible in the User's Address Book.
 
 ## Store resources
 
 | Resource | Relationship |
 | :--- | :--- |
-| \*\*\*\*[**Order**](https://dev-docs.spreecommerce.org/internals/orders)\*\*\*\* | One Order belongs to one Store |
-| \*\*\*\*[**Product**](https://dev-docs.spreecommerce.org/internals/products)\*\*\*\* | One Product can be associated with many Store\(s\), you can pick and choose in which Store\(s\) each Product will be available |
-| \*\*\*\*[**Payment Method**](https://dev-docs.spreecommerce.org/internals/payments)\*\*\*\* | One Payment Method can be associated with many Store\(s\), you can select in which Stores given Payment Method will be available on Checkout |
+| \*\*\*\*[**Order**](orders.md)\*\*\*\* | One Order belongs to one Store |
+| \*\*\*\*[**Product**](products.md)\*\*\*\* | One Product can be associated with many Store\(s\), you can pick and choose in which Store\(s\) each Product will be available |
+| \*\*\*\*[**Payment Method**](payments.md)\*\*\*\* | One Payment Method can be associated with many Store\(s\), you can select in which Stores given Payment Method will be available on Checkout |
 | **Store Credit** | One Store Credit belongs to and can be used in one Store |
 | **CMS Page** | One Page belongs to one Store |
 | **Navigation Menu** | One Menu belongs to one Store |
-| \*\*\*\*[**Taxonomy**](https://dev-docs.spreecommerce.org/internals/products#taxons-and-taxonomies)\*\*\*\* | One Taxonomy belongs to one Store |
-| \*\*\*\*[**Promotion**](https://dev-docs.spreecommerce.org/internals/promotions)\*\*\*\* | One Promotion can be associated with multiple Stores |
+| \*\*\*\*[**Taxonomy**](products.md#taxons-and-taxonomies)\*\*\*\* | One Taxonomy belongs to one Store |
+| \*\*\*\*[**Promotion**](promotions.md)\*\*\*\* | One Promotion can be associated with multiple Stores |
 

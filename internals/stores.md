@@ -51,9 +51,9 @@ Each Store can have different multiple locales and currencies. This configuratio
 
 ## Checkout configuration
 
-Each Store can be configured to ship to only selected countries. This is achieved via the `checkout_zone_id` attribute which holds the ID of the selected [Zone record](https://dev-docs.spreecommerce.org/internals/shipments#zones).
+Each Store can be configured to ship to only selected countries. This is achieved via the `checkout_zone_id` attribute which holds the ID of the selected [Zone record](shipments.md#zones).
 
-Available Shipping Methods on the Checkout are determined based on the [Zone and Shipping Methods configuration](https://dev-docs.spreecommerce.org/internals/shipments).
+Available Shipping Methods on the Checkout are determined based on the [Zone and Shipping Methods configuration](shipments.md).
 
 This will also have an effect on what [Shipping / Billing Addresses](https://dev-docs.spreecommerce.org/internals/addresses) user can add/ select during Checkout. Only Addresses from Countries or States available in the selected Zone can be used and will be visible in the User's Address Book.
 

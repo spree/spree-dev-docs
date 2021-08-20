@@ -6,7 +6,13 @@
 
 * [Installation](getting-started/installation.md)
 * [Headless Commerce](getting-started/headless-commerce.md)
-* [API Reference](https://api.spreecommerce.org)
+
+## 💻API
+
+---
+
+* [Storefront API](https://api.spreecommerce.org/docs/api-v2/YXBpOjMxMjQ5NjA-storefront-api-v2)
+* [Platform API](https://api.spreecommerce.org/docs/api-v2/YXBpOjg3MzkxODk-platform-api-v2)
 
 ## ⚙️Internals
 
@@ -90,6 +96,11 @@
 * [General guidelines](contributing/index.md)
 * [Developing Spree](contributing/developing_spree.md)
 * [Upgrading extensions](contributing/upgrading_extensions.md)
+
+## ✨Releases Notes
+
+* [Releases](https://github.com/spree/spree/releases)
+* [Changelog](https://github.com/spree/spree/blob/master/CHANGELOG.md)
 
 ## 🤝Support
 

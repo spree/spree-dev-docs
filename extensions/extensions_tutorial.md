@@ -6,14 +6,18 @@ order: 1
 
 # Creating an extension
 
+{% hint style="warning" %}
+This guide requires an update!
+{% endhint %}
+
 ## Getting Started
 
 Let's build a simple extension. Suppose we want the ability to mark certain products as being on sale. We'd like to be able to set a sale price on a product and show products that are on sale on a separate products page. This is a great example of how an extension can be used to build on the solid Spree foundation.
 
-Before we start, let's make sure we have spree command installed by running:
+Before we start, let's make sure we have Spree CLI installed by running:
 
 ```ruby
-gem install spree
+gem install spree_cmd
 ```
 
 So let's start by generating the extension. Run the following command from a directory of your choice outside of our Spree application:
@@ -138,26 +142,6 @@ Now, follow the steps I take in selecting a product and updating its master vari
 > variant.save
 => true
 ```
-
-## Creating a View
-
-Now we have at least one product in our database that is on sale. Let's create a view to display these products.
-
-First, create the required views directory with the following command:
-
-```bash
-mkdir -p app/views/spree/home
-```
-
-Next, create the file `app/views/spree/home/sale.html.erb` and add the following content to it:
-
-```text
-<div data-hook="homepage_products">
-  <%= render 'spree/shared/products', products: @products %>
-</div>
-```
-
-If you navigate to `http://localhost:3000/sale` you should now see the product\(s\) listed that we set a `sale_price` on earlier in the tutorial. However, if you look at the price, you'll notice that it's not actually displaying the correct price. This is easy enough to fix and we will cover that in the next section.
 
 ## Decorating Variants
 

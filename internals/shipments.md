@@ -174,7 +174,7 @@ Spree ships with 5 default Calculators:
 
 Flexible rate is defined as a flat rate for the first product, plus a different flat rate for each additional product.
 
-You can define your own calculator if you have more complex needs. In that case, check out the [Calculators Guide](/developer/internals/calculators.html).
+You can define your own calculator if you have more complex needs. In that case, check out the [Calculators Guide](calculators.md).
 
 ## UI
 
@@ -202,7 +202,7 @@ There are a few Spree extensions which provide additional shipping methods, incl
 
 ### Writing Your Own
 
-For more detailed information, check out the section on [Calculators](/developer/internals/calculators.html).
+For more detailed information, check out the section on [Calculators](calculators.md).
 
 Your calculator should accept an array of `LineItem` objects and return a cost. It can look at any reachable data, but typically uses the address, the order and the information from variants which are contained in the line\_items.
 

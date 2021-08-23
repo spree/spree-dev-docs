@@ -28,7 +28,7 @@ This is a list of all Spree versions currently being supported by the Spree team
 
 LTS means [Long-term support releases](https://en.wikipedia.org/wiki/Long-term_support), usually last release in the major release cycle.
 
-If you're using an older version [please upgrade](/developer/upgrades/upgrade_guides.html). Having trouble upgrading? [Contact us for support](https://spreecommerce.org/contact/).
+If you're using an older version [please upgrade](../upgrades/upgrades/). Having trouble upgrading? [Contact us for support](https://spreecommerce.org/contact/).
 
 ## Reporting Security Issues
 

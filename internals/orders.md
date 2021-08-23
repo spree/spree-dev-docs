@@ -79,12 +79,12 @@ Assuming that an order meets the criteria for the next state, you will be able t
 Alongside the global Order state there's also `shipment_state` column which indicates the state of all shipments. Order can have multiple shipments.
 
 * `shipped` - all Shipments are in the `shipped` state
-* `partial` - at least one Shipment has a state of `shipped` and there is another Shipment with a state other than `shipped` or there are [InventoryUnits](/developer/internals/inventory.html) associated with the order that have a state of `sold` but are not associated with a Shipment
+* `partial` - at least one Shipment has a state of `shipped` and there is another Shipment with a state other than `shipped` or there are [InventoryUnits](inventory.md) associated with the order that have a state of `sold` but are not associated with a Shipment
 * `ready` - all Shipments are in the `ready` state
 * `backorder` - there is backordered inventory associated with an order
 * `pending` - all Shipments are in the `pending` state
 
-For more on this please go to [Shipment States page](developer/2_internals/developer/core/shipments.html#overview).
+For more on this please go to [Shipment States page](shipments.md#overview).
 
 ### Order Payment states
 
@@ -96,13 +96,13 @@ Alongside the global Order state there's also `payment_state` column which indic
 * `failed` - most recent payment is in the `failed` state
 * `void` - order is canceled and `payment_total` isequal to `zero`
 
-For more on this please go to [Payment States page](/developer/internals/payments.html#overview).
+For more on this please go to [Payment States page](payments.md#overview).
 
 ### Order Shipment states
 
 ## Line Items
 
-Line items are used to keep track of items within the context of an order. These records provide a link between orders, and [Variants](developer/2_internals/products.html#variants).
+Line items are used to keep track of items within the context of an order. These records provide a link between orders, and [Variants](products.md#variants).
 
 When a variant is added to an order, the price of that item is tracked along with the line item to preserve that data. If the variant's price were to change, then the line item would still have a record of the price at the time of ordering.
 
@@ -112,17 +112,17 @@ An order can link to two `Address` objects. The shipping address indicates where
 
 The billing address indicates where the user who's paying for the order is located. This can alter the tax rate for the order, which in turn can change how much the final order total can be.
 
-For more information about addresses, please read the [Addresses](/developer/internals/addresses.html) guide.
+For more information about addresses, please read the [Addresses](addresses.md) guide.
 
 ## Adjustments
 
-Adjustments are used to affect an order's final cost, either by decreasing it \([Promotions](/developer/internals/promotions.html)\) or by increasing it \([Shipping](/developer/internals/shipments.html), [Taxes](/developer/internals/taxation.html)\).
+Adjustments are used to affect an order's final cost, either by decreasing it \([Promotions](promotions.md)\) or by increasing it \([Shipping](shipments.md), [Taxes](taxation.md)\).
 
-For more information about adjustments, please see the [Adjustments](/developer/internals/adjustments.html) guide.
+For more information about adjustments, please see the [Adjustments](adjustments.md) guide.
 
 ## Payments
 
-Payment records are used to track payment information about an order. For more information, please read the [Payments](/developer/internals/payments.html) guide.
+Payment records are used to track payment information about an order. For more information, please read the [Payments](payments.md) guide.
 
 ## Return Authorizations
 

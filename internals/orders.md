@@ -52,7 +52,7 @@ Some methods you may find useful:
 
 ## The Order State Machine
 
-Orders flow through a state machine, beginning at a `cart` state and ending up at a `complete` state. The intermediary states can be configured using the [Checkout Flow API](/developer/customization/checkout.html).
+Orders flow through a state machine, beginning at a `cart` state and ending up at a `complete` state. The intermediary states can be configured using the [Checkout Flow API](../customization/checkout.md#the-checkout-flow-dsl).
 
 The default states are as follows:
 

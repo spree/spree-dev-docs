@@ -285,7 +285,7 @@ In the above configuration file, three preferences have been defined:
 
 It is recommended to create the configuration file in the `lib/` directory.
 
-Extensions can also define site-wide preferences. For more information on using preferences like this with extensions, check out the [Extensions Tutorial](developer/2_internals/developer/contributing/extensions_tutorial.html).
+Extensions can also define site-wide preferences. For more information on using preferences like this with extensions, check out the [Extensions Tutorial](../extensions/extensions.md).
 
 ### Configuring Site-Wide Preferences
 

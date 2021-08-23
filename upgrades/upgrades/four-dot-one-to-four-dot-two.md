@@ -39,7 +39,7 @@ If you used that gem in the past you need to remove it. Multi Currency is now in
 
 ## Add `deface` gem \(optional\)
 
-If you used [Deface overrides](https://dev-docs.spreecommerce.org/advanced/deface_overrides_tutorial) you will need to include `deface` in your `Gemfile` as it was removed from Spree / Spree Auth Devise / Spree Gateway dependencies.
+If you used [Deface overrides](../../advanced/deface_overrides_tutorial.md#organizing-overrides) you will need to include `deface` in your `Gemfile` as it was removed from Spree / Spree Auth Devise / Spree Gateway dependencies.
 
 Simply add it to your `Gemfile`:
 

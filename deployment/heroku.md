@@ -16,9 +16,9 @@ We recommend you start and stick to Heroku if you do not have DevOps-skilled tea
 
 ## Dynos
 
-[Heroku Dynos](https://www.heroku.com/dynos) are lightweight, isolated environments that provide compute and run yuor application.
+[Heroku Dynos](https://www.heroku.com/dynos) are lightweight, isolated environments that provide compute and run your application.
 
-There's 2 type of dynos:
+There are 2 types of dynos:
 
 * **Web** - for running the web interface of yuour Store \(Storefront, API, Admin Panel\)
 * **Worker** - for running background jobs via [Active Job](https://guides.rubyonrails.org/active_job_basics.html) such as email send out, report generation, etc

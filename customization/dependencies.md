@@ -77,7 +77,7 @@ Spree::Api::Dependencies.storefront_cart_add_item_service = 'AnotherAddItemToCar
 
 The second line will have precedence over the first one, and the Storefront API will use `AnotherAddItemToCart` and the rest of the application will use `MyNewAwesomeAddItemToCart`
 
- Values set in the initializer has to be strings, eg. \`'MyNewAwesomeAddItemToCart'\`
+ Values set in the initializer have to be strings, eg. `'MyNewAwesomeAddItemToCart'`
 
 ## Default values
 

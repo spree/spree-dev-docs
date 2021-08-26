@@ -6,7 +6,7 @@ order: 5
 
 # Checkout
 
-The Spree checkout process has been designed for maximum flexibility. It's been redesigned several times now, each iteration has benefited from the feedback of real world deployment experience. It is relatively simple to customize the checkout process to suit your needs. Secure transmission of customer information is possible via SSL and credit card information is never stored in the database.
+The Spree checkout process has been designed for maximum flexibility. It's been redesigned several times now, each iteration has benefited from the feedback of real-world deployment experience. It is relatively simple to customize the checkout process to suit your needs. Secure transmission of customer information is possible via SSL and credit card information is never stored in the database.
 
 The customization of the flow of the checkout can be done by using Spree's `checkout_flow` DSL, described in the [Checkout Flow DSL](checkout.md#the-checkout-flow-dsl) section below.
 
@@ -20,13 +20,13 @@ The Spree checkout process consists of the following steps. With the exception o
 * Payment
 * Confirmation
 
-The following sections will provide a walk-though of a checkout from a user's perspective, and offer some information on how to configure the default behavior of the various steps.
+The following sections will provide a walk-through of checkout from a user's perspective, and offer some information on how to configure the default behavior of the various steps.
 
 ### Registration
 
-Prior to beginning the checkout process, the customer will be prompted to create a new account or to login to their existing account. By default, there is also a "guest checkout" option which allows users to specify only their email address if they do not wish to create an account.
+Prior to beginning the checkout process, the customer will be prompted to create a new account or to log in to their existing account. By default, there is also a "guest checkout" option that allows users to specify only their email address if they do not wish to create an account.
 
-Technically, the registration step is not an actual state in the `Spree::Order` state machine. The `spree_auth_devise` gem \(an extension that comes with Spree by default\) adds the `check_registration` before filter to the all actions of `Spree::CheckoutController` \(except for obvious reasons the `registration` and `update_registration` actions\), which redirects to a registration page unless one of the following is true:
+Technically, the registration step is not an actual state in the `Spree::Order` state machine. The `spree_auth_devise` gem \(an extension that comes with Spree by default\) adds the `check_registration` before filter to all actions of `Spree::CheckoutController` \(except for obvious reasons the `registration` and `update_registration` actions\), which redirects to a registration page unless one of the following is true:
 
 * `Spree::Auth::Config[:registration_step]` preference is not `true`
 * user is already logged in
@@ -69,7 +69,7 @@ Spree stores only the last four digits of the credit card number along with the 
 
 Several gateways such as ActiveMerchant and Beanstream provide a secure method for storing a "payment profile" in your database. This approach typically involves the use of a "token" which can be used for subsequent purchases but only with your merchant account. If you are using a secure payment profile it would then be possible to show a final "confirmation" step after payment information is entered.
 
-If you do not want to use a gateway with payment profiles then you will need to customize the checkout process so that your final step submits the credit card information. You can then perform an authorization before the order is saved. This is perfectly secure because the credit card information is not ever saved. It's transmitted to the gateway and then discarded like normal.
+If you do not want to use a gateway with payment profiles then you will need to customize the checkout process so that your final step submits the credit card information. You can then perform authorization before the order is saved. This is perfectly secure because the credit card information is not ever saved. It's transmitted to the gateway and then discarded like normal.
 
  Spree discards the credit card number after this step is processed. If you do not have a gateway with payment profiles enabled then your card information will be lost before it's time to authorize the card.
 

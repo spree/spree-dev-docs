@@ -83,7 +83,7 @@ and run `bundle update aws-sdk`
 
 In your paperclip configuration, you also need to specify `s3_region` attribute eg. [https://github.com/spree/spree/blame/master/guides/content/developer/customization/s3\_storage.md\#L27](https://github.com/spree/spree/blame/master/guides/content/developer/customization/s3_storage.md#L27)
 
-Seel also [RubyThursday episode](https://rubythursday.com/episodes/ruby-snack-27-upgrade-paperclip-and-aws-sdk-in-prep-for-rails-5) walkthrough of upgrading paperclip in your project.
+See also [RubyThursday episode](https://rubythursday.com/episodes/ruby-snack-27-upgrade-paperclip-and-aws-sdk-in-prep-for-rails-5) walkthrough of upgrading paperclip in your project.
 
 ### Add jquery.validate to your project if you've used it directly from Spree
 

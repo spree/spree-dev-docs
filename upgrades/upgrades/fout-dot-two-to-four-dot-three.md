@@ -44,7 +44,7 @@ Spree 4.3 includes a built-in CMS. It's not recommended to use `spree_static_con
 
 ## Add Spree modules
 
-Spree 4.3 was split into seperate modules which aren't included in the `spree` package anymore.
+Spree 4.3 was split into separate modules which aren't included in the `spree` package anymore.
 
 ### \(Optional\) Add `spree_frontend` gem
 

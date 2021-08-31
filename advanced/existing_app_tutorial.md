@@ -52,7 +52,7 @@ You can always perform any of these steps later by using these commands.
 bin/rake railties:install:migrations
 bin/rails db:migrate
 bin/rails db:seed
-bin/rake spree_sampe:load
+bin/rake spree_sample:load
 ```
 
 ### Mounting the Spree engine

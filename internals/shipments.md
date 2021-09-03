@@ -446,16 +446,20 @@ For an example of a simple splitter, take a look at Spree's [weight based splitt
 After creating your splitter, you need to add it to the array of splitters Spree uses. To do this, add the following to your application's spree initializer `spree.rb` file:
 
 ```ruby
-Rails.application.config.spree.stock_splitters << Spree::Stock::Splitter::CustomSplitter
+Rails.application.config.after_initialize do
+  Rails.application.config.spree.stock_splitters << Spree::Stock::Splitter::CustomSplitter
+end
 ```
 
 You can also completely override the splitters used in Spree, rearrange them, etc. To do this, add the following to your `spree.rb` file:
 
 ```ruby
-Rails.application.config.spree.stock_splitters = [
-  Spree::Stock::Splitter::CustomSplitter,
-  Spree::Stock::Splitter::ShippingCategory
-]
+Rails.application.config.after_initialize do
+  Rails.application.config.spree.stock_splitters = [
+    Spree::Stock::Splitter::CustomSplitter,
+    Spree::Stock::Splitter::ShippingCategory
+  ]
+end
 ```
 
 Or if you don't want to split packages just set the option above to an empty array. e.g. a store with the following configuration in spree.rb won't have any package splitted.

@@ -28,7 +28,7 @@ A promotion may also have a `usage_limit` attribute set, which restricts how man
 
 ## Actions
 
-There are four actions that come with spree:
+There are four actions that come with Spree:
 
 * An order-level adjustment
 * An item-level adjustment
@@ -41,15 +41,15 @@ When a `CreateAdjustment` action is undertaken, an adjustment is automatically a
 
 Once the adjustment has been applied to the order, its eligibility is re-checked every time the order is saved, by way of the `Promotion#eligible?` method, which uses `Promotion#eligible_rules` to determine if the promotion is still eligible based on its rules. For how this process works, please see the [rules section](promotions.md#rules) below.
 
-An adjustment to an order from a promotion depends on the calculators. For more information about calculators, please see the [Calculators guide](calculators.md).
+An adjustment to order from a promotion depends on the calculators. For more information about calculators, please see the [Calculators guide](calculators.md).
 
 ### Creating an item adjustment
 
-When a `CreateItemAdjustments` action is undertaken, an adjustment is automatically applied to each item within the order, unless the action has already been performed on that line item
+When a `CreateItemAdjustments` action is undertaken, an adjustment is automatically applied to each item within the order unless the action has already been performed on that line item
 
-The eligibility of the item for this promotion is re-checked whenever the item is updated. Its eligibility is based off the rules of the promotion.
+The eligibility of the item for this promotion is re-checked whenever the item is updated. Its eligibility is based on the rules of the promotion.
 
-An adjustment to an order from a promotion depends on the calculators. For more information about calculators, please see the [Calculators guide](calculators.md).
+An adjustment to order from a promotion depends on the calculators. For more information about calculators, please see the [Calculators guide](calculators.md).
 
 ### Free Shipping
 
@@ -76,7 +76,9 @@ You can access promotion information using the `promotion` method within any `Sp
 This action must then be registered with Spree, which can be done by adding this code to `config/initializers/spree.rb`:
 
 ```ruby
-Rails.application.config.spree.promotions.actions << MyPromotionAction
+Rails.application.config.after_initialize do
+  Rails.application.config.spree.promotions.actions << MyPromotionAction
+end
 ```
 
 Once this has been registered, it will be available within Spree's interface. To provide translations for the interface, you will need to define them within your locale file. For instance, to define English translations for your new promotion action, use this code within `config/locales/en.yml`:
@@ -105,7 +107,7 @@ Rules are used by Spree to determine if a promotion is applicable to an order an
 
 ### Registering a New Rule
 
-As a developer, you can create and register a new rule for your Spree app with custom business logic specific to your needs. First define a class that inherits from `Spree::PromotionRule`, like this:
+As a developer, you can create and register a new rule for your Spree app with custom business logic specific to your needs. First, define a class that inherits from `Spree::PromotionRule`, like this:
 
 ```ruby
 module Spree
@@ -141,7 +143,7 @@ You can then register the promotion using this code inside `config/initializers/
 Rails.application.config.spree.promotions.rules << Spree::Promotion::Rules::MyPromotionRule
 ```
 
- Proper location and file name for the rule in this example would be: \`app/models/spree/promotion/rules/my\_promotion\_rule.rb\`
+ Proper location and file name for the rule in this example would be: `app/models/spree/promotion/rules/my_promotion_rule.rb`
 
 To get your rule to appear in the admin promotions interface you have a few more changes to make.
 

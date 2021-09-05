@@ -51,7 +51,7 @@ Spree 4.3 was split into separate modules which aren't included in the `spree` p
 If you use the default Spree Storefront you need to add it to your `Gemfile`.
 
 ```ruby
-gem 'spree_frontend', '~> 4.3.0.rc1'
+gem 'spree_frontend', '>= 4.3.0.rc1'
 ```
 
 ### \(Optional\) Add `spree_backend` gem
@@ -59,7 +59,7 @@ gem 'spree_frontend', '~> 4.3.0.rc1'
 If you use the default Spree Admin Panel you need to add it to your `Gemfile`.
 
 ```ruby
-gem 'spree_backend', '~> 4.3.0.rc1'
+gem 'spree_backend', '>= 4.3.0.rc1'
 ```
 
 ### \(Optional\) Add `spree_emails` gem
@@ -67,7 +67,7 @@ gem 'spree_backend', '~> 4.3.0.rc1'
 Transactional emails once part of `spree_core` were extracted into their own gem called `spree_emails`. If you would like to still use this feature you'll need to include this new gem in your `Gemfile`.
 
 ```ruby
-gem 'spree_emails', '~> 4.3.0.rc1'
+gem 'spree_emails', '>= 4.3.0.rc1'
 ```
 
 ## Update gems
@@ -79,13 +79,13 @@ bundle update
 ## Install missing migrations
 
 ```bash
-rails spree:install:migrations
+bin/rails spree:install:migrations
 ```
 
 ## Run migrations
 
 ```bash
-rails db:migrate
+bin/rails db:migrate
 ```
 
 ## Additional fixes and hints
@@ -126,9 +126,9 @@ bundle update spree_related_products
 
 ## Read the release notes
 
-For information about changes contained within this release, please read the [4.3.0 Release Notes](https://github.com/spree/spree/releases/tag/v4.3.0) and [CHANGELOG](https://github.com/spree/spree/blob/master/CHANGELOG.md).
+For information about changes contained within this release, please read the [CHANGELOG](https://github.com/spree/spree/blob/master/CHANGELOG.md).
 
 ## More info
 
-If you have any questions or suggestions feel free to reach out through [Spree slack channels](http://slack.spreecommerce.org/)
+If you have any questions or suggestions feel free to [contact us via email](https://spreecommerce.org/contact) or through [Spree slack channels](http://slack.spreecommerce.org/)
 

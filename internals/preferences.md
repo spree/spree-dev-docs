@@ -5,9 +5,13 @@ section: internals
 
 # Preferences
 
+{% hint style="warning" %}
+We do not advise to use Preferences anymore, we're working on a path forward limitting Preferences in Spree codebase
+{% endhint %}
+
 ## Overview
 
-Spree Preferences support general application configuration and preferences per model instance. Spree comes with preferences for your store like `logo` and `currency`. Additional preferences can be added by your application or included extensions.
+Spree Preferences support general application configuration and preferences per model instance. Spree comes with preferences for your application like `track_inventory_levels`. Additional preferences can be added by your application or included extensions.
 
 To implement preferences for a model, simply add a new column called `preferences`. This is an example migration for the `spree_products` table:
 
@@ -37,7 +41,7 @@ Both use cases are handled by Spree Preferences. They are easy to define, provid
 
 ## General Settings
 
-Spree comes with many application-wide preferences. They are defined in `core/app/models/spree/app_configuration.rb` and made available to your code through `Spree::Config`, e.g., `Spree::Config.logo`.
+Spree comes with many application-wide preferences. They are defined in `core/app/models/spree/app_configuration.rb` and made available to your code through `Spree::Config`, e.g., `Spree::Config.track_inventory_levels`.
 
 A limited set of the general settings are available in the admin interface of your store \(`/admin/general_settings`\).
 
@@ -205,8 +209,6 @@ The `Spree::Config` constant returns an instance of `Spree::AppConfiguration` wh
 You can access these preferences directly in code. To see this in action, just fire up `rails console` and try the following:
 
 ```ruby
->> Spree::Config.admin_interface_logo
-=> "logo/spree_50.png"
 >> Spree::Config.admin_products_per_page
 => 10
 ```
@@ -243,18 +245,17 @@ During the Spree installation process, an initializer file is created within you
 ```ruby
 Spree.config do |config|
   # Example:
-  # Uncomment to override the default logo location.
-  # config.logo = 'logo/my_store.png'
+  # Uncomment to stop tracking inventory levels in the application
+  # config.track_inventory_levels = false
 end
 ```
 
 The `Spree.config` block acts as a shortcut to setting `Spree::Config` multiple times. If you have multiple default preferences you would like to override within your code you may override them here. Using the initializer for setting the defaults is a nice shortcut, and helps keep your preferences organized in a standard location.
 
-For example if you would like to change the logo location and if you want to tax using the shipping address you can accomplish this by doing the following:
+For example, if you would like to tax using the shipping address you can accomplish this by doing the following:
 
 ```ruby
 Spree.config do |config|
-  config.logo = 'logo/my_store.png'
   config.tax_using_ship_address = true
 end
 ```
@@ -313,10 +314,6 @@ This section lists all of the configuration options for the current version of S
 
 Will determine if the state field should appear on the checkout page. Defaults to `true`.
 
-`admin_interface_logo`
-
-The path to the logo to display on the admin interface. Can be different from `Spree::Config[:logo]`. Defaults to `logo/spree_50.png`.
-
 `admin_products_per_page`
 
 How many products to display on the products listing in the admin interface. Defaults to 30.
@@ -329,42 +326,11 @@ Continues the checkout process even if the payment gateway error failed. Default
 
 Determines if an alternative phone number should be present for the shipping address on the checkout page. Defaults to `false`.
 
-`always_put_site_name_in_title`
-
-Determines if the site name \(`current_store.site_name`\) should be placed into the title. Defaults to `true`.
-
-`attachment_default_url`
-
-Tells `Paperclip` the form of the URL to use for attachments which are missing.
-
-`attachment_path`
-
-Tells `Paperclip` the path at which to store images.
-
-`attachment_styles`
-
 A JSON hash of different styles that are supported by attachments. Defaults to:
-
-```javascript
-{
-  "mini":"48x48>",
-  "small":"100x100>",
-  "product":"240x240>",
-  "large":"600x600>"
-}
-```
-
-`attachment_default_style`
-
-A key from the list of styles from `Spree::Config[:attachment_styles]` that is the default style for images. Defaults to the the `product` style.
 
 `auto_capture`
 
 Depending on whether or not Spree is configured to "auto capture" the credit card, either a purchase or an authorize operation will be performed on the card \(via the current credit card gateway\). Defaults to `false`.
-
-`checkout_zone`
-
-Limits the checkout to countries from a specific zone, by name. Defaults to `nil`.
 
 `company`
 

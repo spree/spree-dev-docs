@@ -9,6 +9,10 @@ description: >-
 
 # Headless Commerce
 
+
+
+![Spree architecture](../.gitbook/assets/spree_headless_architecture_diagram.jpg)
+
 ## Spree APIs
 
 Spree is a modular, API-first headless e-commerce platform that consists of several APIs.
@@ -18,9 +22,11 @@ Spree is a modular, API-first headless e-commerce platform that consists of seve
 * Modern and lightweight REST API based on JSON API schema
 * Designed for building Storefronts and mobile apps
 * [JavaScript / TypeScript SDK](https://github.com/spree/spree-storefront-api-v2-js-sdk) available
-* Next.js Commerce and VueStorefront integrations will be released soon!  [Please contact us directly](https://spreecommerce.org/contact) for early access
+* Next.js Commerce and VueStorefront integrations will be released soon! 
 
 ### [Platform API](https://api.spreecommerce.org/docs/api-v2/YXBpOjg3MzkxODk-platform-api-v2) \(Developer Preview\)
+
+![](../.gitbook/assets/platform_api_diagram.jpg)
 
 * OAuth 2.0 authentication
 * designed for building application to application integration

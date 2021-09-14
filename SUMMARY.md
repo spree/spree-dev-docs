@@ -14,6 +14,10 @@
 * [Storefront API](https://api.spreecommerce.org/docs/api-v2/YXBpOjMxMjQ5NjA-storefront-api-v2)
 * [Platform API](https://api.spreecommerce.org/docs/api-v2/YXBpOjg3MzkxODk-platform-api-v2)
 
+## 🎨Storefronts
+
+* [Next.js Commerce](storefronts/next.js-commerce.md)
+
 ## ⚙️Internals
 
 * [Stores](internals/stores.md)

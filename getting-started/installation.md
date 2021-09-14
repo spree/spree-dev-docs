@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-Before proceeding make sure you have [Docker Desktop](https://docs.docker.com/get-docker/) installed on your system. This is fairly straightforward, but differs depending on which operating system you use.
+Before proceeding make sure you have [Docker Desktop](https://docs.docker.com/get-docker/) installed on your system. This is fairly straightforward but differs depending on which operating system you use.
 
 If you would like to add Spree to your existing Ruby on Rails application, please [follow this guide instead](../advanced/existing_app_tutorial.md) \(for advanced users\).
 
@@ -26,11 +26,11 @@ To stop the webserver, hit `Ctrl-C` in the terminal window where it's running.
 
 ### Connecting to the API
 
-Your API server is up and running.[ Download our Open API doc](https://raw.githubusercontent.com/spree/spree/master/api/docs/v2/storefront/index.yaml) and [import it to Postman](https://learning.postman.com/docs/integrations/available-integrations/working-with-openAPI/) to start playing around. Your backend server URL is `http://localhost:3000` so to grab the Products List you can use:
+Your API server is up and running.[ Download our Open API doc](https://raw.githubusercontent.com/spree/spree/master/api/docs/v2/storefront/index.yaml) and [import it to Postman](https://learning.postman.com/docs/integrations/available-integrations/working-with-openAPI/) to start playing around. Your backend server URL is `http://localhost:4000` so to grab the Products List you can use:
 
 ```bash
 curl --request GET \
-  --url http://localhost:3000/api/v2/storefront/products \
+  --url http://localhost:4000/api/v2/storefront/products \
   --header 'Content-Type: application/json'
 ```
 

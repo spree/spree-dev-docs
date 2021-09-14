@@ -9,14 +9,14 @@ order: 0
 {% hint style="warning" %}
 This sections covers the Rails storefront which was extracted to `spree_frontend` ruby gem. 
 
-For new projects we recommend to use [Storefront API](https://spark-solutions.stoplight.io/docs/api-v2/api/docs/v2/storefront/index.yaml) to build your own storefront.
+For new projects we recommend to use [Storefront API](https://spark-solutions.stoplight.io/docs/api-v2/api/docs/v2/storefront/index.yaml) to build your own storefront or use existing integrations with Next.js or Vue Storefront
 {% endhint %}
 
 ## Styling with SASS variables
 
 Spree 4 under the hood uses [Bootstrap 4](https://getbootstrap.com/docs/4.6/getting-started/theming/) for easy theming with some additional Spree-specific [SASS variables](https://sass-lang.com/documentation/variables).
 
-To make those changes live you need to update SCSS variable files located in your project at `app/assets/stylesheets/spree/frontend/variables/variables.scss`.
+![](../.gitbook/assets/cms_navigation.png) To make those changes live you need to update SCSS variable files located in your project at `app/assets/stylesheets/spree/frontend/variables/variables.scss`.
 
 ### Header
 

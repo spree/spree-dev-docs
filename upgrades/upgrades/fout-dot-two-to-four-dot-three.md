@@ -21,7 +21,7 @@ This is the safest and recommended method.
 ## Update Gemfile
 
 ```ruby
-gem 'spree', '>= 4.3.0.rc1'
+gem 'spree', '>= 4.3'
 ```
 
 ## Remove gems merged into Spree Core
@@ -51,7 +51,7 @@ Spree 4.3 was split into separate modules which aren't included in the `spree` p
 If you use the default Spree Storefront you need to add it to your `Gemfile`.
 
 ```ruby
-gem 'spree_frontend', '>= 4.3.0.rc1'
+gem 'spree_frontend', '>= 4.3'
 ```
 
 ### \(Optional\) Add `spree_backend` gem
@@ -59,7 +59,7 @@ gem 'spree_frontend', '>= 4.3.0.rc1'
 If you use the default Spree Admin Panel you need to add it to your `Gemfile`.
 
 ```ruby
-gem 'spree_backend', '>= 4.3.0.rc1'
+gem 'spree_backend', '>= 4.3'
 ```
 
 ### \(Optional\) Add `spree_emails` gem
@@ -67,7 +67,7 @@ gem 'spree_backend', '>= 4.3.0.rc1'
 Transactional emails once part of `spree_core` were extracted into their own gem called `spree_emails`. If you would like to still use this feature you'll need to include this new gem in your `Gemfile`.
 
 ```ruby
-gem 'spree_emails', '>= 4.3.0.rc1'
+gem 'spree_emails', '>= 4.3'
 ```
 
 ## Update gems
@@ -101,6 +101,12 @@ In your project create  `app/assets/config/manifest.jss` file with contents:
 ```
 
 More [on this topic](https://github.com/rails/sprockets/blob/master/UPGRADING.md#manifestjs).
+
+### Update Spree Auth Devise and Spree Gateway
+
+```bash
+bundle update spree_gateway spree_auth_devise
+```
 
 ### Admin Panel fix
 

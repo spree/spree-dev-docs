@@ -53,8 +53,9 @@ Spree is divided into several modules / gems which you can install independently
 | Spree module | Description |
 | :--- | :--- |
 | **spree** | Data models, Services and APIs |
-| **spree\_backend** | Admin Panel UI \(Rails\) |
+| **spree\_backend** | Admin Panel UI |
 | **spree\_sample** | Sample seed data |
+| **spree\_emails** | Transactional emails, eg. order confirmation |
 
 There are many other packages adding more features called [Extensions](../extensions/extensions.md).
 

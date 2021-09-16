@@ -9,7 +9,7 @@ description: >-
 
 # Headless Commerce
 
-![Spree architecture](../.gitbook/assets/spree_headless_architecture_diagram.jpg)
+![Spree architecture](../.gitbook/assets/spree_commerce_spree_api_3-2x.png)
 
 ## Spree APIs
 
@@ -25,7 +25,7 @@ Spree is a modular, API-first headless e-commerce platform that consists of seve
 
 ### [Platform API](https://api.spreecommerce.org/docs/api-v2/YXBpOjg3MzkxODk-platform-api-v2) \(Developer Preview\)
 
-![](../.gitbook/assets/platform_api_diagram.jpg)
+![](../.gitbook/assets/spree_commerce_spree_api_6.png)
 
 * OAuth 2.0 authentication
 * designed for building application to application integration

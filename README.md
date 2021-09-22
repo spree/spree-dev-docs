@@ -14,5 +14,3 @@ Happy coding!
 
 ![](.gitbook/assets/spree_commerce_home_header_2-2x-1-.png)
 
-
-

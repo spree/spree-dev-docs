@@ -16,11 +16,13 @@ Spree uses [postmark templates](https://github.com/wildbit/postmark-templates), 
 
 ## Email previews
 
-Spree offers emails preview generator for development purposes. To generate them, use command:
+Spree offers an emails preview generator for development purposes. To generate them, use the command:
 
-`bundle exec rails g spree:mailers_preview`
+```bash
+bundle exec rails g spree:emails:install
+```
 
-After that, start rails server locally and go to: `localhost:3000/rails/mailers`
+After that, start the rails server locally and go to: `localhost:3000/rails/mailers`
 
-\(it requires seeded development database in order to work properly\)
+\(it requires a seeded development database in order to work properly\)
 

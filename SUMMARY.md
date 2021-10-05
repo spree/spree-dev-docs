@@ -17,6 +17,7 @@
 ## 🎨Storefronts
 
 * [Next.js Commerce](storefronts/next.js-commerce.md)
+* [Vue Storefront](storefronts/vue-storefront.md)
 
 ## ⚙️Internals
 

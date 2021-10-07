@@ -38,7 +38,7 @@ We recommend checking out our [API reference](https://api.spreecommerce.org/) fo
 
 ### Logging Into the Admin Panel
 
-The next thing you'll probably want to do is to log into the admin interface. Use your browser window to navigate to [http://localhost:3000/admin](http://localhost:3000/admin). You can log in with the username `spree@example.com` and password `spree123`.
+The next thing you'll probably want to do is to log into the admin interface. Use your browser window to navigate to [http://localhost:3000/admin](http://localhost:3000/admin). You can log in with the email `spree@example.com` and password `spree123`.
 
 Upon successful authentication, you should see the admin screen:
 

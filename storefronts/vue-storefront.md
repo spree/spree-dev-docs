@@ -1,46 +1,45 @@
 # Vue Storefront
 
 {% hint style="info" %}
-This integration was built by the awesome Team at [Upside](https://upsidelab.io/) [❤️](https://emojipedia.org/red-heart/)
+This integration was built by the awesome Team at [Upside](https://upsidelab.io) [❤️](https://emojipedia.org/red-heart/)
 {% endhint %}
 
-[Vue Storefront](https://www.vuestorefront.io/) is a lightning-fast frontend platform for headless eCommerce solutions. It comes with both reusable components to build custom storefronts and a default theme that allows developers to effortlessly create an eCommerce frontend.
+[Vue Storefront](https://www.vuestorefront.io) is a lightning-fast frontend platform for headless eCommerce solutions. It comes with both reusable components to build custom storefronts and a default theme that allows developers to effortlessly create an eCommerce frontend.
 
 ![](../.gitbook/assets/screenshot-2021-10-05-at-11.19.20.png)
 
-See the live demo: [https://vuestorefront-spree.upsidelab.io/](https://vuestorefront-spree.upsidelab.io/)
+See the live demo: [https://vuestorefront-spree.upsidelab.io/](https://vuestorefront-spree.upsidelab.io)
 
 ### Installation
 
 1. Clone the git repository:
 
-```text
+```
 git clone https://github.com/upsidelab/vue-storefront-spree.git
 ```
 
-   2.  Install the required dependencies:
+   2\.  Install the required dependencies:
 
-```text
+```
 yarn install
 ```
 
-   3. Set the backend URL via env variable:
+   3\. Set the backend URL via env variable:
 
-```text
+```
 export BACKEND_URL=https://localhost:4000
 ```
 
-   4. \(optional\) Then you can verify if everything works properly by building all three projects:
+   4\. (optional) Then you can verify if everything works properly by building all three projects:
 
-```text
+```
 yarn build
 ```
 
-   5. If everything is built properly, you can start working on your new frontend with:
+   5\. If everything is built properly, you can start working on your new frontend with:
 
-```text
+```
 yarn dev
 ```
 
-If you spot any problems don't hesitate to submit a [Github Issue](https://github.com/upsidelab/vue-storefront-spree)
-
+For more configurtion options please visit the [Spree VueStorefront GitHub repository](https://github.com/upsidelab/vue-storefront-spree).

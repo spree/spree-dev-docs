@@ -42,4 +42,4 @@ yarn build
 yarn dev
 ```
 
-For more configurtion options please visit the [Spree VueStorefront GitHub repository](https://github.com/upsidelab/vue-storefront-spree).
+For more configurtion options please visit the Spree [VueStorefront GitHub repository](https://github.com/vuestorefront/spree).

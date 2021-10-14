@@ -1,16 +1,9 @@
----
-title: Add Spree to an existing Ruby on Rails application
-section: advanced
-order: 1
----
-
 # Adding Spree to an existing Rails application
 
 ### Add Spree gems to your `Gemfile`
 
 ```ruby
 gem 'spree' # core and API
-gem 'spree_frontend' # Rails storefront (optional)
 gem 'spree_backend' # Rails admin panel (optional)
 gem 'spree_emails' # transactional emails (optional)
 gem 'spree_sample' # dummy data like products, taxons, etc
@@ -30,25 +23,24 @@ gem 'sassc', github: 'sass/sassc-ruby', branch: 'master'
 
 ### Use the install generators to set up Spree
 
-```text
+```
 bin/rails g spree:install --user_class=Spree::User
 bin/rails g spree:auth:install
 bin/rails g spree_gateway:install
-bin/rails g spree:frontend:install
 bin/rails g spree:backend:install
 ```
 
 ### Installation options
 
-By default, the installation generator \(`rails g spree:install`\) will run migrations as well as adding seed. This can be disabled using
+By default, the installation generator (`rails g spree:install`) will run migrations as well as adding seed. This can be disabled using
 
-```text
+```
 bin/rails g spree:install --migrate=false --sample=false --seed=false
 ```
 
 You can always perform any of these steps later by using these commands.
 
-```text
+```
 bin/rake railties:install:migrations
 bin/rails db:migrate
 bin/rails db:seed
@@ -71,7 +63,7 @@ You can customize this simply by changing the `:at` specification in `config/rou
 mount Spree::Core::Engine, at: `/shop`
 ```
 
-The different parts of Spree \(API, Admin\) will be mounted there as well, eg. `http://localhost:3000/shop/admin`.
+The different parts of Spree (API, Admin) will be mounted there as well, eg. `http://localhost:3000/shop/admin`.
 
 ### Use your existing authentication
 
@@ -80,8 +72,6 @@ The different parts of Spree \(API, Admin\) will be mounted there as well, eg. `
 ### Hello, Spree Commerce
 
 You now have a functional Spree application after running only a few commands!
-
-To see your application in action, open a browser window and navigate to [http://localhost:3000](http://localhost:3000). You should see the Spree default home page:
 
 To stop the webserver, hit Ctrl-C in the terminal window where it's running. In development mode, Spree does not generally require you to stop the server; changes you make in files will be automatically picked up by the server.
 
@@ -92,4 +82,3 @@ The next thing you'll probably want to do is to log into the admin interface. Us
 Upon successful authentication, you should see the admin screen:
 
 Feel free to explore some of the Admin Panel features that Spree has to offer and to verify that your installation is working properly.
-

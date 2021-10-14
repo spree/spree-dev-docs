@@ -1,15 +1,9 @@
----
-title: Storefront
-section: customization
-order: 0
----
-
 # Storefront
 
 {% hint style="warning" %}
-This sections covers the Rails storefront which was extracted to `spree_frontend` ruby gem. 
+This section covers the Rails storefront which was extracted to `spree_frontend` ruby gem. 
 
-For new projects we recommend to use [Storefront API](https://spark-solutions.stoplight.io/docs/api-v2/api/docs/v2/storefront/index.yaml) to build your own storefront or use existing integrations with Next.js or Vue Storefront
+For new projects, we recommend using [Storefront API](https://spark-solutions.stoplight.io/docs/api-v2/api/docs/v2/storefront/index.yaml) to build your own storefront or use existing integrations with [Next.js](../storefronts/next.js-commerce.md) or [Vue Storefront](../storefronts/vue-storefront.md)
 {% endhint %}
 
 ## Styling with SASS variables
@@ -119,7 +113,7 @@ _**$primary-color**_ variable changes
 
 _**$primary-color**_ variable changes
 
-* The color of the **SAVE AND CONTINUE** button \(this element remains the same across the whole checkout process\)
+* The color of the **SAVE AND CONTINUE** button (this element remains the same across the whole checkout process)
 * The color of the **Edit** icon
 
 #### Checkout - Payment step
@@ -201,7 +195,7 @@ _**$secondary-color**_ variable changes
 
 _**$secondary-color**_ variable changes
 
-* The color of **individual steps** \(box, name step, and guideline\) - this element remains the same across the whole checkout process
+* The color of **individual steps** (box, name step, and guideline) - this element remains the same across the whole checkout process
 
 #### Checkout - Address step
 
@@ -258,7 +252,7 @@ _**$enable-gradients**_ - Enable gradient for components
 
 ### Importing
 
-You can import all templates from spree frontend into your application using this command \(in your application root directory\):
+You can import all templates from spree frontend into your application using this command (in your application root directory):
 
 ```bash
 rails g spree:frontend:copy_storefront
@@ -270,11 +264,11 @@ All of those views will be added to your `app/views` directory under `spree` fol
 
 ### Spree's Asset Pipeline
 
-Spree applications include an `app/assets` directory. We've taken this one step further by subdividing each top level asset directory \(images, JavaScript files, stylesheets\) into `frontend` and `backend` directories. This is designed to keep assets from the frontend and backend from conflicting with each other.
+Spree applications include an `app/assets` directory. We've taken this one step further by subdividing each top level asset directory (images, JavaScript files, stylesheets) into `frontend` and `backend` directories. This is designed to keep assets from the frontend and backend from conflicting with each other.
 
 A typical assets directory for a Spree application will look like:
 
-```text
+```
 app
 |-- assets
     |-- images
@@ -295,15 +289,15 @@ app
     |           |-- all.css
 ```
 
-Spree also generates four top level manifests \(all.css & all.js, see above\) that require all the core extension's and site specific stylesheets / JavaScript files.
+Spree also generates four top level manifests (all.css & all.js, see above) that require all the core extension's and site specific stylesheets / JavaScript files.
 
-### How core extensions \(engines\) manage assets
+### How core extensions (engines) manage assets
 
 All core engines have been updated to provide four asset manifests that are responsible for bundling up all the JavaScript files and stylesheets required for that engine.
 
 For example, Spree provides the following manifests:
 
-```text
+```
 vendor
 |-- assets
     |-- javascripts
@@ -338,7 +332,7 @@ Assets that customize your Spree store should go inside the appropriate director
 
 Overriding or replacing any of Spree's internal assets is even easier than before. It's recommended to attempt to replace as little as possible in a given JavaScript or stylesheet file to help ease future upgrade work required.
 
-The methods listed below will work for both applications, extensions and themes with one noticeable difference: Extension & theme asset files will not be automatically included \(see above for instructions on how to include asset files from your extensions / themes\).
+The methods listed below will work for both applications, extensions and themes with one noticeable difference: Extension & theme asset files will not be automatically included (see above for instructions on how to include asset files from your extensions / themes).
 
 ### Overriding individual CSS styles
 
@@ -430,25 +424,25 @@ For example, to replace `spree/frontend/all.js` you would save the replacement t
 We highly recommend adding a sitemap to your site. It might affect how Google bot crawls your store pages. There is an official extension called [Spree Sitemap](https://github.com/spree-contrib/spree_sitemap) for that exact purpose.
 
 1. Per region, language or currency
-2. Click the **Edit** button \(indicated with a pencil icon\) for the right store
+2. Click the **Edit** button (indicated with a pencil icon) for the right store
 3. Enter a title, keywords, and description values for the store homepage
 4. Click the **Update** button at the bottom of the page
 
-To set the title, meta keywords, and description for each store **category page \(PLP\)**, in the admin panel:
+To set the title, meta keywords, and description for each store **category page (PLP)**, in the admin panel:
 
-1. Go to **Products &gt; Taxonomies**
-2. Go into the Categories list by pressing the **Edit** button \(pencil icon\)
-3. Pick the category you’d like to edit by right-clicking \(control + click on a Mac\) a child in the tree to access the menu for adding, deleting or sorting a child.
+1. Go to **Products > Taxonomies**
+2. Go into the Categories list by pressing the **Edit** button (pencil icon)
+3. Pick the category you’d like to edit by right-clicking (control + click on a Mac) a child in the tree to access the menu for adding, deleting or sorting a child.
 4. Click the **Edit** link for that category
 5. Replace the default values for title, meta keywords, and description with your own
 6. Click the **Update** button at the bottom of the page
 
 You’ll have to edit every category and subcategory to your liking in a similar fashion.
 
-To set the title, meta keywords and description for each **product page \(PDP\)**, in the admin panel:
+To set the title, meta keywords and description for each **product page (PDP)**, in the admin panel:
 
-1. Go to **Products &gt; Products**
-2. In the product list pick the right one by pressing the **Edit** button \(pencil icon\)
+1. Go to **Products > Products**
+2. In the product list pick the right one by pressing the **Edit** button (pencil icon)
 3. While in the Details tab, scroll down and input your values for the title, meta keywords, and description
 4. Click the **Update** button at the bottom of the page
 
@@ -456,8 +450,7 @@ To set the title, meta keywords and description for each **product page \(PDP\)*
 
 The new Spree UX has the following social sharing features implemented:
 
-* Facebook sharing with [Open Graph tags](https://ogp.me/) to enable an attractive page preview
-* Google visibility with structured data using [Schema.org](http://schema.org/) with [JSON-DL](https://json-ld.org/)
+* Facebook sharing with [Open Graph tags](https://ogp.me) to enable an attractive page preview
+* Google visibility with structured data using [Schema.org](http://schema.org) with [JSON-DL](https://json-ld.org)
 
 Feel free to [test the Open Graph tags implementation](https://developers.facebook.com/tools/debug/) and the also [test the Schema.org implementation](https://search.google.com/structured-data/testing-tool/u/0/) for your store.
-

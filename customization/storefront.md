@@ -1,16 +1,18 @@
 # Storefront
 
 {% hint style="warning" %}
-This section covers the Rails storefront which was extracted to `spree_frontend` ruby gem. 
+This section covers the Rails storefront which was extracted to [`spree_frontend`](https://github.com/spree/spree\_legacy\_frontend) ruby gem.&#x20;
 
-For new projects, we recommend using [Storefront API](https://spark-solutions.stoplight.io/docs/api-v2/api/docs/v2/storefront/index.yaml) to build your own storefront or use existing integrations with [Next.js](../storefronts/next.js-commerce.md) or [Vue Storefront](../storefronts/vue-storefront.md)
+
+
+For new projects, we recommend using [Storefront API](https://spark-solutions.stoplight.io/docs/api-v2/api/docs/v2/storefront/index.yaml) to build your own storefront or using existing integrations with [Next.js](../storefronts/next.js-commerce.md) or [Vue Storefront](../storefronts/vue-storefront.md).
 {% endhint %}
 
 ## Styling with SASS variables
 
 Spree 4 under the hood uses [Bootstrap 4](https://getbootstrap.com/docs/4.6/getting-started/theming/) for easy theming with some additional Spree-specific [SASS variables](https://sass-lang.com/documentation/variables).
 
-![](../.gitbook/assets/cms_navigation.png) To make those changes live you need to update SCSS variable files located in your project at `app/assets/stylesheets/spree/frontend/variables/variables.scss`.
+![](../.gitbook/assets/cms\_navigation.png) To make those changes live you need to update SCSS variable files located in your project at `app/assets/stylesheets/spree/frontend/variables/variables.scss`.
 
 ### Header
 
@@ -365,7 +367,7 @@ To replace an entire stylesheet as provided by Spree you simply need to create a
 
 For example, to replace `spree/frontend/all.css` you would save the replacement to `your_app/vendor/assets/stylesheets/spree/frontend/all.css`.
 
- This same method can also be used to override stylesheets provided by third-party extensions.
+&#x20;This same method can also be used to override stylesheets provided by third-party extensions.
 
 ### Overriding individual JavaScript functions
 
@@ -415,13 +417,13 @@ To replace an entire JavaScript file as provided by Spree you simply need to cre
 
 For example, to replace `spree/frontend/all.js` you would save the replacement to `your_app/vendor/assets/javascripts/spree/frontend/all.js`.
 
- This same method can be used to override JavaScript files provided by third-party extensions.
+&#x20;This same method can be used to override JavaScript files provided by third-party extensions.
 
 ## SEO recommendations
 
 ### Sitemap
 
-We highly recommend adding a sitemap to your site. It might affect how Google bot crawls your store pages. There is an official extension called [Spree Sitemap](https://github.com/spree-contrib/spree_sitemap) for that exact purpose.
+We highly recommend adding a sitemap to your site. It might affect how Google bot crawls your store pages. There is an official extension called [Spree Sitemap](https://github.com/spree-contrib/spree\_sitemap) for that exact purpose.
 
 1. Per region, language or currency
 2. Click the **Edit** button (indicated with a pencil icon) for the right store

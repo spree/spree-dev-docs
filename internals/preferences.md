@@ -1,12 +1,9 @@
----
-title: Preferences
-section: internals
----
-
 # Preferences
 
-{% hint style="warning" %}
-We do not advise to use Preferences anymore, we're working on a path forward limitting Preferences in Spree codebase
+
+
+{% hint style="danger" %}
+We do not advise to use Preferences, we're working on replacing preferences with a more modern solution - [https://github.com/spree/spree/issues/11451](https://github.com/spree/spree/issues/11451)
 {% endhint %}
 
 ## Overview
@@ -43,7 +40,7 @@ Both use cases are handled by Spree Preferences. They are easy to define, provid
 
 Spree comes with many application-wide preferences. They are defined in `core/app/models/spree/app_configuration.rb` and made available to your code through `Spree::Config`, e.g., `Spree::Config.track_inventory_levels`.
 
-A limited set of the general settings are available in the admin interface of your store \(`/admin/general_settings`\).
+A limited set of the general settings are available in the admin interface of your store (`/admin/general_settings`).
 
 You can add additional preferences under the `spree/app_configuration` namespace or create your own subclass of `Preferences::Configuration`.
 
@@ -330,7 +327,7 @@ A JSON hash of different styles that are supported by attachments. Defaults to:
 
 `auto_capture`
 
-Depending on whether or not Spree is configured to "auto capture" the credit card, either a purchase or an authorize operation will be performed on the card \(via the current credit card gateway\). Defaults to `false`.
+Depending on whether or not Spree is configured to "auto capture" the credit card, either a purchase or an authorize operation will be performed on the card (via the current credit card gateway). Defaults to `false`.
 
 `company`
 
@@ -397,4 +394,3 @@ Determines if tax information should be based on shipping address, rather than t
 `track_inventory_levels`
 
 Determines if inventory levels should be tracked when products are purchased at checkout. This option causes new `InventoryUnit` objects to be created when a product is bought. Defaults to `true`.
-

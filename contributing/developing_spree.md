@@ -18,7 +18,7 @@ All Spree models, controllers and other Ruby classes are namespaced by the `Spre
 
 ## Forking Spree repo
 
-Go to [Spree GitHub repository](https://github.com/spree/spree) and click **Fork** button. This will create a copy of Spree repository on your GitHub account. See [Github Documentation](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) for more information on forking.
+Go to [Spree GitHub repository](https://github.com/spree/spree) and click the **Fork** button. This will create a copy of the Spree repository on your GitHub account. See [Github Documentation](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) for more information on forking.
 
 ## Local setup
 
@@ -40,25 +40,31 @@ Go to [Spree GitHub repository](https://github.com/spree/spree) and click **Fork
      bundle install
     ```
 
-## Create Sandbox application
+## Creating Sandbox application
 
 Bellow command will setup a Rails application with Spree pre-installed with some data seeded:
 
 ```
-bundle exec rake sandbox
+bin/sandbox.sh
 ```
 
 By default, Sandbox uses the **PostgreSQL** database. But you can switch to **MySQL**:
 
 ```
-DB=mysql bundle exec rake sandbox
+DB=mysql bin/sandbox.sh
+```
+
+When developing [Spree Dashboard](https://github.com/spree/spree\_backend) you can also pass `SPREE_`DASHBOARD`_PATH`
+
+```bash
+SPREE_DASHBOARD_PATH=../../spree_backend bin/sandbox.sh
 ```
 
 Start the server
 
 ```
 cd sandbox
-bin/rails s
+bin/dev
 ```
 
 ### Performance in development mode

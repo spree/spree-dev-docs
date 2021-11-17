@@ -13,7 +13,6 @@ This is a list of all Spree versions currently being supported by the Spree team
 | 4.3     | **Yes**    | 14.09.2021   | 14.09.2023 |
 | 4.2     | **Yes**    | 23.02.2021   | 23.02.2023 |
 | 4.1     | **Yes**    | 02.03.2020   | 02.03.2022 |
-| 4.0     | **Yes**    | 09.10.2019   | 09.10.2021 |
 | 3.7 LTS | **Yes**    | 04.02.2019   | 04.02.2022 |
 
 LTS means [Long-term support releases](https://en.wikipedia.org/wiki/Long-term\_support), usually the last release in the major release cycle.

@@ -147,6 +147,49 @@ product.default_variant.amount_in('EUR').to_s
 
 A prototype is a useful way to share common `OptionType` and `Property` combinations amongst many different products. For instance, if you're creating a lot of shirt products, you may wish to maintain the "Size" and "Color" option types, as well as a "Fitting Type" property.
 
+
+## Digital Assets
+
+Besides psychical goods Spree offers the ability to retail digital goods delivered via an Active Storage download link, download links can be limited with a download count and expire time through the store settings area.
+
+Ideally each product should be either a psychical, or a digital product. If the product you are creating has no options (variants) this product becomes a digital product when a digital asset is attached.
+If the product you are creating has several variants, each variant is treated as physical or digital on a per variant basis when the variant has a digital asset attached.
+
+An example use case of a product with many digital variants would be if you want to give the customer the option to purchase an eBook in a specific language, each variant being a designated language and the appropriate eBook translation uploaded to each variant,
+the customer viewing the eBook product can select the language of choice and the file they receive upon purchase will be the asset attached the variant the customer purchased.
+
+#### Private Digital Asset Storage
+
+When storing digital goods (assets) on your chosen storage provider you will want to host these on a separate bucket to the one you are using for the public product images, to set-up a private storage bucket for private files follow these steps:
+
+1. Create a new private bucket on your asset hosting service provider.
+
+2. Within the `config/storage.yml` file add the credentials of your new private bucket and give this configuration a name of your choosing, here we have used `spree_private:`.
+
+```yml
+---
+amazon:
+  service: S3
+  access_key_id: <%= Rails.application.credentials.dig(:aws, :access_key_id) %>
+  secret_access_key: <%= Rails.application.credentials.dig(:aws, :secret_access_key) %>
+  region: us-east-1
+  bucket: the_public_bucket
+
+spree_private:
+  service: S3
+  access_key_id: <%= Rails.application.credentials.dig(:aws, :access_key_id) %>
+  secret_access_key: <%= Rails.application.credentials.dig(:aws, :secret_access_key) %>
+  region: us-east-1
+  bucket: the_private_bucket
+```
+
+2. Within your Spree Rails app locate the spree.rb initializer file, and add the following line referencing the name of your private bucket service configuration.
+
+```ruby
+# initializers/spree.rb
+Spree.private_storage_service_name = 'spree_private'
+```
+
 ## Taxons and Taxonomies
 
 Taxonomies provide a simple, yet robust way of categorizing products by enabling store administrators to define as many separate structures as needed.
@@ -163,4 +206,3 @@ Taxons use the [Nested set model](http://en.wikipedia.org/wiki/Nested_set_model)
 Taxons link to products through an intermediary model called `Classification`. This model exists so that when a product is deleted, all of the links from that product to its taxons are deleted automatically. A similar action takes place when a taxon is deleted; all of the links to products are deleted automatically.
 
 Linking to a taxon in a controller or a template should be done using the `spree.nested_taxons_path` helper, which will use the taxon's permalink to generate a URL such as `/t/categories/brand`.
-

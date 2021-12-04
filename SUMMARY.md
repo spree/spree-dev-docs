@@ -9,7 +9,7 @@
 
 ## 💻API
 
----
+***
 
 * [Storefront API](https://api.spreecommerce.org/docs/api-v2/YXBpOjMxMjQ5NjA-storefront-api-v2)
 * [Platform API](https://api.spreecommerce.org/docs/api-v2/YXBpOjg3MzkxODk-platform-api-v2)
@@ -38,7 +38,7 @@
 
 * [Dependencies](customization/dependencies.md)
 * [Business Logic](customization/logic.md)
-* [Storefront API](customization/api_v2.md)
+* [Storefront API](customization/api\_v2.md)
 * [Checkout](customization/checkout.md)
 * [Authentication](customization/authentication.md)
 * [Permissions](customization/permissions.md)
@@ -50,7 +50,7 @@
 ## 🎁Extensions
 
 * [Extensions](extensions/extensions.md)
-* [Creating an extension](extensions/extensions_tutorial.md)
+* [Creating an extension](extensions/extensions\_tutorial.md)
 
 ## 🌏Deployment
 
@@ -62,18 +62,19 @@
 
 * [General guidelines](security/index.md)
 * [API](security/api.md)
-* [PCI Compliance](security/pci_compliance.md)
-* [Authentication & authorization](security/authentication_and_authorization.md)
+* [PCI Compliance](security/pci\_compliance.md)
+* [Authentication & authorization](security/authentication\_and\_authorization.md)
 
 ## Advanced
 
-* [Adding Spree to an existing Rails application](advanced/existing_app_tutorial.md)
-* [Deface](advanced/deface_overrides_tutorial.md)
+* [Adding Spree to an existing Rails application](advanced/existing\_app\_tutorial.md)
+* [Deface](advanced/deface\_overrides\_tutorial.md)
 
 ## ⏩Upgrades
 
 * [How to perform upgrades](upgrades/index.md)
 * [Upgrade guides](upgrades/upgrades/README.md)
+  * [4.3 to 4.4](upgrades/upgrades/4.3-to-4.4.md)
   * [4.2 to 4.3](upgrades/upgrades/fout-dot-two-to-four-dot-three.md)
   * [4.1 to 4.2](upgrades/upgrades/four-dot-one-to-four-dot-two.md)
   * [4.0 to 4.1](upgrades/upgrades/four-dot-oh-to-four-dot-one.md)
@@ -97,8 +98,8 @@
 ## ❤️Contributing
 
 * [General guidelines](contributing/index.md)
-* [Developing Spree](contributing/developing_spree.md)
-* [Upgrading extensions](contributing/upgrading_extensions.md)
+* [Developing Spree](contributing/developing\_spree.md)
+* [Upgrading extensions](contributing/upgrading\_extensions.md)
 
 ## ✨Releases Notes
 
@@ -107,8 +108,7 @@
 
 ## 🤝Support
 
----
+***
 
 * [Core Team support](https://spreecommerce.org/contact)
 * [Slack Community](https://slack.spreecommerce.org)
-

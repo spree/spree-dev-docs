@@ -4,7 +4,7 @@
 
 ![](../.gitbook/assets/screenshot-2021-09-14-at-22.45.58.png)
 
-See the live demo: [https://spree.vercel.app/](https://spree.vercel.app/)
+See the live demo: [https://spree.vercel.store/](https://spree.vercel.store/)
 
 ### Installation
 

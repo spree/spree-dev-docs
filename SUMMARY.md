@@ -9,8 +9,6 @@
 
 ## 💻API
 
-***
-
 * [Storefront API](https://api.spreecommerce.org/docs/api-v2/YXBpOjMxMjQ5NjA-storefront-api-v2)
 * [Platform API](https://api.spreecommerce.org/docs/api-v2/YXBpOjg3MzkxODk-platform-api-v2)
 
@@ -107,8 +105,6 @@
 * [Changelog](https://github.com/spree/spree/blob/master/CHANGELOG.md)
 
 ## 🤝Support
-
-***
 
 * [Core Team support](https://spreecommerce.org/contact)
 * [Slack Community](https://slack.spreecommerce.org)

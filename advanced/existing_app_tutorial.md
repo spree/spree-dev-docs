@@ -27,6 +27,7 @@ gem 'sassc', github: 'sass/sassc-ruby', branch: 'master'
 bin/rails g spree:install --user_class=Spree::User
 bin/rails g spree:auth:install
 bin/rails g spree_gateway:install
+bin/rails javascript:install:esbuild
 bin/rails g spree:backend:install
 ```
 
@@ -67,7 +68,7 @@ The different parts of Spree (API, Admin) will be mounted there as well, eg. `ht
 
 ### Use your existing authentication
 
-[Spree Auth Devise](https://github.com/spree/spree_auth_devise) is the default authentication that comes with Spree but you can swap it for your own, please [follow this guide](../customization/authentication.md)
+[Spree Auth Devise](https://github.com/spree/spree\_auth\_devise) is the default authentication that comes with Spree but you can swap it for your own, please [follow this guide](../customization/authentication.md)
 
 ### Hello, Spree Commerce
 

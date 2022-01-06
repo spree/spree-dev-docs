@@ -48,7 +48,9 @@ Spree 4.3 was split into separate modules which aren't included in the `spree` p
 
 ### \(Optional\) Add `spree_frontend` gem
 
-If you use the default Spree Storefront you need to add it to your `Gemfile`.
+If you use the default Spree Storefront you need to add it to your `Gemfile`. 
+
+Note: If you are using `spree_auth_devise`, make sure `spree_frontend` precedes it in your Gemfile.
 
 ```ruby
 gem 'spree_frontend', '>= 4.3'
@@ -56,7 +58,10 @@ gem 'spree_frontend', '>= 4.3'
 
 ### \(Optional\) Add `spree_backend` gem
 
-If you use the default Spree Admin Panel you need to add it to your `Gemfile`.
+If you use the default Spree Admin Panel you need to add it to your `Gemfile`. Make sure it comes before `spree_auth_devise`.
+
+Note: If you are using `spree_auth_devise`, make sure `spree_backend` precedes it in your Gemfile.
+
 
 ```ruby
 gem 'spree_backend', '>= 4.3'

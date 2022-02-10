@@ -8,15 +8,17 @@ Proper application design, intelligent programming, and secure infrastructure ar
 
 This is a list of all Spree versions currently being supported by the Spree team.
 
-| Version | Supported? | Release date | EOL date   |
-| ------- | ---------- | ------------ | ---------- |
-| 4.3     | **Yes**    | 14.09.2021   | 14.03.2023 |
-| 4.2     | **Yes**    | 23.02.2021   | 23.08.2022 |
-| 3.7 LTS | **Yes**    | 04.02.2019   | 04.02.2022 |
-
-LTS means [Long-term support releases](https://en.wikipedia.org/wiki/Long-term\_support), usually the last release in the major release cycle.
+| Version | Release date | EOL date   |
+| ------- | ------------ | ---------- |
+| 4.4     | 26.01.2022   | 26.07.2023 |
+| 4.3     | 14.09.2021   | 14.03.2023 |
+| 4.2     | 23.02.2021   | 23.08.2022 |
 
 If you're using an older version [please upgrade](../upgrades/upgrades/). Have trouble upgrading? [Contact us for support](https://spreecommerce.org/contact/).
+
+Or you can migrate once to [Spree as a Service](https://spreecommerce.org/spree-as-a-service/) and forget about upgrades altogether!
+
+**Versions that aren't supported will not receive any security patches and fixes!**
 
 ## Reporting Security Issues
 

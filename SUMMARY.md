@@ -45,11 +45,6 @@
 * [Storefront](customization/storefront.md)
 * [Emails](customization/emails.md)
 
-## 🎁Extensions
-
-* [Extensions](extensions/extensions.md)
-* [Creating an extension](extensions/extensions\_tutorial.md)
-
 ## 🌏Deployment
 
 * [Vendo](deployment/vendo.md)
@@ -63,11 +58,6 @@
 * [API](security/api.md)
 * [PCI Compliance](security/pci\_compliance.md)
 * [Authentication & authorization](security/authentication\_and\_authorization.md)
-
-## Advanced
-
-* [Adding Spree to an existing Rails application](advanced/existing\_app\_tutorial.md)
-* [Deface](advanced/deface\_overrides\_tutorial.md)
 
 ## ⏩Upgrades
 
@@ -93,6 +83,16 @@
   * [1.2 to 1.3](upgrades/upgrades/one-dot-two-to-one-dot-three.md)
   * [1.1 to 1.2](upgrades/upgrades/one-dot-one-to-one-dot-two.md)
   * [1.0 to 1.1](upgrades/upgrades/one-dot-oh-to-one-dot-one.md)
+
+## 🎁Extensions
+
+* [Extensions](extensions/extensions.md)
+* [Creating an extension](extensions/extensions\_tutorial.md)
+
+## Advanced
+
+* [Adding Spree to an existing Rails application](advanced/existing\_app\_tutorial.md)
+* [Deface](advanced/deface\_overrides\_tutorial.md)
 
 ## ❤️Contributing
 

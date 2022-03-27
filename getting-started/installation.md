@@ -1,5 +1,13 @@
 # Installation
 
+## Self-hosted vs SaaS
+
+Before you proceed we would like to remind you that we also offer Software as a Service platform called [Vendo](https://getvendo.com) which is essentialy Spree in the cloud, with [additional features](https://spreecommerce.org/spree-as-a-service/), global CDN, pre-built integrations without hosting headaches.&#x20;
+
+![Vendo - Spree as a Service offerring](https://uploads-ssl.webflow.com/6230c485f2c32ea1b0daa438/62386b96518cdcbe111f134a\_OG%20Image%20\(2\).png)
+
+With [Vendo](https://getvendo.com), you just need to sign up and focus on your brand and storefront experience. The rest (hosting, maintanence, security, scaling) is handled by us.
+
 ## Prerequisites
 
 Before proceeding make sure you have [Docker Desktop](https://docs.docker.com/get-docker/) installed on your system. This is fairly straightforward but differs depending on which operating system you use.

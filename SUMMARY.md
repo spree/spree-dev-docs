@@ -52,6 +52,7 @@
 
 ## 🌏Deployment
 
+* [Vendo](deployment/vendo.md)
 * [AWS](deployment/aws.md)
 * [Heroku](deployment/heroku.md)
 * [Performance](deployment/performance.md)

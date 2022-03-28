@@ -1,6 +1,6 @@
 # Developer's Documentation
 
-![](.gitbook/assets/linkedin\_cover\_profile-2x.png)
+![](.gitbook/assets/spree\_vendo\_user\_doc.png)
 
 [![GitHub stars](https://img.shields.io/github/stars/spree/spree.svg?style=social\&label=Star\&maxAge=2592000)](https://github.com/spree/spree/)
 

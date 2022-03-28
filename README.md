@@ -1,8 +1,6 @@
 # Developer's Documentation
 
-![](.gitbook/assets/spree\_vendo\_user\_doc.png)
-
-[Vendo](https://getvendo.com/?utm_source=spree_devdocs) comes with a built-in storefront, features and integrations. Try it for free.
+![Vendo comes with a built-in storefront, features and integrations. Try it for free.](.gitbook/assets/spree\_vendo\_user\_doc.png)
 
 [![GitHub stars](https://img.shields.io/github/stars/spree/spree.svg?style=social\&label=Star\&maxAge=2592000)](https://github.com/spree/spree/)
 

@@ -1,6 +1,6 @@
 # Vendo
 
-[Vendo](https://getvendo.com) is a Software as a Service based on Spree with lot's of additional features and integrations pre-built.&#x20;
+[Vendo](https://getvendo.com) is a Software as a Service based on Spree with lots of additional features and integrations pre-built.&#x20;
 
 ![](https://uploads-ssl.webflow.com/6230c485f2c32ea1b0daa438/62386b96518cdcbe111f134a\_OG%20Image%20\(2\).png)
 

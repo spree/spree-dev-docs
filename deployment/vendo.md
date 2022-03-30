@@ -4,7 +4,7 @@
 
 ![](https://uploads-ssl.webflow.com/6230c485f2c32ea1b0daa438/62386b96518cdcbe111f134a\_OG%20Image%20\(2\).png)
 
-With Vendo you don't need to worry aboyt hosting, scaling, maintanence, upgrades or security.  It's all taken care of by us. Instead you can focus on your business and storefront customization.&#x20;
+With Vendo, you don't need to worry about hosting, scaling, maintenance, upgrades or security; we take care of everything so you can focus on your business and storefront customizations.&#x20;
 
 Vendo has all the flexibility of Spree without the hosting headaches.
 

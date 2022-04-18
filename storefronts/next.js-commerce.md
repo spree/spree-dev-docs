@@ -11,7 +11,7 @@ See the live demo: [https://spree.vercel.store/](https://spree.vercel.store/)
 1. Clone the git repository:
 
    ```text
-   git clone https://github.com/vercel/commerce.git
+   git clone https://github.com/spree/nextjs-commerce.git
    ```
 
 2. Copy the `framework/spree/env.template` file to `.env.local` in the main directory:

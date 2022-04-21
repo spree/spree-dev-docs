@@ -123,7 +123,7 @@ Or simply run `bundle exec rails g spree:frontend:copy_storefront`
 
 ## Read the release notes
 
-For information about changes contained within this release, please read the [4.2.0 Release Notes](https://guides.spreecommerce.org/release_notes/spree_4_2_0.html).
+For information about changes contained within this release, please read the [4.2.0 Release Notes](https://github.com/spree/spree/releases/tag/v4.2.0).
 
 ## More info
 

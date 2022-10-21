@@ -8,20 +8,17 @@ See the live demo: [https://spree.vercel.store/](https://spree.vercel.store/)
 
 ### Installation
 
-1. Clone the git repository:
+1.  Clone the git repository:
 
-   ```text
-   git clone https://github.com/vercel/commerce.git
-   ```
+    ```
+    git clone https://github.com/vercel/commerce.git
+    ```
+2.  Copy the `packages/spree/env.template` file to `site/.env.local` in the main directory:
 
-2. Copy the `framework/spree/env.template` file to `.env.local` in the main directory:
-
-   ```text
-   cp framework/spree/.env.template .env.local
-   ```
-
+    ```
+    cp packages/spree/.env.template site/.env.local
+    ```
 3. Adjust the `NEXT_PUBLIC_SPREE_CATEGORIES_TAXONOMY_PERMALINK` and `NEXT_PUBLIC_SPREE_BRANDS_TAXONOMY_PERMALINK` environment variables inside `.env.local`:
    * They rely on [taxonomies'](https://dev-docs.spreecommerce.org/internals/products#taxons-and-taxonomies) `permalink` values set in Spree.
    * Go to the Spree admin panel and create `Categories` and `Brands` taxonomies if they don't exist. Copy their permalinks into `.env.local` in NextJS Commerce.
-4. Finally, run `npm install` and `npm run dev`.
-
+4. Finally, run `yarn install` and `yarn run dev`.

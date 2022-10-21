@@ -32,7 +32,7 @@ Go to [Spree GitHub repository](https://github.com/spree/spree) and click the **
 3.  Install required libraries
 
     ```
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" && brew install openssl mysql postgresql imagemagick redis
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" && brew install openssl mysql postgresql imagemagick redis vips node
     ```
 4.  Install the gem dependencies
 
@@ -90,7 +90,7 @@ Create a new branch for your changes. Do not push changes to the main branch. Br
 
 ## Running Tests
 
-We use [CircleCI](https://circleci.com) to run the tests for Spree.
+We use [CircleCI](https://circleci.com/) to run the tests for Spree.
 
 You can see the build statuses at [https://circleci.com/gh/spree/spree](https://circleci.com/gh/spree/spree).
 

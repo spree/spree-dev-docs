@@ -12,7 +12,7 @@ For new projects, we recommend using [Storefront API](https://spark-solutions.st
 
 Spree 4 under the hood uses [Bootstrap 4](https://getbootstrap.com/docs/4.6/getting-started/theming/) for easy theming with some additional Spree-specific [SASS variables](https://sass-lang.com/documentation/variables).
 
-![](../.gitbook/assets/cms\_navigation.png) To make those changes live you need to update SCSS variable files located in your project at `app/assets/stylesheets/spree/frontend/variables/variables.scss`.
+<img src="../.gitbook/assets/cms_navigation.png" alt="" data-size="line"> To make those changes live you need to update SCSS variable files located in your project at `app/assets/stylesheets/spree/frontend/variables/variables.scss`.
 
 ### Header
 
@@ -452,7 +452,7 @@ To set the title, meta keywords and description for each **product page (PDP)**,
 
 The new Spree UX has the following social sharing features implemented:
 
-* Facebook sharing with [Open Graph tags](https://ogp.me) to enable an attractive page preview
-* Google visibility with structured data using [Schema.org](http://schema.org) with [JSON-DL](https://json-ld.org)
+* Facebook sharing with [Open Graph tags](https://ogp.me/) to enable an attractive page preview
+* Google visibility with structured data using [Schema.org](http://schema.org/) with [JSON-DL](https://json-ld.org/)
 
 Feel free to [test the Open Graph tags implementation](https://developers.facebook.com/tools/debug/) and the also [test the Schema.org implementation](https://search.google.com/structured-data/testing-tool/u/0/) for your store.

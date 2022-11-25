@@ -2,11 +2,11 @@
 
 ## Self-hosted vs SaaS
 
-Before you proceed we would like to remind you that we also offer Software as a Service platform called [Vendo](https://getvendo.com) which is essentialy Spree in the cloud, with [additional features](https://spreecommerce.org/spree-as-a-service/), global CDN, pre-built integrations without hosting headaches.&#x20;
+Before you proceed we would like to remind you that we also offer Software as a Service platform called [Vendo](https://getvendo.com/?utm\_source=spree\_docs) which is essentialy Spree in the cloud, with [additional features](https://spreecommerce.org/spree-as-a-service/), global CDN, pre-built integrations without hosting headaches.&#x20;
 
 ![Vendo - Spree as a Service offerring](https://uploads-ssl.webflow.com/6230c485f2c32ea1b0daa438/62386b96518cdcbe111f134a\_OG%20Image%20\(2\).png)
 
-With [Vendo](https://getvendo.com), you just need to sign up and focus on your brand and storefront experience. The rest (hosting, maintanence, security, scaling) is handled by us.
+With [Vendo](https://getvendo.com/?utm\_source=spree\_docs), you just need to sign up and focus on your brand and storefront experience. The rest (hosting, maintanence, security, scaling) is handled by us.
 
 ## Prerequisites
 
@@ -42,7 +42,7 @@ curl --request GET \
   --header 'Content-Type: application/json'
 ```
 
-We recommend checking out our [API reference](https://api.spreecommerce.org) for more details.
+We recommend checking out our [API reference](https://api.spreecommerce.org/) for more details.
 
 ### Logging Into the Admin Panel
 
@@ -50,6 +50,6 @@ The next thing you'll probably want to do is to log into the admin interface. Us
 
 Upon successful authentication, you should see the admin screen:
 
-![](<../.gitbook/assets/admin\_panel\_978-2x (1).jpg>)
+![](../.gitbook/assets/admin\_panel\_978-2x.jpg)
 
 Feel free to explore some of the Admin Panel features that Spree has to offer and to verify that your installation is working properly.

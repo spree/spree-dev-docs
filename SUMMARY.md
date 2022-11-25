@@ -9,8 +9,13 @@
 
 ## 💻API
 
-* [Storefront API](https://api.spreecommerce.org/docs/api-v2/YXBpOjMxMjQ5NjA-storefront-api-v2)
-* [Platform API](https://api.spreecommerce.org/docs/api-v2/YXBpOjg3MzkxODk-platform-api-v2)
+* [Getting Started with Spree API](api/getting-started-with-spree-api.md)
+* [Storefront API](api/storefront-api/README.md)
+  * [Authenticating requests](api/storefront-api/authenticating-requests.md)
+  * [Storefront API Examples](https://api.spreecommerce.org/docs/api-v2/YXBpOjMxMjQ5NjA-storefront-api-v2)
+* [Platform API](api/platform-api/README.md)
+  * [Authenticating requests](api/platform-api/authenticating-requests.md)
+  * [Platform API Examples](https://api.spreecommerce.org/docs/api-v2/YXBpOjg3MzkxODk-platform-api-v2)
 
 ## 🎨Storefronts
 

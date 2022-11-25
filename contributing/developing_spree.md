@@ -149,6 +149,20 @@ Please keep your commit history meaningful and clear. [This guide](https://about
 
     We're aiming to review and leave feedback as soon as possible. We'll leave you a meaningul feedback if needed.
 
+## Troubleshooting
+
+This section will help you troubleshoot common issues with Spree.
+
+#### libvips error
+
+If you are using Spree 4.5 or higher, you may encounter the following libvips error:
+
+```
+LoadError: Could not open library 'vips.so.42'
+```
+
+This error is usually an indication that you do not have libvips installed locally on your machine. Check that libvips is installed with `vips -v`, and if it is not installed, follow [installation instructions here](https://www.libvips.org/install.html).
+
 ## That's a wrap!
 
 Thank you for participating in Open Source and improving Spree - you're awesome!

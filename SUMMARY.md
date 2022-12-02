@@ -68,6 +68,7 @@
 
 * [How to perform upgrades](upgrades/index.md)
 * [Upgrade guides](upgrades/upgrades/README.md)
+  * [4.4 to 4.5](upgrades/upgrades/4.4-to-4.5.md)
   * [4.3 to 4.4](upgrades/upgrades/4.3-to-4.4.md)
   * [4.2 to 4.3](upgrades/upgrades/fout-dot-two-to-four-dot-three.md)
   * [4.1 to 4.2](upgrades/upgrades/four-dot-one-to-four-dot-two.md)

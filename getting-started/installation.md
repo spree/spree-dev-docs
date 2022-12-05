@@ -20,6 +20,12 @@ Windows users will need to [install the Linux subsystem](https://docs.microsoft.
 
 ## Installation
 
+### Installation using Spree CLI
+
+For the instructions on how to setup Spree with a dedicated CLI tool go to [this](spree-cli.md) page.
+
+### Manual installation
+
 1. Download [Spree Starter](https://github.com/spree/spree\_starter/archive/main.zip)
 2. Unzip it
 3. Rename `spree_starter-main` directory as you please

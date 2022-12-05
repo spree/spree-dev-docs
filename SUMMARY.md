@@ -5,6 +5,7 @@
 ## 🚀Getting Started
 
 * [Installation](getting-started/installation.md)
+* [Spree CLI](getting-started/spree-cli.md)
 * [Headless Commerce](getting-started/headless-commerce.md)
 
 ## 💻API

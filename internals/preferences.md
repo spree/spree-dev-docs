@@ -1,11 +1,5 @@
 # Preferences
 
-
-
-{% hint style="danger" %}
-We do not advise to use Preferences, we're working on replacing preferences with a more modern solution - [https://github.com/spree/spree/issues/11451](https://github.com/spree/spree/issues/11451)
-{% endhint %}
-
 ## Overview
 
 Spree Preferences support general application configuration and preferences per model instance. Spree comes with preferences for your application like `track_inventory_levels`. Additional preferences can be added by your application or included extensions.

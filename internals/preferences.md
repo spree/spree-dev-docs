@@ -234,12 +234,16 @@ Here we are changing a preference to something other than the default as specifi
 During the Spree installation process, an initializer file is created within your application's source code. The initializer is found under `config/initializers/spree.rb`:
 
 ```ruby
-Spree.config do |config|
-  # Example:
-  # Uncomment to stop tracking inventory levels in the application
-  # config.track_inventory_levels = false
+Rails.application.config.after_initialize do
+  Spree.config do |config|
+    # Example:
+    # Uncomment to stop tracking inventory levels in the application
+    # config.track_inventory_levels = false
+  end
 end
 ```
+
+Note that if using Rails 7, you'll need to wrap the `Spree.config` block in an `Rails.application.config.after_initialize` block to avoid getting an error when booting up the app.
 
 The `Spree.config` block acts as a shortcut to setting `Spree::Config` multiple times. If you have multiple default preferences you would like to override within your code you may override them here. Using the initializer for setting the defaults is a nice shortcut, and helps keep your preferences organized in a standard location.
 

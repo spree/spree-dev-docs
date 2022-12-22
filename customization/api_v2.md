@@ -13,7 +13,7 @@ description: >-
 
 ### Customizing JSON response
 
-Spree uses J[SON API serializers](https://github.com/jsonapi-serializer/jsonapi-serializer) to represent data returned by API endpoints. 
+Spree uses [JSON API serializers](https://github.com/jsonapi-serializer/jsonapi-serializer) to represent data returned by API endpoints. 
 
 You can easily swap OOTB Spree serializers with your own thanks to [Spree Dependencies](dependencies.md). 
 

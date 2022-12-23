@@ -2,6 +2,26 @@
 
 Spree CLI is a tool that makes it easy to bootstrap a new Spree project. It provides an interactive process for configuring Spree backend (running in Dockerized, Hybrid or Native mode) and a selection of available frontends.
 
+### Usage
+
+To get started, simply run the following command in your terminal:
+
+```bash
+npx @spree/cli new app
+```
+
+This will launch the interactive process that will guide you through the process of setting up a new Spree-based store.
+
+In order to start the already generated app, navigate to your project's folder and run the following command:
+
+```bash
+npx @spree/cli start app
+```
+
+Happy hacking!
+
+
+
 ### Dependencies
 
 Node 14+ is required to run the CLI. Depending on the chosen Spree setup, you will have to install different dependencies first:
@@ -36,24 +56,6 @@ Node 14+ is required to run the CLI. Depending on the chosen Spree setup, you wi
 
 * node >= 13.0
 * yarn
-
-### Usage
-
-To get started, simply run the following command in your terminal:
-
-```bash
-npx @spree/cli new app
-```
-
-This will launch the interactive process that will guide you through the process of setting up a new Spree-based store.
-
-In order to start the already generated app, navigate to your project's folder and run the following command:
-
-```bash
-npx @spree/cli start app
-```
-
-Happy hacking!
 
 ### Running the CLI locally (debugging / contributing)
 

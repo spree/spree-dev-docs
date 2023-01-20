@@ -29,8 +29,9 @@ For the instructions on how to setup Spree with a dedicated CLI tool go to [this
 1. Download [Spree Starter](https://github.com/spree/spree\_starter/archive/main.zip)
 2. Unzip it
 3. Rename `spree_starter-main` directory as you please
-4. Run `bin/setup` in said directory
+4. Run `bin/setup-docker` in said directory
 5. Wait for the commands to execute (it can take around 2-3 minutes)
+6. Run `bin/start-docker` to run the webserver
 
 ## Hello, Spree Commerce
 

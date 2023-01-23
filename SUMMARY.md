@@ -2,13 +2,14 @@
 
 * [Developer's Documentation](README.md)
 
-## 🚀Getting Started
+## 🚀 Getting Started
 
+* [Quick Start Guide](getting-started/quick-start-guide.md)
 * [Installation](getting-started/installation.md)
-* [Spree CLI](getting-started/spree-cli.md)
 * [Headless Commerce](getting-started/headless-commerce.md)
+* [Supported Ruby and Rails Versions](getting-started/supported-ruby-and-rails-versions.md)
 
-## 💻API
+## 🔌 API
 
 * [Getting Started with Spree API](api/getting-started-with-spree-api.md)
 * [Storefront API](api/storefront-api/README.md)
@@ -18,12 +19,17 @@
   * [Authenticating requests](api/platform-api/authenticating-requests.md)
   * [Platform API Examples](https://api.spreecommerce.org/docs/api-v2/YXBpOjg3MzkxODk-platform-api-v2)
 
-## 🎨Storefronts
+## 🎨 Storefronts
 
 * [Next.js Commerce](storefronts/next.js-commerce.md)
 * [Vue Storefront](storefronts/vue-storefront.md)
 
-## ⚙️Internals
+## 🖥 CLI
+
+* [Getting Started with Spree CLI](cli/getting-started-with-spree-cli.md)
+* [Contributing to Spree CLI](cli/contributing-to-spree-cli.md)
+
+## ⚙ Internals
 
 * [Stores](internals/stores.md)
 * [Products](internals/products.md)
@@ -38,7 +44,7 @@
 * [Calculators](internals/calculators.md)
 * [Preferences](internals/preferences.md)
 
-## 🛠Customization
+## ⚒ Customization
 
 * [Dependencies](customization/dependencies.md)
 * [Business Logic](customization/logic.md)
@@ -51,21 +57,21 @@
 * [Storefront](customization/storefront.md)
 * [Emails](customization/emails.md)
 
-## 🌏Deployment
+## 🌎 Deployment
 
 * [Vendo](deployment/vendo.md)
 * [AWS](deployment/aws.md)
 * [Heroku](deployment/heroku.md)
 * [Performance](deployment/performance.md)
 
-## 🔑Security
+## 🔐 Security
 
 * [General guidelines](security/index.md)
 * [API](security/api.md)
 * [PCI Compliance](security/pci\_compliance.md)
 * [Authentication & authorization](security/authentication\_and\_authorization.md)
 
-## ⏩Upgrades
+## 🔋 Upgrades
 
 * [How to perform upgrades](upgrades/index.md)
 * [Upgrade guides](upgrades/upgrades/README.md)
@@ -91,28 +97,28 @@
   * [1.1 to 1.2](upgrades/upgrades/one-dot-one-to-one-dot-two.md)
   * [1.0 to 1.1](upgrades/upgrades/one-dot-oh-to-one-dot-one.md)
 
-## 🎁Extensions
+## 🎁 Extensions
 
 * [Extensions](extensions/extensions.md)
 * [Creating an extension](extensions/extensions\_tutorial.md)
 
-## Advanced
+## 👓 Advanced
 
 * [Adding Spree to an existing Rails application](advanced/existing\_app\_tutorial.md)
 * [Deface](advanced/deface\_overrides\_tutorial.md)
 
-## ❤️Contributing
+## ❤ Contributing
 
 * [General guidelines](contributing/index.md)
 * [Developing Spree](contributing/developing\_spree.md)
 * [Upgrading extensions](contributing/upgrading\_extensions.md)
 
-## ✨Releases Notes
+## ✨ Releases Notes
 
 * [Releases](https://github.com/spree/spree/releases)
 * [Changelog](https://github.com/spree/spree/blob/master/CHANGELOG.md)
 
-## 🤝Support
+## 🤝 Support
 
 * [Core Team support](https://spreecommerce.org/contact)
 * [Slack Community](https://slack.spreecommerce.org)

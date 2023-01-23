@@ -22,7 +22,7 @@ Windows users will need to [install the Linux subsystem](https://docs.microsoft.
 
 ### Installation using Spree CLI
 
-For the instructions on how to setup Spree with a dedicated CLI tool go to [this](spree-cli.md) page.
+For the instructions on how to setup Spree with a dedicated CLI tool go to [this](../cli/getting-started-with-spree-cli.md) page.
 
 ### Manual installation
 

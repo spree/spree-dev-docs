@@ -50,7 +50,7 @@ For further information on the available configuration options, please refer to 
 
 
 
-Open http://localhost:3000 in your browser to access the storefront.
+Open [http://localhost:4000](http://localhost:4000) in your browser to access the storefront.
 
 <figure><img src="../.gitbook/assets/Spree Vue Storefront.png" alt=""><figcaption></figcaption></figure>
 

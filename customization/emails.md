@@ -22,7 +22,6 @@ Spree offers an emails preview generator for development purposes. To generate t
 bundle exec rails g spree:emails:install
 ```
 
-After that, start the rails server locally and go to: `localhost:3000/rails/mailers`
+After that, start the rails server locally and go to: `localhost:4000/rails/mailers`
 
-\(it requires a seeded development database in order to work properly\)
-
+(it requires a seeded development database in order to work properly)

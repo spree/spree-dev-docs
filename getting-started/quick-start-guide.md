@@ -42,7 +42,7 @@ Open [http://localhost:4000/admin](http://localhost:4000/admin) in your browser.
 **Password:** spree123
 {% endhint %}
 
-For further information on the available configuration options, please refer to [Spree User Documentation](https://app.gitbook.com/o/-MgQRp4FD0-VW3y7clsV/s/-MgeqbyeWK5fVNDYGH38/)
+For further information on the available configuration options, please refer to [Spree User Documentation](https://app.gitbook.com/o/-MgQRp4FD0-VW3y7clsV/s/-MgeqbyeWK5fVNDYGH38/).
 
 
 

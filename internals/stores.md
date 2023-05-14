@@ -42,12 +42,29 @@ Spree::Store.default
 
 ## Localization and Currency
 
-Each Store can have different multiple locales and currencies. This configuration is stored in Store model attributes:
+Each Store can have multiple locales and currencies. This configuration is stored in Store model attributes:
 
 * `default_currency`- this is the default currency that will be pre-selected when visiting the store the first time, eg. `USD`
 * `supported_currencies` - if there is more than one supported currency, visitors will be able to choose which currency they would like to browse your store in, eg. `USD`, `CAD`, etc.
 * `default_locale` - this is the default locale/language which will be pre-selected when visiting the store the first time, eg. `en`
 * `supported_locales`, if there is more than one supported locale, visitors will be able to choose which locale they would like to browse your store in, eg. `en`, `fr`, etc. Locales are available upon installing [Spree I18n](https://github.com/spree-contrib/spree\_i18n)
+
+As of version 4.6, the `Store` resource allows for translating many of its fields. Translations are enabled when selecting more than one locale in `supported_locales`. The following fields are translatable:
+
+* `name`
+* `meta_description`
+* `meta_keywords`
+* `seo_title`
+* `facebook`
+* `twitter`
+* `instagram`
+* `customer_support_email`
+* `description`
+* `address`
+* `contact_phone`
+* `new_order_notifications_email`
+
+Read more about how resource translations work in [Internationalization](../customization/i18n.md#resource-translations).
 
 ## Checkout configuration
 
@@ -59,13 +76,13 @@ This will also have an effect on what [Shipping / Billing Addresses](addresses.m
 
 ## Store resources
 
-| Resource                                                  | Relationship                                                                                                                               |
-| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| ****[**Order**](orders.md)****                            | One Order belongs to one Store                                                                                                             |
-| ****[**Product**](products.md)****                        | One Product can be associated with many Store(s), you can pick and choose in which Store(s) each Product will be available                 |
-| ****[**Payment Method**](payments.md)****                 | One Payment Method can be associated with many Store(s), you can select in which Stores given Payment Method will be available on Checkout |
-| **Store Credit**                                          | One Store Credit belongs to and can be used in one Store                                                                                   |
-| **CMS Page**                                              | One Page belongs to one Store                                                                                                              |
-| **Navigation Menu**                                       | One Menu belongs to one Store                                                                                                              |
-| ****[**Taxonomy**](products.md#taxons-and-taxonomies)**** | One Taxonomy belongs to one Store                                                                                                          |
-| ****[**Promotion**](promotions.md)****                    | One Promotion can be associated with multiple Stores                                                                                       |
+| Resource                                          | Relationship                                                                                                                               |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| [**Order**](orders.md)                            | One Order belongs to one Store                                                                                                             |
+| [**Product**](products.md)                        | One Product can be associated with many Store(s), you can pick and choose in which Store(s) each Product will be available                 |
+| [**Payment Method**](payments.md)                 | One Payment Method can be associated with many Store(s), you can select in which Stores given Payment Method will be available on Checkout |
+| **Store Credit**                                  | One Store Credit belongs to and can be used in one Store                                                                                   |
+| **CMS Page**                                      | One Page belongs to one Store                                                                                                              |
+| **Navigation Menu**                               | One Menu belongs to one Store                                                                                                              |
+| [**Taxonomy**](products.md#taxons-and-taxonomies) | One Taxonomy belongs to one Store                                                                                                          |
+| [**Promotion**](promotions.md)                    | One Promotion can be associated with multiple Stores                                                                                       |

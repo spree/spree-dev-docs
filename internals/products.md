@@ -8,19 +8,19 @@ order: 2
 
 ## Overview
 
-`Product` records track unique products within your store. These differ from [Variants](products.md#variants), which track the unique variations of a product. For instance, a product that's a T-shirt would have variants denoting its different colors. Together, Products and Variants describe what is for sale.
+`Product` records track unique products within your store. These differ from [Variants](products.md#variants), which track the unique variations of a product. For instance, a product that's a T-shirt would have variants denoting its different colors. Together, Products and Variants describe what is for sale. Note that as of version 4.6, certain product fields are translatable (read more about this in [Internationalization](../customization/i18n.md#resource-translations)).
 
 Products have the following attributes:
 
-* `name`: short name for the product
-* `description`: The most elegant, poetic turn of phrase for describing your product's benefits and features to your site visitors
-* `slug`: An SEO slug based on the product name that is placed into the URL for the product
+* `name`: short name for the product _\[translatable]_
+* `description`: The most elegant, poetic turn of phrase for describing your product's benefits and features to your site visitors _\[translatable]_
+* `slug`: An SEO slug based on the product name that is placed into the URL for the product _\[translatable]_
 * `available_on`: The first date the product becomes available for sale online in your shop. If you don't set the `available_on` attribute, the product will not appear among your store's products for sale.
 * `discontinue_on`: Date when the product will become unavailable for sale online in your shop
 * `deleted_at`: The date the product is marked as deleted
-* `meta_title`: Optional title used for search engines instead of `name`
-* `meta_description`: A description targeted at search engines for search engine optimization \(SEO\)
-* `meta_keywords`: Several words and short phrases separated by commas, also targeted at search engines
+* `meta_title`: Optional title used for search engines instead of `name` _\[translatable]_
+* `meta_description`: A description targeted at search engines for search engine optimization (SEO) _\[translatable]_
+* `meta_keywords`: Several words and short phrases separated by commas, also targeted at search engines _\[translatable]_
 
 To understand how variants come to be, you must first understand option types and option values.
 
@@ -28,7 +28,9 @@ To understand how variants come to be, you must first understand option types an
 
 Option types denote the different options for a variant. A typical option type would be a size, with that option type's values being something such as "Small", "Medium" and "Large". Another typical option type could be a color, such as "Red", "Green", or "Blue".
 
-A product can be assigned many option types, but must be assigned at least one if you wish to create variants for that product.
+A product can be assigned many option types, but must be assigned at least one if you wish to create variants for that product.&#x20;
+
+The `name` and `presentation` fields for option types are translatable as of version 4.6.
 
 ## Variants
 
@@ -66,7 +68,7 @@ To simplify things you can call `product.default_variant` to get the default Var
 
 Images link to a product through its master variant. The sub-variants for the product may also have their own unique images to differentiate them in the frontend.
 
-Spree automatically handles the creation and storage of several size versions of each image \(via Active Storage\). See [Images Customization](../customization/images.md) section.
+Spree automatically handles the creation and storage of several size versions of each image (via Active Storage). See [Images Customization](../customization/images.md) section.
 
 ## Product Properties
 
@@ -89,13 +91,15 @@ product.set_property("material", "100% cotton")
 
 If this property doesn't already exist, a new `Property` instance with this name will be created.
 
+As of version 4.6, product property `value` and `filter_param` fields are translatable.
+
 ## Prices
 
-`Price` objects track a price for a particular currency and variant combination. For instance, a [Variant](products.md#variants) may be available for $15 \(15 USD\) and €7 \(7 Euro\).
+`Price` objects track a price for a particular currency and variant combination. For instance, a [Variant](products.md#variants) may be available for $15 (15 USD) and €7 (7 Euro).
 
-Spree behind the scenes uses [Ruby Money gem](https://github.com/RubyMoney/money) with some [additional](https://github.com/spree/spree/blob/master/core/app/models/concerns/spree/display_money.rb) [tweaks](https://github.com/spree/spree/blob/master/core/lib/spree/money.rb).
+Spree behind the scenes uses [Ruby Money gem](https://github.com/RubyMoney/money) with some [additional](https://github.com/spree/spree/blob/master/core/app/models/concerns/spree/display\_money.rb) [tweaks](https://github.com/spree/spree/blob/master/core/lib/spree/money.rb).
 
-If a product doesn't have a price in the selected currency it won't show up in the Storefront API by default. 
+If a product doesn't have a price in the selected currency it won't show up in the Storefront API by default.&#x20;
 
 To fetch a list of currencies that given product is available in, call `prices` to get a list of related `Price` objects:
 
@@ -129,16 +133,16 @@ product.default_variant.price_in('EUR')
 
 There are also other helpful methods available such as:
 
-#### Getting amount \(number\)
+#### Getting amount (number)
 
-```text
+```
 product.default_variant.amount_in('EUR')
  => 0.8499e2
 ```
 
-#### Getting amount \(string\)
+#### Getting amount (string)
 
-```text
+```
 product.default_variant.amount_in('EUR').to_s
  => "84.99"
 ```
@@ -154,13 +158,14 @@ Taxonomies provide a simple, yet robust way of categorizing products by enabling
 When working with Taxonomies there are two key terms to understand:
 
 * `Taxonomy` – a hierarchical list which is made up of individual Taxons. Each taxonomy relates to one `Taxon`, which is its root node.
-* `Taxon` – a single child node which exists at a given point within a `Taxonomy`. Each `Taxon` can contain many \(or no\) sub / child taxons. Store administrators can define as many Taxonomies as required, and link a product to multiple Taxons from each Taxonomy.
+* `Taxon` – a single child node which exists at a given point within a `Taxonomy`. Each `Taxon` can contain many (or no) sub / child taxons. Store administrators can define as many Taxonomies as required, and link a product to multiple Taxons from each Taxonomy.
 
 By default, both Taxons and Taxonomies are ordered by their `position` attribute.
 
-Taxons use the [Nested set model](http://en.wikipedia.org/wiki/Nested_set_model) for their hierarchy. The `lft` and `rgt` columns in the `spree_taxons` table represent the locations within the hierarchy of the item. This logic is handled by the [awesome nested set](https://github.com/collectiveidea/awesome_nested_set) gem.
+Taxons use the [Nested set model](http://en.wikipedia.org/wiki/Nested\_set\_model) for their hierarchy. The `lft` and `rgt` columns in the `spree_taxons` table represent the locations within the hierarchy of the item. This logic is handled by the [awesome nested set](https://github.com/collectiveidea/awesome\_nested\_set) gem.
 
 Taxons link to products through an intermediary model called `Classification`. This model exists so that when a product is deleted, all of the links from that product to its taxons are deleted automatically. A similar action takes place when a taxon is deleted; all of the links to products are deleted automatically.
 
 Linking to a taxon in a controller or a template should be done using the `spree.nested_taxons_path` helper, which will use the taxon's permalink to generate a URL such as `/t/categories/brand`.
 
+As of version 4.6, the taxon `name` and `description` fields are translatable.

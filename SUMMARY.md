@@ -7,7 +7,7 @@
 * [Quick Start Guide](getting-started/quick-start-guide.md)
 * [Installation](getting-started/installation.md)
 * [Headless Commerce](getting-started/headless-commerce.md)
-* [Supported Ruby and Rails Versions](getting-started/supported-ruby-and-rails-versions.md)
+* [Supported Versions](getting-started/supported-versions.md)
 
 ## 🔌 API
 
@@ -75,6 +75,7 @@
 
 * [How to perform upgrades](upgrades/index.md)
 * [Upgrade guides](upgrades/upgrades/README.md)
+  * [4.5 to 4.6](upgrades/upgrades/4.5-to-4.6.md)
   * [4.4 to 4.5](upgrades/upgrades/4.4-to-4.5.md)
   * [4.3 to 4.4](upgrades/upgrades/4.3-to-4.4.md)
   * [4.2 to 4.3](upgrades/upgrades/fout-dot-two-to-four-dot-three.md)

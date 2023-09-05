@@ -31,7 +31,7 @@ Spree is a modular, API-first headless e-commerce platform that consists of seve
 
 ### Webhooks
 
-We're working hard to deliver webhooks in the [Spree v4.4](https://github.com/spree/spree/milestone/45)!
+Webhooks are available since Spree v4.4. More information can be found [here](https://dev-docs.spreecommerce.org/\~/changes/6yIqEEgKQb8FUx9iV54d/upgrades/upgrades/4.3-to-4.4).
 
 ## Storefronts
 

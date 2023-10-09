@@ -11,12 +11,12 @@ See the live demo: [https://spree.vercel.store/](https://spree.vercel.store/)
 1.  Clone the git repository:
 
     ```
-    git clone https://github.com/vercel/commerce.git
+    git clone https://github.com/spree/nextjs-commerce.git
     ```
-2.  Copy the `packages/spree/env.template` file to `site/.env.local` in the main directory:
+2.  Copy the `framework/spree/.env.template` file to `.env.local` in the main directory:
 
     ```
-    cp packages/spree/.env.template site/.env.local
+    cp framework/spree/.env.template .env.local
     ```
 3. Adjust the `NEXT_PUBLIC_SPREE_CATEGORIES_TAXONOMY_PERMALINK` and `NEXT_PUBLIC_SPREE_BRANDS_TAXONOMY_PERMALINK` environment variables inside `.env.local`:
    * They rely on [taxonomies'](https://dev-docs.spreecommerce.org/internals/products#taxons-and-taxonomies) `permalink` values set in Spree.

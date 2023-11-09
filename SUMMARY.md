@@ -54,6 +54,7 @@
 * [Permissions](customization/permissions.md)
 * [Images](customization/images.md)
 * [Internationalization](customization/i18n.md)
+* [Admin Panel](customization/admin-panel.md)
 * [Storefront](customization/storefront.md)
 * [Emails](customization/emails.md)
 

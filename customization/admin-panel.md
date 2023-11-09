@@ -51,6 +51,26 @@ Rails.application.config.after_initialize do
 end
 ```
 
+### Customizing actions
+
+A common case for extensions is to add a new action button in the admin panel.&#x20;
+
+Action buttons are built with [`Spree::Admin::Actions::Action`](https://github.com/spree/spree\_backend/blob/main/app/models/spree/admin/actions/action.rb) or with a dedicated [`Spree::Admin::Actions::ActionBuilder`](https://github.com/spree/spree\_backend/blob/main/app/models/spree/admin/actions/action\_builder.rb) class. The action buttons are attached to `Rails.application.config.spree_backend.actions` and can be modified with an initializer.
+
+**Example: adding a new button to the order page**
+
+```ruby
+Rails.application.config.after_initialize do
+  Rails.application.config.spree_backend.actions[:order].add(
+    Spree::Admin::Actions::ActionBuilder.new('generate_export', admin_export_orders_path).
+      with_icon_key('list.svg').
+      with_style(Spree::Admin::Actions::ActionStyle::PRIMARY).
+      with_method(:post).
+      build
+  )
+end
+```
+
 ### Customizing existing views and partials
 
 If you need a more extensive customization of any of the admin panel pages, you can just copy their .erb file from the `spree_backend` gem to your `app/views/` directory and modify it there. This allows you to fully override default views provided by the `spree_backend` gem.

@@ -12,25 +12,44 @@ Additionally, there are two builder classes [`Spree::Admin::MainMenu::SectionBui
 
 The menu is available under `Rails.application.config.spree_backend.main_menu` and can be modified by both extensions as well as the Rails application code.
 
-
-
-Example: adding an additional section to the admin panel:
+#### Example: adding an additional section to the admin panel:
 
 ```ruby
 Rails.application.config.after_initialize do
-    Rails.application.config.spree_backend.main_menu.add(
-      Spree::Admin::MainMenu::SectionBuilder.new('subscriptions', 'inbox-fill.svg').
-         with_admin_ability_check(Spree::Subscription).
-         with_items(
-           Spree::Admin::MainMenu::ItemBuilder.new('active', Spree::Core::Engine.routes.url_helpers.admin_active_subsciptions_path).build,
-           Spree::Admin::MainMenu::ItemBuilder.new('expired', Spree::Core::Engine.routes.url_helpers.admin_expired_subsciptions_path).build
-         ).
-         build
-    )
+  Rails.application.config.spree_backend.main_menu.add(
+    Spree::Admin::MainMenu::SectionBuilder.new('subscriptions', 'inbox-fill.svg').
+       with_admin_ability_check(Spree::Subscription).
+       with_items(
+         Spree::Admin::MainMenu::ItemBuilder.new('active', Spree::Core::Engine.routes.url_helpers.admin_active_subsciptions_path).build,
+         Spree::Admin::MainMenu::ItemBuilder.new('expired', Spree::Core::Engine.routes.url_helpers.admin_expired_subsciptions_path).build
+       ).
+       build
+  )
 end
 ```
 
 For a more extensive example, take a look at how the [default menu is built](https://github.com/spree/spree\_backend/blob/main/app/models/spree/admin/main\_menu/default\_configuration\_builder.rb).
+
+### Customizing tabs
+
+In some cases you may need to add a new tab to a page for editing Orders, Products or Users.
+
+<figure><img src="../.gitbook/assets/Screenshot 2023-10-31 at 18.57.13.png" alt=""><figcaption><p>Product Tabs</p></figcaption></figure>
+
+These tabs are built with [`Spree::Admin::Tabs::Tab`](https://github.com/spree/spree\_backend/blob/main/app/models/spree/admin/tabs/tab.rb). You can also use [`Spree::Admin::Tabs::TabBuilder`](https://github.com/spree/spree\_backend/blob/main/app/models/spree/admin/tabs/tab\_builder.rb) class to construct new Tab objects. The tabs are attached to `Rails.application.config.spree_backend.tabs` and can be modified via an initializer.
+
+#### Example: adding an additional tab to the product edit admin page
+
+```ruby
+Rails.application.config.after_initialize do
+  Rails.application.config.spree_backend.tabs[:product].add(
+    Spree::Admin::Tabs::TabBuilder.new('discounts', ->(resource) { admin_product_discounts_path(product) }).
+      with_icon_key('view.svg').
+      with_active_check.
+      build
+  )
+end
+```
 
 ### Customizing existing views and partials
 

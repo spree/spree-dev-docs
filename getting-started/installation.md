@@ -6,7 +6,7 @@ Before you proceed we would like to remind you that we also offer Software as a 
 
 ![Vendo - Spree as a Service offerring](https://uploads-ssl.webflow.com/6230c485f2c32ea1b0daa438/62386b96518cdcbe111f134a\_OG%20Image%20\(2\).png)
 
-With [Vendo](https://getvendo.com/?utm\_source=spree\_docs), you just need to sign up and focus on your brand and storefront experience. The rest (hosting, maintanence, security, scaling) is handled by us.
+With [Vendo](https://getvendo.com/?utm\_source=spree\_docs), you just need to sign up and focus on your brand and storefront experience. The rest (hosting, maintenance, security, scaling) is handled by us.
 
 ## Prerequisites
 

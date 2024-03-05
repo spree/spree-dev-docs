@@ -28,7 +28,7 @@ Once the application is configured inside Spree, you can use its credentials to 
 
 To obtain the token, send the following `POST` request to `/spree_oauth/token`
 
-```
+```json
 {
   "grant_type": "client_credentials",
   "client_id": "xxx",

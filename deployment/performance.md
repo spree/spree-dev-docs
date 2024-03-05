@@ -28,9 +28,9 @@ This is the time when API objects will be available in cache storage. Objects su
 
 ### Background jobs
 
-Sending emails, parsing big amounts of data - it's not recommended to do it in the web process. 
+Sending emails, parsing big amounts of data - it's not recommended to do it in the web process.
 
-We recommend setting up [Sidekiq with ActiveJob](https://github.com/mperham/sidekiq/wiki/Active-Job), this required a Redis instance. Spree Starter users don't need to do anything as it's already pre-configured for them.
+We recommend setting up ActiveJob adapter such as [Solid Queue](https://github.com/basecamp/solid_queue) or [Sidekiq](https://github.com/mperham/sidekiq/wiki/Active-Job). Spree Starter users don't need to do anything as it's already pre-configured for them (with Solid Queue).
 
 ### Testing locally
 
@@ -40,29 +40,14 @@ To enable caching in the development environment please type in your project dir
 bin/rails dev cache
 ```
 
-or if you're using Spree Starter
-
-```bash
-docker-compose run web rails dev:cache
-```
-
 After that, you will need to restart your webserver / or stop/start docker-compose.
 
 ## Infrastructure
 
 ### Cache storage engine
 
-We strongly recommend using Memcached or Redis as cache storage. 
-
-#### Spree Starter
-
-Starter is pre-configured to work with Memcached. To enable caching please set the ENV variables:
-
-`MEMCACHEDCLOUD_SERVERS` - URL of the Memcached instance
-
-`MEMCACHEDCLOUD_USERNAME` / `MEMCACHEDCLOUD_PASSWORD` - username/password required to access instance
-
-`MEMCACHED_POOL_SIZE` - connection pool, defaults to `5` 
+We recommend using a distributed cache storage engine such as [Solid Cache](https://github.com/rails/solid_cache), Memcached or Redis. Spree Starter uses Solid Cache by default as it
+doesn't require any additional setup or services to be installed.
 
 #### Memcached
 
@@ -71,6 +56,3 @@ Please see the configuration options [detailed in Rails Guides](https://guides.r
 #### Redis
 
 Please see the configuration options [detailed in Rails Guides](https://guides.rubyonrails.org/caching_with_rails.html#activesupport-cache-rediscachestore).
-
-### 
-

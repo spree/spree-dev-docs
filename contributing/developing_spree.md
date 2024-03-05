@@ -22,21 +22,33 @@ Go to [Spree GitHub repository](https://github.com/spree/spree) and click the **
 
 ## Local setup
 
-1.  Clone your fork repository
+1. Clone your fork repository
 
-    ```
+    ```bash
      git clone git://github.com/your_github_username/spree.git
      cd spree
     ```
+
 2. [Install ruby](https://www.ruby-lang.org/en/documentation/installation/)
-3.  Install required libraries
+3. Install required libraries
 
-    ```
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" && brew install openssl mysql postgresql imagemagick redis vips node
-    ```
-4.  Install the gem dependencies
+    You will need SQLite (or PostgreSQL or MySQL) and libvips installed on your system. You can install them using the following commands:
 
+    ```bash
+    brew install vips
     ```
+
+    If you are using Ubuntu or Windows Linux Subsystem, you can install libvips using the following command:
+
+    ```bash
+    sudo apt-get install libvips
+    ```
+
+    Please refer to the [libvips installation guide](https://libvips.github.io/libvips/install.html) for more information.
+
+4. Install the gem dependencies
+
+    ```bash
      bundle install
     ```
 
@@ -44,14 +56,14 @@ Go to [Spree GitHub repository](https://github.com/spree/spree) and click the **
 
 Bellow command will setup a Rails application with Spree pre-installed with some data seeded:
 
-```
+```bash
 bin/sandbox.sh
 ```
 
-By default, Sandbox uses the **PostgreSQL** database. But you can switch to **MySQL**:
+By default, Sandbox uses the **SQLite** database. But you can switch to **PostgreSQL** or **MySQL**:
 
-```
-DB=mysql bin/sandbox.sh
+```bash
+DB=postgres bin/sandbox.sh
 ```
 
 When developing [Spree Dashboard](https://github.com/spree/spree\_backend) you can also pass `SPREE_`DASHBOARD`_PATH`
@@ -62,9 +74,9 @@ SPREE_DASHBOARD_PATH=../../spree_backend bin/sandbox.sh
 
 Start the server
 
-```
+```bash
 cd sandbox
-bin/dev
+bin/rails s
 ```
 
 ### Performance in development mode
@@ -96,7 +108,7 @@ You can see the build statuses at [https://circleci.com/gh/spree/spree](https://
 
 Each gem contains its own series of tests, and for each directory, you need to do a quick one-time creation of a test application and then you can use it to run the tests. For example, to run the tests for the core project.
 
-```
+```bash
 cd core
 bundle exec rake test_app
 bundle exec rspec
@@ -104,20 +116,20 @@ bundle exec rspec
 
 If you would like to run specs against a particular database you may specify the dummy app's database, which defaults to sqlite3.
 
-```
+```bash
 DB=postgres bundle exec rake test_app
 ```
 
 If you want to run specs for only a single spec file
 
-```
+```bash
 cd core
 bundle exec rspec spec/models/spree/state_spec.rb
 ```
 
 If you want to run a particular line of spec
 
-```
+```bash
 cd core
 bundle exec rspec spec/models/spree/state_spec.rb:7
 ```
@@ -136,16 +148,17 @@ brew cask install chromedriver
 
 Please keep your commit history meaningful and clear. [This guide](https://about.gitlab.com/blog/2018/06/07/keeping-git-commit-history-clean/) covers it quite well and we recommend reading it, not only for Spree project but for any IT project overall.
 
-1.  Push your changes to a topic branch in your fork of the repository.
+1. Push your changes to a topic branch in your fork of the repository.
 
+    ```bash
+    git push -u origin fix/order-recalculation-total-bug
     ```
-     git push -u origin fix/order-recalculation-total-bug
-    ```
-2.  Create a Pull request - [please follow this guide](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork)
+
+2. Create a Pull request - [please follow this guide](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork)
 
     If your changes references Github issues, please mark which issue you're fixing by adding `Fixes #<number or url of the issue>` in the commit name or PR title/description. This will automatically mark that issue as closed when your PR will be merged.
 3. Wait for CI to pass
-4.  If CI passed wait for Spree Core team code review
+4. If CI passed wait for Spree Core team code review
 
     We're aiming to review and leave feedback as soon as possible. We'll leave you a meaningul feedback if needed.
 
@@ -157,7 +170,7 @@ This section will help you troubleshoot common issues with Spree.
 
 If you are using Spree 4.5 or higher, you may encounter the following libvips error:
 
-```
+```bash
 LoadError: Could not open library 'vips.so.42'
 ```
 

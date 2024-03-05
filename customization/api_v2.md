@@ -69,6 +69,6 @@ Hitting the Products API you will notice that in the [relationships](https://jso
 
 To include Video response in the Product API add `?includes=videos` in the API URL, eg.
 
-```
-https://localhost:4000/api/v2/storefront/products?include=videos
+```http
+GET https://localhost:3000/api/v2/storefront/products?include=videos
 ```

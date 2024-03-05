@@ -4,14 +4,15 @@
 
 ```ruby
 gem 'spree' # core and API
-gem 'spree_backend' # Rails admin panel (optional)
+gem 'spree_backend' # Admin panel (optional)
+gem 'spree_frontend' # Storefront (optional)
 gem 'spree_emails' # transactional emails (optional)
 gem 'spree_sample' # dummy data like products, taxons, etc
-gem 'spree_auth_devise', '~> 4.3' # Devise integration (optional)
-gem 'spree_gateway', '~> 3.9' # payment gateways eg. Stripe, Braintree (optional)
-gem 'spree_i18n', '~> 5.0' # translation files (optional) 
+gem 'spree_auth_devise' # Devise integration (optional)
+gem 'spree_gateway' # payment gateways eg. Stripe, Braintree (optional)
+gem 'spree_i18n' # translation files (optional) 
  
-# only needed for MacOS and Ruby 3.0
+# only needed for MacOS and Ruby 3+
 gem 'sassc', github: 'sass/sassc-ruby', branch: 'master'
 ```
 
@@ -25,23 +26,23 @@ gem 'sassc', github: 'sass/sassc-ruby', branch: 'master'
 
 ```
 bin/rails g spree:install --user_class=Spree::User
+bin/rails g spree:backend:install
+bin/rails g spree:frontend:install
 bin/rails g spree:auth:install
 bin/rails g spree_gateway:install
-bin/rails javascript:install:esbuild
-bin/rails g spree:backend:install
 ```
 
 ### Installation options
 
 By default, the installation generator (`rails g spree:install`) will run migrations as well as adding seed. This can be disabled using
 
-```
+```bash
 bin/rails g spree:install --migrate=false --sample=false --seed=false
 ```
 
 You can always perform any of these steps later by using these commands.
 
-```
+```bash
 bin/rake railties:install:migrations
 bin/rails db:migrate
 bin/rails db:seed
@@ -78,7 +79,7 @@ To stop the webserver, hit Ctrl-C in the terminal window where it's running. In 
 
 #### Logging Into the Admin Panel
 
-The next thing you'll probably want to do is to log into the admin interface. Use your browser window to navigate to [http://localhost:4000/admin](http://localhost:4000/admin). You can log in with the username `spree@example.com` and password `spree123`.
+The next thing you'll probably want to do is to log into the admin interface. Use your browser window to navigate to [http://localhost:3000/admin](http://localhost:3000/admin). You can log in with the username `spree@example.com` and password `spree123`.
 
 Upon successful authentication, you should see the admin screen:
 

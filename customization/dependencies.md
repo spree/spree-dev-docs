@@ -8,7 +8,7 @@ order: 3
 
 ## Overview
 
-With Dependencies you can easily replace parts of Spree internals with your custom classes. You can replace [Services](https://github.com/spree/spree/tree/master/core/app/services/spree), Abilities and [Serializers](https://github.com/spree/spree/tree/master/api/app/serializers/spree/v2). More will come in the future.
+With Dependencies, you can easily replace parts of Spree internals with your custom classes. You can replace [Services](https://github.com/spree/spree/tree/master/core/app/services/spree), Abilities, and [Serializers](https://github.com/spree/spree/tree/master/api/app/serializers/spree/v2). More will come in the future.
 
 ## Controller level customization
 
@@ -41,20 +41,20 @@ Different API endpoints can have different dependency injection points. You can 
 
 Storefront and Platform APIs have separate Dependencies injection points so you can easily customize one without touching the other.
 
-In your Spree initializer \(`config/initializers/spree.rb`\) please add:
+In your Spree initializer (`config/initializers/spree.rb`) please add:
 
 ```ruby
 Spree::Api::Dependencies.storefront_cart_serializer = 'MyNewAwesomeCartSerializer'
 Spree::Api::Dependencies.storefront_cart_add_item_service = 'MyNewAwesomeAddItemToCart'
 ```
 
-This will swap the default Cart serializer and Add Item to Cart service for your custom ones within all Storefront API endpoints that uses those classes.
+This will swap the default Cart serializer and Add Item to Cart service for your custom ones within all Storefront API endpoints that use those classes.
 
- Values set in the initializer has to be strings, eg. \`'MyNewAwesomeAddItemToCart'\`
+&#x20;Values set in the initializer have to be strings, eg. \`'MyNewAwesomeAddItemToCart'\`
 
-## Application \(global\) customization
+## Application (global) customization
 
-You can also inject classes globally to the entire Spree stack. Be careful about this though as this touches every aspect of the application \(both APIs, Admin Panel and default Rails frontend if you're using it\).
+You can also inject classes globally into the entire Spree stack. Be careful about this though as this touches every aspect of the application (both APIs, Admin Panel, and default Rails frontend if you're using it).
 
 ```ruby
 Spree::Dependencies.cart_add_item_service = 'MyNewAwesomeAddItemToCart'
@@ -68,7 +68,7 @@ Spree.dependencies do |dependencies|
 end
 ```
 
-You can mix and match both global and API level customizations:
+You can mix and match both global and API-level customizations:
 
 ```ruby
 Spree::Dependencies.cart_add_item_service = 'MyNewAwesomeAddItemToCart'
@@ -77,12 +77,11 @@ Spree::Api::Dependencies.storefront_cart_add_item_service = 'AnotherAddItemToCar
 
 The second line will have precedence over the first one, and the Storefront API will use `AnotherAddItemToCart` and the rest of the application will use `MyNewAwesomeAddItemToCart`
 
- Values set in the initializer have to be strings, eg. `'MyNewAwesomeAddItemToCart'`
+&#x20;Values set in the initializer have to be strings, eg. `'MyNewAwesomeAddItemToCart'`
 
 ## Default values
 
-Default values can be easily checked looking at the source code of Dependencies classes:
+By default values can be easily checked by looking at the source code of Dependencies classes:
 
-* [Application \(global\) dependencies](https://github.com/spree/spree/blob/master/core/app/models/spree/app_dependencies.rb)
-* [API level dependencies](https://github.com/spree/spree/blob/master/api/app/models/spree/api_dependencies.rb)
-
+* [Application (global) dependencies](https://github.com/spree/spree/blob/main/core/lib/spree/core/dependencies.rb)
+* [API level dependencies](https://github.com/spree/spree/blob/main/api/lib/spree/api/dependencies.rb)

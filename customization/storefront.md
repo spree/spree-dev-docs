@@ -5,7 +5,7 @@ This section covers the Rails storefront which was extracted to [`spree_frontend
 
 
 
-For new projects, we recommend using [Storefront API](https://spark-solutions.stoplight.io/docs/api-v2/api/docs/v2/storefront/index.yaml) to build your own storefront or using existing integrations with [Next.js](../storefronts/next.js-commerce.md) or [Vue Storefront](../storefronts/vue-storefront.md).
+For new projects, we recommend using [Storefront API](https://spark-solutions.stoplight.io/docs/api-v2/api/docs/v2/storefront/index.yaml) to build your own storefront or using existing integrations with [Next.js](broken-reference) or [Vue Storefront](broken-reference).
 {% endhint %}
 
 ## Styling with SASS variables

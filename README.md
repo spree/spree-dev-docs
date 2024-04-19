@@ -1,3 +1,5 @@
+⚠️ Docs moved to https://github.com/spree/spree ⚠️
+
 # Developer's Documentation
 
 [![GitHub stars](https://img.shields.io/github/stars/spree/spree.svg?style=social\&label=Star\&maxAge=2592000)](https://github.com/spree/spree/)
